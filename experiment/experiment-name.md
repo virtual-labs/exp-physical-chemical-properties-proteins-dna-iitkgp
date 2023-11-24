@@ -1,1 +1,1 @@
-## Experiment name
+## Computation of various physical and chemical properties of Proteins and DNA from their primary sequence
