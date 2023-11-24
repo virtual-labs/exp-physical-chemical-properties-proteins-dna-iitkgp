@@ -30,9 +30,15 @@ Fill a brief description of this experiment here
 
 
 
-### Contributors List
+### Developer and Integration Engineer
 
 SrNo | Name | Designation | Department| Institute| 
 :--|:--|:--|:--|:--|
-1 | **Prakriti Dhang** | Developer and Integration Engineer | Department of Mechanical Engineering | IIT Kharagpur |
-2 | **Namrata Ganguli** | Research Scholar | School of Bioscience | IIT Kharagpur |
+1 | **Prakriti Dhang** | Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |
+
+
+### Contributor List
+
+SrNo | Name | Designation | Department| Institute| 
+:--|:--|:--|:--|:--|
+1 | **Namrata Ganguli** | Research Scholar | School of Bioscience | IIT Kharagpur |
