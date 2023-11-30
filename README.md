@@ -31,7 +31,7 @@ Fill a brief description of this experiment here
 
 
 
-### Contributor Lists
+### Contributors List
 SrNo | Name | Vlabs Developer or Integration Engineer| Designation | Department| Institute| 
 :--|:--|:--|:--|:--|:--|
 1 | **Prakriti Dhang** | Developer and Integration Engineer | Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |
