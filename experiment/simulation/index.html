@@ -1,152 +1,381 @@
+<!-- 
+Lab name: Experimental Biochemistry
+Exp name: Computation of various physical and chemical properties of Proteins and DNA from their primary sequence
+File name: index.thml
+Developer: Prakriti Dhang
+-->
+
 <!DOCTYPE html>
 <html>
+
 <head>
-			<!-- Add CSS at the head of HTML file -->
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"></script-->
-			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-			<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-			<link rel="stylesheet" href="./css/main.css">
-		</head>
-		
-		<body>
-			<div class="container-fluid p-2">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="card">
-							<div class="card-header fs-5 fw-bold">Instructions</div>
-							<div class="card-body">
-								<ol>
-									<li>Click on "Start the Experiment" button
-									</li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-								</ol>
-								<b>Note:</b> To repeat the experiment, click on the "Re-Do the Experiment" button.
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="card">
-							<div class="card-header fs-5 fw-bold">Input Panels</div>
-							<div class="card-body">
-								<table id="ex2tb2" class="m-1 table table-bordered">
-									<tr>
-										<td colspan="2">
-											<button id="step0" type="button"
-												class="btn btn-success border border-1  rounded-3 fs-6 m-1"
-												style="cursor: pointer; " data-bs-toggle="modal"
-												data-bs-target="#exampleModal">Start the Experiment</button>
-		
-											<button id="steprs" type="button"
-												class="btn btn-warning border border-1  rounded-3 fs-6 m-1"
-												style="cursor: pointer; float:right " onclick="restartexp()">Re-Do the
-												Experiment</button>
-										</td>
-									</tr>
-									<tr>
-										<td>Step 1</td>
-										<td></td>
-										
-									</tr>
-									<tr>
-										<td>Step 2</td>
-										<td></td>
-										
-									</tr>
-									<tr>
-										<td>Step 3</td>
-										<td></td>
-										
-									</tr>
-									<tr>
-										<td>Step 4</td>
-										<td></td>
-										
-									</tr>
-									</table>
-								</div>
-								</div>
-							</div>
-		
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-		
-						<div class="card">
-							<div class="card-header fs-5 fw-bold">Action</div>
-							<div class="card-body">
-								<p class="fs-5" id="actionid"></p>
-								
-							</div>
-						</div>
+	<!-- Add CSS at the head of HTML file -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"></script-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+	<div class="container-fluid p-2">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="card">
+					<div class="card-header fs-5 fw-bold">Instructions</div>
+					<div class="card-body">
+						<ol>
+
+							<li>Select any amino acid name from the dropdown.</li>
+							<li>
+								Click on "Show Protein Sequence" button.
+							</li>
+							<li>Click on "Compute parameters" button.</li>
+							<li>Click on "Reset" button. </li>
+
+						</ol>
+
 					</div>
 				</div>
-		
-				<div class="row">
-					<div class="col-md-12">
-						<div class="card card-body border border-0">
-						<div class="img-container">
-		<img src="./images/setup.png" id="setup" class="img-fluid" alt="setup">
-		
-		</div>
-		
-						</div>
-						</div>
-		
-						<!--div class="col-md-6">
-							<div class="card card-body border border-1">
-								<div id="chartContainer" style="height: 500px; width: 100%;"></div>
-							</div>
-							</div-->
-		
-		
-	
-						</div>
-	
-	
-	
-							<div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-								<div class="modal-dialog">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title">Viewing message</h5>
-											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-										</div>
-										<div class="modal-body">
-											<p>A desktop or laptop is the preferred choice for an enhanced viewing experience.</p>
-											<p> When using a phone, it is recommended to enable the auto-rotate feature for an improved
-												viewing experience.</p>
-										</div>
-										<div class="modal-footer">
-				
-											<button type="button" class="btn btn-warning" onclick="start()"
-												data-bs-dismiss="modal">OK</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						
-		
-		
-				
 			</div>
-		
-		
-			<!-- Add JS at the bottom of HTML file -->
-			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		
-			<!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script-->
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-			<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
-			<script src="./js/main.js"></script>
-			<script src="./js/plotgraph.js"></script>
-		</body>
+			<div class="col-md-6">
+				<div class="card">
+					<div class="card-header fs-5 fw-bold">Input Panels</div>
+					<div class="card-body">
+
+
+						<select id="step1" class="form-select m-2 fs-5 " aria-label="Default select example"
+							style="cursor: pointer;"> <!--onchange="selectname()"-->
+							<option value="0" selected>Select any amino acid name</option>
+							<option value="1">TIGIT</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+						</select>
+
+
+
+						<button id="ressetbtn" type="button" class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
+							style="cursor: pointer;  " onclick="resetexpbtn()">Reset</button>
+
+							<button id="computebtn" type="button"
+							class="btn btn-primary border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
+							onclick="showsequencebtn()">Show Protein Sequence</button>
+
+						<button id="computebtn" type="button"
+							class="btn btn-success border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
+							onclick="computebtn()">Compute Parameters</button>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card card-body border border-1">
+					<div class="form-group m-2 fs-5">
+						<label class="fs-5" for="Textarea1">Protein Sequence</label>
+						<textarea class="form-control" id="Textarea1" rows="3"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card card-body border border-1" id="card1">
+
+					<p> <b>Number of amino acids:</b> 169 </p>
+					<br>
+
+					<p><b>Molecular weight:</b> 18332.97</p>
+					<br>
+					<p><b>Theoretical pI:</b> 5.92</p>
+					<br>
+					<b>Amino acid composition:</b>
+					<div class="col-md-3">
+						<table class="table table-bordered">
+							<tr>
+								<td>Ala (A)</td>
+								<td> 14</td>
+								<td>8.3%</td>
+							</tr>
+							<tr>
+								<td>Arg (R)</td>
+								<td>7</td>
+								<td>4.1%</td>
+							</tr>
+							<tr>
+								<td>Asn (N)</td>
+								<td>4</td>
+								<td>2.4%</td>
+							</tr>
+							<tr>
+								<td>Asp (D)</td>
+								<td>6</td>
+								<td>3.6%</td>
+							</tr>
+
+							<tr>
+								<td>Cys (C)</td>
+								<td> 4</td>
+								<td>2.4%</td>
+							</tr>
+							<tr>
+								<td>Gln (Q)</td>
+								<td>9</td>
+								<td>5.3%</td>
+							</tr>
+							<tr>
+								<td>Glu(E)</td>
+								<td>10 </td>
+								<td>5.9%</td>
+							</tr>
+							<tr>
+								<td> Gly(G)</td>
+								<td>15 </td>
+
+								<td>8.9%</td>
+							</tr>
+							<tr>
+								<td> His(H)</td>
+								<td>5 </td>
+
+								<td>3.0%</td>
+							</tr>
+							<tr>
+								<td> Ile(I)</td>
+								<td>12 </td>
+
+								<td>7.1%</td>
+							</tr>
+							<tr>
+								<td> Leu(L)</td>
+								<td>17 </td>
+								<td>10.1%</td>
+							</tr>
+							<tr>
+								<td> Lys(K)</td>
+								<td>6 </td>
+
+								<td>3.6%</td>
+							</tr>
+							<tr>
+								<td> Met(M)</td>
+								<td>3 </td>
+
+								<td>1.8%</td>
+							</tr>
+							<tr>
+								<td> Phe(F)</td>
+								<td>4 </td>
+
+								<td>2.4%</td>
+							</tr>
+							<tr>
+								<td> Pro(P)</td>
+								<td>5 </td>
+
+								<td>3.0%</td>
+							</tr>
+							<tr>
+								<td> Ser(S)</td>
+								<td>12 </td>
+
+								<td>7.1%</td>
+							</tr>
+							<tr>
+								<td> Thr(T)</td>
+								<td>16 </td>
+
+								<td>9.5%</td>
+							</tr>
+							<tr>
+								<td> Trp(W)</td>
+								<td>3 </td>
+
+								<td>1.8%</td>
+							</tr>
+							<tr>
+								<td> Tyr(Y)</td>
+								<td>4 </td>
+
+								<td>2.4%</td>
+							</tr>
+							<tr>
+								<td> Val(V)</td>
+								<td>13 </td>
+
+								<td>7.7%</td>
+							</tr>
+							<tr>
+								<td> Pyl(O)</td>
+								<td>0 </td>
+
+								<td>0.0%</td>
+							</tr>
+							<tr>
+								<td> Sec(U)</td>
+								<td>0 </td>
+
+								<td>0.0%</td>
+							</tr>
+
+						</table>
+					</div>
+
+
+
+					<div class="col-md-3">
+						<table class="table table-bordered">
+							<tr>
+								<td>(B)</td>
+								<td> 0</td>
+								<td>0.0%</td>
+							</tr>
+							<tr>
+								<td>(z)</td>
+								<td>0</td>
+								<td>0.0%</td>
+							</tr>
+							<tr>
+								<td>(x)</td>
+								<td>0</td>
+								<td>0.0%</td>
+							</tr>
+						</table>
+					</div>
+
+
+					<br><br>
+
+					<p><b>Total number of negatively charged residues (Asp + Glu):</b> 16 <br></p>
+					<p> <b>Total number of positively charged residues (Arg + Lys):</b> 13</p>
+					<br>
+					<b>Atomic composition:</b>
+					<br>
+					<div class="col-md-3">
+						<table class="table table-bordered">
+							<tr>
+								<td>Carbon</td>
+								<td> C</td>
+								<td>811</td>
+							</tr>
+							<tr>
+								<td>Hydrogen</td>
+								<td>H</td>
+								<td>1296</td>
+							</tr>
+							<tr>
+								<td>Nitrogen</td>
+								<td>N</td>
+								<td>222</td>
+							</tr>
+							<tr>
+								<td>Oxygen</td>
+								<td>O</td>
+								<td>247</td>
+							</tr>
+							<tr>
+								<td>Sulfer</td>
+								<td>S</td>
+								<td>7</td>
+							</tr>
+						</table>
+					</div>
+
+					<br>
+
+					<p><b>Formula:</b> C811H1296N222O247S7<br></p>
+					<p><b>Total number of atoms:</b> 2583</p>
+					<br>
+					<b>Extinction coefficients:</b>
+					<br>
+					<p> Extinction coefficients are in units of M<sup>-1</sup> cm<sup>-1</sup>, at 280 nm measured in
+						water.</p>
+					<br>
+					Ext. coefficient 22710<br>
+					<p>Abs 0.1% (=1 g/l) 1.239, assuming all pairs of Cys residues form cystines</p>
+					<br>
+
+					Ext. coefficient 22460<br>
+					Abs 0.1% (=1 g/l) 1.225, assuming all Cys residues are reduced
+					<br><br>
+					<b>Estimated half-life:</b>
+					<br>
+					The N-terminal of the sequence considered is M (Met).
+					<br>
+					The estimated half-life is:
+					<ul>
+						<li>30 hours (mammalian reticulocytes, in vitro).</li>
+						<li>>20 hours (yeast, in vivo).</li>
+						<li>>10 hours (Escherichia coli, in vivo).</li>
+					</ul><br>
+					<b>Instability index:</b>
+					<br>
+					The instability index (II) is computed to be 39.98<br>
+					This classifies the protein as stable.<br>
+
+					<br><br>
+					<p><b>Aliphatic index:</b> 97.51</p>
+					<br>
+					<p><b>Grand average of hydropathicity (GRAVY):</b> 0.060</p>
+
+				</div>
+			</div>
+
+
+
+
+
+		</div>
+
+
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Alert Message</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Please select amino acid name from the dropdown.</p>
+
+					</div>
+					<div class="modal-footer">
+
+						<button type="button" class="btn btn-warning" onclick="selectaminoname()"
+							data-bs-dismiss="modal">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+
+	<!-- Add JS at the bottom of HTML file -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/plotgraph.js"></script>
+</body>
+
 </html>

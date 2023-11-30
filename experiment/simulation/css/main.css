@@ -1,7 +1,10 @@
-/* You CSS goes in here */
+/* Lab name: Experimental Biochemistry
+Exp name: Computation of various physical and chemical properties of Proteins and DNA from their primary sequence
+File name: main.css
+Developer: Prakriti Dhang */
 
 .card {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .img-container {
@@ -14,3 +17,8 @@
 
     display: inline-block;
 }
+
+#card1 {
+    font-family: "Times New Roman", Times, serif;
+    display: none;
+  }
