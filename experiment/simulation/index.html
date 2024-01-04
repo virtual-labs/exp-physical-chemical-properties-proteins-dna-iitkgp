@@ -24,27 +24,35 @@ Developer: Prakriti Dhang
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header fs-5 fw-bold">Instructions</div>
+					<div class="card-header fs-5 fw-bold">Instructions <button id="step0" type="button"
+						class="btn btn-warning border border-1 rounded-3 fs-6 m-1"
+						style="cursor: pointer; float:right " onclick="restartexp()">Re-Do the Experiment</button></div>
 					<div class="card-body">
 						<ol>
 
-							<li>Select any amino acid name from the dropdown.</li>
+							
 							<li>
-								Click on "Show Protein Sequence" button.
+								Amino Acid
 							</li>
-							<li>Click on "Compute parameters" button.</li>
-							<li>Click on "Show Chemical Structure" button.</li>
-							<li>Click on "DNA" button.</li>
-							<li>Click on "Reset" button. </li>
+							<li>pI Calculation</li>
+							
+							<li>DNA</li>
+							<ol>
+								<li>Enter DNA sequence in the textarea.</li>
+								<li>Click on Calculate "Calculate Melting Temperature (Tm)" button</li>
+								<li>Click on "Show graph" button. </li>
+							</ol>
+							
 
 						</ol>
-
+						<b>Note:</b> To repeat the experiment, click on the "Re-Do the Experiment" button.
 					</div>
 				</div>
 			</div>
-			</div>
-			<div class="row">
+		</div>
+		<div class="row">
 			<div class="col-md-12">
+			
 				<div class="card">
 					<div class="card-header fs-5 fw-bold">Amino Acid</div>
 					<div class="card-body">
@@ -52,7 +60,8 @@ Developer: Prakriti Dhang
 
 						<div class="form-group m-2 fs-5">
 							<label class="fs-5" for="Textarea1">Amino acid sequence</label>
-							<textarea class="form-control" placeholder="Enter any amino acid sequence" id="Textarea1" rows="1" ></textarea>
+							<textarea class="form-control" placeholder="Enter any amino acid sequence" id="Textarea1"
+								rows="1"></textarea>
 						</div>
 
 
@@ -60,15 +69,16 @@ Developer: Prakriti Dhang
 						<!--button id="ressetbtn" type="button" class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
 							style="cursor: pointer;  " onclick="resetexpbtn()">Reset</button-->
 
-							<button id="proteinbtn" type="button"
+						<button id="proteinbtn" type="button"
 							class="btn btn-primary border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
 							onclick="showsequencebtn()">Calculate</button>
 
-						
-							
+
+
 
 					</div>
 				</div>
+				
 			</div>
 
 		</div>
@@ -76,71 +86,113 @@ Developer: Prakriti Dhang
 		<div class="row">
 			<div class="col-md-12">
 				
-					<div class="card" id="card11">
-						<div class="card-header fs-5 fw-bold">pI</div>
-						<div class="card-body">
+				<div class="card" id="card11">
+					<div class="card-header fs-5 fw-bold">pI</div>
+					<div class="card-body">
+					</div>
 				</div>
-			</div>
-		</div>
-		
-		
-		<div class="row">
-			<div class="col-md-12">
 				
-					<div class="card" id="card12">
+			</div>
+</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					
+					<div class="card" >
 						<div class="card-header fs-5 fw-bold">DNA</div>
 						<div class="card-body">
 							<div class="form-group m-2 fs-5">
 								<label class="fs-5" for="Textarea1">DNA Sequence</label>
-								<textarea class="form-control" placeholder="Enter any DNA sequence"  id="Textarea2" rows="1" ></textarea>
+								<textarea class="form-control" placeholder="Enter any DNA sequence" id="Textarea2"
+									rows="1"></textarea>
 							</div>
 							<button id="dnabtn" type="button"
-							class="btn btn-purple border border-1   rounded-3 fs-6 m-2" style="cursor: pointer; "
-							onclick="dnabtn()">Calculate Melting Temperature </button>
-					<p id="atgc">
-
-					</p>
-					<p id="tm">
-
-					</p>
+								class="btn btn-purple border border-1   rounded-3 fs-6 m-2" style="cursor: pointer; "
+								onclick="dnabtn()">Calculate Melting Temperature </button>
+								<button id="dnabtn" type="button"
+								class="btn btn-success border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
+								onclick="dnatmgraph()">Plot GC concentration and Tm </button>
+						</div>
+					</div>
+					
 				</div>
-			</div>
-		</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="card card-body border-1" id="card31" style="display:none;">
+						<p id="atgc">
 
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title">Alert Message</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</p>
+						<p id="tm">
+
+						</p>
+</div>
 					</div>
-					<div class="modal-body">
-						<p>Please select amino acid name from the dropdown.</p>
-
-					</div>
-					<div class="modal-footer">
-
-						<button type="button" class="btn btn-warning" onclick="selectaminoname()"
-							data-bs-dismiss="modal">OK</button>
+					<div class="col-md-6">
+						<div class="card card-body border-1" id="card32" style="display:none;">
+							<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+							<!--button class="btn btn-olive" id="exportChart">Export Chart</button-->
+						</div>
 					</div>
 				</div>
+
+
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Alert Message</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p>Please select amino acid name from the dropdown.</p>
+
+							</div>
+							<div class="modal-footer">
+
+								<button type="button" class="btn btn-warning" onclick="selectaminoname()"
+									data-bs-dismiss="modal">OK</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="modal" id="alertModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Alert message</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p></p>
+							</div>
+							<div class="modal-footer">
+			
+								<button type="button" class="btn btn-warning" onclick="cancelmsg()" data-bs-dismiss="modal">OK</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
-		</div>
 
 
 
 
-	</div>
+			<!-- Add JS at the bottom of HTML file -->
+			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+			<!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script-->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+			<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+			<script src="./js/main.js"></script>
 
-	<!-- Add JS at the bottom of HTML file -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-	<!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script-->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
-	<script src="./js/main.js"></script>
-	
 </body>
 
 </html>
