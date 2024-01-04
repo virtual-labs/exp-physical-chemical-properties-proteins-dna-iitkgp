@@ -17,7 +17,7 @@ Developer: Prakriti Dhang
 
 
 
-function resetexpbtn() {
+function restartexp() {
   location.reload();
 }
 
@@ -145,10 +145,20 @@ function chemstructbtn(){
 
 
 /********************************************   DNA  **********************************************************/
-
+var totalBases, molarConcentrationA, molarConcentrationT, molarConcentrationG,  molarConcentrationC, Tm, dataPointg=[];
 function dnabtn(){
+  document.getElementById("card31").style.display = "block";
  var dnaSequence = document.getElementById("Textarea2").value;
  
+ if (!/^[ATGC]+$/i.test(dnaSequence)) {
+
+  $('#alertModal').modal('show');
+      $('.modal-body').text('Invalid DNA sequence. Please enter only A, T, G, and C letters.');
+}
+
+else{
+
+
      countNucleotides(dnaSequence);
   
     function countNucleotides(dnaSequence) {
@@ -181,11 +191,11 @@ function dnabtn(){
       }
     
       // Optional: Calculate molar concentrations
-      const totalBases = dnaSequence.length;
-      const molarConcentrationA = countA / totalBases;
-      const molarConcentrationT = countT / totalBases;
-      const molarConcentrationG = countG / totalBases;
-      const molarConcentrationC = countC / totalBases;
+     totalBases = (dnaSequence.length);
+    molarConcentrationA = (countA / totalBases);
+      molarConcentrationT = (countT / totalBases);
+  molarConcentrationG = (countG / totalBases);
+      molarConcentrationC = (countC / totalBases);
 
 //displaying the result
 document.getElementById("atgc").innerHTML=" <i>Count of A:</i> " +countA+  "<br> <i>Count of T:</i> " +countT+ "<br> <i>Count of G:</i> " +countG+  
@@ -193,12 +203,12 @@ document.getElementById("atgc").innerHTML=" <i>Count of A:</i> " +countA+  "<br>
  "<br> <i>Molar Concentration of G:</i>  " +molarConcentrationG+ "<br> <i>Molar Concentration of C:</i>  " +molarConcentrationC ;
 
 //Calculate melting temperature
- Tm=4 *  (molarConcentrationG + molarConcentrationC)+2 *(molarConcentrationA + molarConcentrationT)
+ Tm=(4 *  (molarConcentrationG + molarConcentrationC)+2 *(molarConcentrationA + molarConcentrationT)).toFixed(2);
 
 
  document.getElementById("tm").innerHTML="Melting temperature (T<sub>m</sub>): " +Tm;
  
-
+dataPointg.push({ x: parseFloat(Tm), y: parseFloat(molarConcentrationG + molarConcentrationC)  }) 
      // console.log('Count of A:', countA);
  // console.log('Count of T:', countT);
  // console.log('Count of G:', countG);
@@ -226,6 +236,68 @@ document.getElementById("atgc").innerHTML=" <i>Count of A:</i> " +countA+  "<br>
     
 
   }
+}
   
+  
+function cancelmsg() {
+ 
+  document.getElementById("alertModal").style.display = "none";
+  document.getElementById("alertModal").classList.remove("show");
+  document.getElementById("Textarea2").value="";
+}
+
+
+function dnatmgraph(){
+  document.getElementById("card32").style.display = "block";
+  const chart = new CanvasJS.Chart("chartContainer", {
+		animationEnabled: true,
+		title: {
+			text: "Tm and GC Concentration "
+		},
+		axisY: {
+			title: "GC concentration",
+		
+			gridThickness: 0
+
+		},
+		axisX: {
+			title: "Tm",
+minimum:0
+
+		},
+
+		data: [{
+    type: "line",
+    dataPoints: dataPointg,
+  },
+
+
+  {
+    type: "line",
+    color: "purple",
+    
+    dataPoints:[ {  x: 0, y: 0},
+      {  x: parseFloat(Tm), y: parseFloat(molarConcentrationG + molarConcentrationC),indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside" }] , //,indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside", indexLabelWrap: true, indexLabelBackgroundColor: "black" 
+   
+  },
+
   
 
+],
+/* annotations:  [
+  {
+    type: "rectangle",
+    x: parseFloat(Tm)-50, // Adjust the position as needed  
+    y: parseFloat(molarConcentrationG + molarConcentrationC)-50 ,
+    width: 40, // Adjust the width as needed
+    height: 20, // Adjust the height as needed
+    
+  }
+] */
+	});
+
+	chart.render();
+	/* document.getElementById("exportChart").addEventListener("click",function(){
+    	chart.exportChart({format: "jpg"});
+    }); */
+}
