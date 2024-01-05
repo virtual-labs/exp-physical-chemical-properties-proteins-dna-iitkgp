@@ -16,11 +16,13 @@ Developer: Prakriti Dhang
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<link rel="stylesheet" href="./css/virtualc.css">
 	<link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
 	<div class="container-fluid p-2">
+		
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
@@ -32,8 +34,9 @@ Developer: Prakriti Dhang
 
 							
 							<li>
-								Amino Acid
+								Molecular weight of Amino Acid
 							</li>
+							<li>Molar extinction coefficient of protein</li>
 							<li>pI Calculation</li>
 							
 							<li>DNA</li>
@@ -50,11 +53,39 @@ Developer: Prakriti Dhang
 				</div>
 			</div>
 		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+					Molecular weight table
+				  </button>
+				
+				<div class="collapse" id="collapseExample1">
+				  <div class="card card-body">
+					Molecular weight table
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<button class="btn btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+					Isoelectric point (pI) table
+				  </button>
+			
+				<div class="collapse" id="collapseExample2">
+				  <div class="card card-body">
+					Isoelectric point (pI) table
+				  </div>
+				</div>
+
+			</div>
+			</div>
+
 		<div class="row">
 			<div class="col-md-12">
 			
 				<div class="card">
-					<div class="card-header fs-5 fw-bold">Amino Acid</div>
+					<div class="card-header fs-5 fw-bold">Molecular Weights of the Amino Acids  
+					</div>
 					<div class="card-body">
 
 
@@ -64,31 +95,134 @@ Developer: Prakriti Dhang
 								rows="1"></textarea>
 						</div>
 
-
+						 
+						<div class="row g-3 align-items-center">
+							<div class="col-auto">
+							  <label for="inputmwa" class="col-form-label fs-5">M.W. of protein =</label>
+							</div>
+							<div class="col-auto">
+							  <input type="input" id="inputmwa" placeholder="# amino acids " class="form-control" >
+							</div>
+							<div class="col-auto">
+							  <span  class="form-text fs-5">
+								x 110 Da 
+							  </span>
+							</div>
+						  </div>
 
 						<!--button id="ressetbtn" type="button" class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
 							style="cursor: pointer;  " onclick="resetexpbtn()">Reset</button-->
 
-						<button id="proteinbtn" type="button"
-							class="btn btn-primary border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
-							onclick="showsequencebtn()">Calculate</button>
+						<button id="mwbtn" type="button"
+							class="btn btn-success border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
+							onclick="checkmwbtn()">Check</button>
 
+							<!--<button id="proteinbtn" type="button"
+							class="btn btn-border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; float: right;"
+							onclick="calcul()"><img src="./images/Calculator.png" alt="Save icon" class="img-fluid"/></button>
 
-
-
+							<button id="proteinbtn" type="button"
+							class="btn btn-border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; float: right;"
+							onclick="ok()"><img src="./images/Close Window.png" alt="Save icon" id="closebtn" style="width:30px;height:30px"/></button>-->
 					</div>
 				</div>
 				
 			</div>
 
 		</div>
+		<div class="row">
+			<div class="col-md-12">
+				
+				<div class="card" id="card11">
+					<div class="card-header fs-5 fw-bold">Molar extinction coefficient of protein
+					</div>
+					<div class="card-body">
+						<div class="row g-3 align-items-center">
+							<div class="col-auto">
+							  <label for="inputmabs" class="col-form-label fs-5">ε =</label>
+							</div>
+							<div class="col-auto">
+							  <input type="input" id="inputmabs1" placeholder="nW " class="form-control" >
+							</div>
+							<div class="col-auto">
+							  <span  class="form-text fs-5">
+								x 5500
+							  </span>
+							</div>
+							<div class="col-auto">
+								<input type="input" id="inputmabs2" placeholder="nY " class="form-control" >
+							  </div>
+							  <div class="col-auto">
+								<span  class="form-text fs-5">
+								  x 1490
+								</span>
+							  </div>
+							  <div class="col-auto">
+								<input type="input" id="inputmabs3" placeholder="nC " class="form-control" >
+							  </div>
+							  <div class="col-auto">
+								<span  class="form-text fs-5">
+								  x 125 
+								</span>
+							  </div>
+						  </div>
+
+						  <button id="mabsbtn" type="button"
+							class="btn btn-success border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
+							onclick="checkmabsbtn()">Check</button>
+					</div>
+				</div>
+				
+			</div>
+</div>
 
 		<div class="row">
 			<div class="col-md-12">
 				
 				<div class="card" id="card11">
-					<div class="card-header fs-5 fw-bold">pI</div>
+					<div class="card-header fs-5 fw-bold">Isoelectric point (pI) </div>
 					<div class="card-body">
+						<div class="row g-3 align-items-center">
+							<div class="col-auto">
+							  <label for="inputpi" class="col-form-label fs-5">pI=</label>
+							</div>
+							<div class="col-auto">
+								<span  class="form-text fs-5">
+								  (
+								</span>
+							  </div>
+							<div class="col-auto">
+							  <input type="input" id="inputpi1" placeholder="pka1 " class="form-control" >
+							</div>
+							<div class="col-auto">
+							  <span  class="form-text fs-5">
+								+
+							  </span>
+							</div>
+							<div class="col-auto">
+								<input type="input" id="inputpi2" placeholder="pka2 " class="form-control" >
+							  </div>
+							  <div class="col-auto">
+								<span  class="form-text fs-5">
+								  )
+								</span>
+							  </div>
+							  <div class="col-auto">
+								<span  class="form-text fs-5">
+								 /
+								</span>
+							  </div>
+							 
+							  <div class="col-auto">
+								<span  class="form-text fs-5">
+								 2
+								</span>
+							  </div>
+						  </div>
+
+						  <button id="mabsbtn" type="button"
+							class="btn btn-success border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
+							onclick="checpibtn()">Check</button>
 					</div>
 				</div>
 				
@@ -99,7 +233,7 @@ Developer: Prakriti Dhang
 				<div class="col-md-12">
 					
 					<div class="card" >
-						<div class="card-header fs-5 fw-bold">DNA</div>
+						<div class="card-header fs-5 fw-bold">Tm calculation of DNA</div>
 						<div class="card-body">
 							<div class="form-group m-2 fs-5">
 								<label class="fs-5" for="Textarea1">DNA Sequence</label>
@@ -120,7 +254,7 @@ Developer: Prakriti Dhang
 				<div class="row">
 					<div class="col-md-6">
 						<div class="card card-body border-1" id="card31" style="display:none;">
-						<p id="atgc">
+						<p id="atgc" >
 
 						</p>
 						<p id="tm">
@@ -183,7 +317,63 @@ Developer: Prakriti Dhang
 
 
 
+<!----- Calculator --->
 
+<!--
+
+<div id="calculator" >
+	<div class="bttncls" id="close" >
+		</div>
+
+	<div class="box" id="hide">
+		<div class="display"><input type="text" readonly size="17" id="d"></div>
+		<div class="keys">
+			<p>
+
+
+				<input type="button" class="button pink"  value="&#8730;" onclick="Root('sq')">
+				<input type="button" class="button pink"  value="&#8731;" onclick="Root('cu')">
+				
+				<input type="button" class="button pink"  value="x2" onclick="Power('sq')">
+				<input type="button" class="button pink"  value="x3" onclick="Power('cu')">
+			
+
+			</p>
+			<p>
+				<input type="button" class="button pink"  value="sinr" onclick="TrigFunc('sin')">  
+				<input type="button" class="button pink"  value="cosr" onclick="TrigFunc('cos')">  
+				<input type="button" class="button pink"  value="tanr" onclick="TrigFunc('tan')">  
+				<input type="button" class="button pink"  value="/" onclick='v("/")'>  
+
+			</p>
+			<p><input type="button" class="button black" value="7" onclick='v("7")'>
+				<input type="button"  class="button black" value="8" onclick='v("8")'>
+				<input type="button" class="button black" value="9" onclick='v("9")'>
+				<input type="button" class="button pink" value="*" onclick='v("*")'>
+			</p>
+
+			<p><input type="button" class="button black" value="4" onclick='v("4")'>
+				<input type="button" class="button black" value="5" onclick='v("5")'>
+				<input type="button" class="button black" value="6"  onclick='v("6")'>
+				<input type="button"  class="button pink" value="-" onclick='v("-")'>
+			</p>
+
+			<p><input type="button" class="button black"  value="1" onclick='v("1")'>
+				<input type="button" class="button black" value="2" onclick='v("2")'>
+				<input type="button" class="button black" value="3" onclick='v("3")'>
+				<input type="button" class="button pink" value="+" onclick='v("+")'>
+			</p>
+
+			<p><input type="button" class="button black"  value="0" onclick='v("0")'>
+				<input type="button" class="button black" value="." onclick='v(".")'>
+				<input type="button" class="button black" value="C" onclick='del("")'>
+				<input type="button"  class="button orange" value="=" onclick='eqls()'>
+			</p>
+		</div>
+	</div>
+</div>  -->
+
+<!---------Calculator --------->
 			<!-- Add JS at the bottom of HTML file -->
 			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -191,6 +381,7 @@ Developer: Prakriti Dhang
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
 			<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+			<script src="./js/virtualc.js"></script>
 			<script src="./js/main.js"></script>
 
 </body>
