@@ -198,9 +198,9 @@ else{
       molarConcentrationC = (countC / totalBases);
 
 //displaying the result
-document.getElementById("atgc").innerHTML=" <i>Count of A:</i> " +countA+  "<br> <i>Count of T:</i> " +countT+ "<br> <i>Count of G:</i> " +countG+  
-"<br> <i>Count of C:</i> " +countC+ "<br><br><i> Molar Concentration of A:</i>  " +molarConcentrationA+ "<br> <i>Molar Concentration of T:</i>  " +molarConcentrationT+
- "<br> <i>Molar Concentration of G:</i>  " +molarConcentrationG+ "<br> <i>Molar Concentration of C:</i>  " +molarConcentrationC ;
+document.getElementById("atgc").innerHTML=" <i>Count of A:</i> " +countA+  "<br><br> <i>Count of T:</i> " +countT+ "<br><br> <i>Count of G:</i> " +countG+  
+"<br><br> <i>Count of C:</i> " +countC+ "<br><br><br><i> Molar Concentration of A:</i>  " +molarConcentrationA+ "<br><br> <i>Molar Concentration of T:</i>  " +molarConcentrationT+
+ "<br><br> <i>Molar Concentration of G:</i>  " +molarConcentrationG+ "<br><br> <i>Molar Concentration of C:</i>  " +molarConcentrationC ;
 
 //Calculate melting temperature
  Tm=(4 *  (molarConcentrationG + molarConcentrationC)+2 *(molarConcentrationA + molarConcentrationT)).toFixed(2);
