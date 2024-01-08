@@ -34,19 +34,19 @@ Developer: Prakriti Dhang
 						<ol>
 							<li>Click on the button "Table of molecular weights of amino acid". Click on Table of pka
 								and pI values. Click on respective buttons to hide the table.</li>
-							<li>Enter any Amino acid sequence in the input box and click on the button "Enter".</li>
+							<li>Enter any Amino acid sequence in the input box and click on the button "Submit".</li>
 							<li>Approximate molecular weight of
 								the sequence </li>
-								<ol>
-									<li>Enter no. of amino acid in the input box </li>
-									<li>Click on the button "Check". Click on "Show answer"
-								button to view correct answer.</li>
-								</ol>
+							<ol>
+								<li>Enter number of amino acid in the input box </li>
+								<li>Click on the button "Check". Click on "Show answer"
+									button to view correct answer.</li>
+							</ol>
 
 
 							<li>
 								Actual
-								molecular weight of the sequence 
+								molecular weight of the sequence
 								<ol>
 									<li>Enter calculated molecular weight of amino acid in the input </li>
 									<li>Click on the "check" button. Click on "Show answer"
@@ -67,11 +67,13 @@ Developer: Prakriti Dhang
 								<li></li>
 							</ol>
 
-							<li>Enter DNA sequence in the input box and click on the "Enter" button.</li>
+							<li>Enter DNA sequence in the input box and click on the "Submit" button.</li>
 							<ol>
-								<li>Enter no. of bases in the input box. Click on "Check" button.</li>
-								<li>Enter no. of A, T, C, G in the respective input boxes  of "Enter the actual molecular weight of the DNA sequence" section. Next click on "Check" button. </li>
-								<li>Enter no. of A, T, C, G in the respective input boxes  of "Enter the melting temperature of the DNA sequence" section. Next click on "Check" button. </li>
+								<li>Enter number of bases in the input box. Click on "Check" button.</li>
+								<li>Enter number of A, T, C, G in the respective input boxes of "Enter the actual molecular
+									weight of the DNA sequence" section. Next click on "Check" button. </li>
+								<li>Enter number of A, T, C, G in the respective input boxes of "Enter the melting
+									temperature of the DNA sequence" section. Next click on "Check" button. </li>
 								<li>Click on "Plot Tm Vs GC" button. </li>
 							</ol>
 
@@ -93,7 +95,7 @@ Developer: Prakriti Dhang
 					</button>
 
 					<div class="collapse" id="collapseExample1">
-						<div class="card card-body">
+						<div class="card card-body border-0">
 							<div class="table-responsive">
 								<table class="table table-bordered border-primary table-hover">
 									<thead>
@@ -234,14 +236,14 @@ Developer: Prakriti Dhang
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="card card-body">
+				<div class="card card-body ">
 					<button class="btn btn-info col-md-12 fs-5" type="button" data-bs-toggle="collapse"
 						data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
 						Table of pKa and pI values
 					</button>
 
 					<div class="collapse" id="collapseExample2">
-						<div class="card card-body">
+						<div class="card card-body border-0">
 							<div class="table-responsive">
 								<table class="table table-bordered border-primary table-hover">
 									<thead>
@@ -403,369 +405,383 @@ Developer: Prakriti Dhang
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12">
+		<div class="card border-primary border border-2">
+			<div class="card-body ">
+				<div class="row">
+					<div class="col-md-12">
 
-				<div class="card">
-					<div class="card-header fs-5 fw-bold">Amino Acid
-					</div>
-					<div class="card-body">
+						<div class="card border-0">
+							<!--div class="card-header fs-5 fw-bold">Amino Acid
+							</div-->
+							<div class="card-body">
 
 
-						<div class="form-group m-2 fs-5">
-							<label class="fs-5" for="Textarea1">Please enter the amino acid sequence ( 15-20 amino acid)
-							</label>
-							<textarea class="form-control" placeholder="Enter any amino acid sequence" id="Textarea1"
-								rows="1"></textarea>
-						</div>
-						<button id="aseqbtn" type="button" class="btn btn-primary border border-1  rounded-3 fs-6 m-2"
-							style="cursor: pointer; " onclick="aseqbtn()">Enter</button>
+								<div class="form-group m-2 fs-5">
+									<label class="fs-5" for="Textarea1">Please enter the amino acid sequence ( 15-20
+										amino acid)
+									</label>
+									<textarea class="form-control" placeholder="Enter any amino acid sequence"
+										id="Textarea1" rows="1"></textarea>
+								</div>
+								<button id="aseqbtn" type="button"
+									class="btn btn-purple border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
+									onclick="aseqbtn()">Submit</button>
 
-						<!--label class="fs-5" id="sequence">
+								<!--label class="fs-5" id="sequence">
 							
 						</label-->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-
-				<div class="card">
-					<div class="card-header fs-5 fw-bold">Enter the approximate molecular weight of the
-						sequence :
-					</div>
-					<div class="card-body">
-
-
-
-
-						<div class="row g-3 align-items-center">
-							<div class="col-auto">
-								<label for="inputmwa" class="col-form-label fs-5">M.W.
-									=</label>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmwa" placeholder="# amino acids " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									x 110 =
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmwar" placeholder=" " readonly class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									Da
-								</span>
 							</div>
 						</div>
+					</div>
+				</div>
+				<!----------------------------------------------------------------------- Approx  molecular weight of amino acid sequence ---------------------------------------------------------------->
+				<div class="row">
+					<div class="col-md-12">
 
-						<!--button id="ressetbtn" type="button" class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
+						<div class="card border-0">
+							<div class="card-header border-primary fs-5 fw-bold">Enter the approximate molecular weight of the
+								sequence 
+							</div>
+							<div class="card-body">
+
+
+
+
+								<div class="row g-3 align-items-center">
+									<div class="col-auto">
+										<label for="inputmwa" class="col-form-label fs-5">M.W.
+											=</label>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmwa" placeholder="Number of amino acids "
+											class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											x 110 =
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmwar" placeholder=" " readonly
+											class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											Da
+										</span>
+									</div>
+								</div>
+
+								<!--button id="ressetbtn" type="button" class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
 							style="cursor: pointer;  " onclick="resetexpbtn()">Reset</button-->
 
-						<button id="mwbtn" type="button" class="btn btn-success border border-1  rounded-3 fs-6 m-2"
-							style="cursor: pointer; " onclick="checkmwbtn()">Check</button>
-						<button id="mwbtnshow" type="button" class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
-							style="cursor: pointer;float: right; " onclick="showmwbtn()" disabled>Show
-							Answer</button>
+								<button id="mwbtn" type="button"
+									class="btn btn-success border border-1  rounded-3 fs-6 m-2"
+									style="cursor: pointer; " onclick="checkmwbtn()">Check</button>
+								<button id="mwbtnshow" type="button"
+									class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
+									style="cursor: pointer;float: right; " onclick="showmwbtn()" disabled>Show
+									Answer</button>
 
-						<!--<button id="proteinbtn" type="button"
+								<!--<button id="proteinbtn" type="button"
 							class="btn btn-border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; float: right;"
 							onclick="calcul()"><img src="./images/Calculator.png" alt="Save icon" class="img-fluid"/></button>
 
 							<button id="proteinbtn" type="button"
 							class="btn btn-border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; float: right;"
 							onclick="ok()"><img src="./images/Close Window.png" alt="Save icon" id="closebtn" style="width:30px;height:30px"/></button>-->
+							</div>
+						</div>
+
 					</div>
+
 				</div>
 
-			</div>
 
-		</div>
+				<!----------------------------------------------------------------------- Actual molecular weight of amino acid sequence ---------------------------------------------------------------->
+
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="card border-0">
+							<div class="card-header border-primary fs-5 fw-bold">Enter the actual molecular weight of the
+								sequence:
+								<!-- -->
+
+								<!--button class="btn btn-info  fs-5" type="button" style="float: right;"
+									data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false"
+									aria-controls="collapseExample">
+									Table of molecular weights of amino acid
+								</button>
+
+								<div class="collapse" id="collapseExample3">
+									<div class="card card-body">
+										<div class="table-responsive">
+											<table class="table table-bordered border-primary table-hover">
+												<thead>
+													<tr>
+														<th scope="col">Amino Acid</th>
+														<th scope="col">3-letters code</th>
+														<th scope="col">1-letter code</th>
+														<th scope="col">Molecular weight</th>
+													</tr>
+
+												</thead>
+												<tbody>
+													<tr>
+														<th scope="row">Alanine</th>
+														<td>Ala</td>
+														<td>A</td>
+														<td>89.1</td>
+													</tr>
+													<tr>
+														<th scope="row">Arginine</th>
+														<td> Arg</td>
+														<td> R</td>
+														<td> 174.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Asparagine</th>
+														<td> Asn</td>
+														<td> N</td>
+														<td> 132.1</td>
+													</tr>
+													<tr>
+														<th scope="row">Aspartate</th>
+														<td> Asp</td>
+														<td> D</td>
+														<td> 133.1</td>
+													</tr>
+													<tr>
+														<th scope="row">Cysteine</th>
+														<td> Cys</td>
+														<td> C</td>
+														<td> 121.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Glutamate</th>
+														<td> Glu</td>
+														<td> E</td>
+														<td> 147.1</td>
+													</tr>
+													<tr>
+														<th scope="row">Glutamine</th>
+														<td> Gln</td>
+														<td> Q</td>
+														<td> 146.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Glycine</th>
+														<td> Gly</td>
+														<td> G</td>
+														<td> 75.1</td>
+													</tr>
+													<tr>
+														<th scope="row">Histidine</th>
+														<td> His</td>
+														<td> H</td>
+														<td> 155.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Isoleucine</td>
+														<td> Ile</td>
+														<td> I</td>
+														<td> 131.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Leucine</th>
+														<td> Leu</td>
+														<td> L</td>
+														<td> 131.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Lysine</th>
+														<td> Lys</td>
+														<td> K</td>
+														<td> 146.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Methionine</th>
+														<td> Met</td>
+														<td> M</td>
+														<td> 149.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Phenylalanine</th>
+														<td> Phe</td>
+														<td> F</td>
+														<td> 165.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Proline</th>
+														<td> Pro</td>
+														<td> P</td>
+														<td> 115.1</td>
+													</tr>
+													<tr>
+														<th scope="row">Serine</th>
+														<td> Ser</td>
+														<td> S</td>
+														<td> 105.1</td>
+													</tr>
+													<tr>
+														<th scope="row">Threonine</th>
+														<td> Thr</td>
+														<td> T</td>
+														<td> 119.1</td>
+													</tr>
+													<tr>
+														<th scope="row">Tryptophan</th>
+														<td> Trp</td>
+														<td> W</td>
+														<td> 204.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Tyrosine</th>
+														<td> Tyr</td>
+														<td> Y</td>
+														<td> 181.2</td>
+													</tr>
+													<tr>
+														<th scope="row">Valine</th>
+														<td> Val</td>
+														<td> V</td>
+														<td> 117.1</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div-->
+
+
+								<!----->
+							</div>
+							<div class="card-body">
 
 
 
 
-		<div class="row">
-			<div class="col-md-12">
-
-				<div class="card">
-					<div class="card-header fs-5 fw-bold">Enter the actual molecular weight of the
-						sequence :
-						<!-- -->
-
-						<button class="btn btn-info  fs-5" type="button" style="float: right;" data-bs-toggle="collapse"
-							data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-							Table of molecular weights of amino acid
-						</button>
-
-						<div class="collapse" id="collapseExample1">
-							<div class="card card-body">
-								<div class="table-responsive">
-									<table class="table table-bordered border-primary table-hover">
-										<thead>
-											<tr>
-												<th scope="col">Amino Acid</th>
-												<th scope="col">3-letters code</th>
-												<th scope="col">1-letter code</th>
-												<th scope="col">Molecular weight</th>
-											</tr>
-
-										</thead>
-										<tbody>
-											<tr>
-												<th scope="row">Alanine</th>
-												<td>Ala</td>
-												<td>A</td>
-												<td>89.1</td>
-											</tr>
-											<tr>
-												<th scope="row">Arginine</th>
-												<td> Arg</td>
-												<td> R</td>
-												<td> 174.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Asparagine</th>
-												<td> Asn</td>
-												<td> N</td>
-												<td> 132.1</td>
-											</tr>
-											<tr>
-												<th scope="row">Aspartate</th>
-												<td> Asp</td>
-												<td> D</td>
-												<td> 133.1</td>
-											</tr>
-											<tr>
-												<th scope="row">Cysteine</th>
-												<td> Cys</td>
-												<td> C</td>
-												<td> 121.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Glutamate</th>
-												<td> Glu</td>
-												<td> E</td>
-												<td> 147.1</td>
-											</tr>
-											<tr>
-												<th scope="row">Glutamine</th>
-												<td> Gln</td>
-												<td> Q</td>
-												<td> 146.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Glycine</th>
-												<td> Gly</td>
-												<td> G</td>
-												<td> 75.1</td>
-											</tr>
-											<tr>
-												<th scope="row">Histidine</th>
-												<td> His</td>
-												<td> H</td>
-												<td> 155.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Isoleucine</td>
-												<td> Ile</td>
-												<td> I</td>
-												<td> 131.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Leucine</th>
-												<td> Leu</td>
-												<td> L</td>
-												<td> 131.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Lysine</th>
-												<td> Lys</td>
-												<td> K</td>
-												<td> 146.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Methionine</th>
-												<td> Met</td>
-												<td> M</td>
-												<td> 149.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Phenylalanine</th>
-												<td> Phe</td>
-												<td> F</td>
-												<td> 165.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Proline</th>
-												<td> Pro</td>
-												<td> P</td>
-												<td> 115.1</td>
-											</tr>
-											<tr>
-												<th scope="row">Serine</th>
-												<td> Ser</td>
-												<td> S</td>
-												<td> 105.1</td>
-											</tr>
-											<tr>
-												<th scope="row">Threonine</th>
-												<td> Thr</td>
-												<td> T</td>
-												<td> 119.1</td>
-											</tr>
-											<tr>
-												<th scope="row">Tryptophan</th>
-												<td> Trp</td>
-												<td> W</td>
-												<td> 204.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Tyrosine</th>
-												<td> Tyr</td>
-												<td> Y</td>
-												<td> 181.2</td>
-											</tr>
-											<tr>
-												<th scope="row">Valine</th>
-												<td> Val</td>
-												<td> V</td>
-												<td> 117.1</td>
-											</tr>
-										</tbody>
-									</table>
+								<div class="row g-3 align-items-center">
+									<div class="col-auto">
+										<label for="inputmwa1" class="col-form-label fs-5">M.W.
+											=</label>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmwa1" placeholder=" " class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											Da
+										</span>
+									</div>
 								</div>
+
+
+
+								<button id="mw1btn" type="button"
+									class="btn btn-success border border-1  rounded-3 fs-6 m-2"
+									style="cursor: pointer; " onclick="checkmw1btn()">Check</button>
+								<button id="mw1btnshow" type="button"
+									class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
+									style="cursor: pointer;float: right; " onclick="showmw1btn()" disabled>Show
+									Answer</button>
+
+
 							</div>
 						</div>
 
-
-						<!----->
 					</div>
-					<div class="card-body">
 
+				</div>
+				<!----------------------------------------------------------------------- Molar extinction cofficient amino acid ---------------------------------------------------------------->
 
+				<div class="row">
+					<div class="col-md-12">
 
+						<div class="card border-0" >
+							<div class="card-header border-primary fs-5 fw-bold">Enter the molar extinction coefficient of the
+								peptide sequence
 
-						<div class="row g-3 align-items-center">
-							<div class="col-auto">
-								<label for="inputmwa1" class="col-form-label fs-5">M.W.
-									=</label>
 							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmwa1" placeholder=" " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									Da
-								</span>
+							<div class="card-body">
+
+								<div class="row g-3 align-items-center">
+									<div class="col-auto">
+										<label for="inputmabs" class="col-form-label fs-5">ε =</label>
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											(
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmabs1" placeholder="nW " class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											x 5500 ) + (
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmabs2" placeholder="nY " class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											x 1490 ) + (
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmabs3" placeholder="nC " class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											x 125 ) =
+										</span>
+									</div>
+
+									<div class="col-auto">
+										<input type="input" id="inputmabst" placeholder=" " class="form-control"
+											readonly>
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											M <sup>-1</sup>cm <sup>-1</sup>
+										</span>
+									</div>
+								</div>
+
+								<button id="mabsbtn" type="button"
+									class="btn btn-success border border-1  rounded-3 fs-6 m-2"
+									style="cursor: pointer; " onclick="checkmabsbtn()">Check</button>
+								<button id="mabsbtnshow" type="button"
+									class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
+									style="cursor: pointer;float: right; " onclick="showmabsbtn()" disabled>Show
+									Answer</button>
+
 							</div>
 						</div>
-
-
-
-						<button id="mw1btn" type="button" class="btn btn-success border border-1  rounded-3 fs-6 m-2"
-							style="cursor: pointer; " onclick="checkmw1btn()">Check</button>
-						<button id="mw1btnshow" type="button"
-							class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
-							style="cursor: pointer;float: right; " onclick="showmw1btn()" disabled>Show
-							Answer</button>
 
 
 					</div>
 				</div>
-
-			</div>
-
-		</div>
-
-
-		<div class="row">
-			<div class="col-md-12">
-
-				<div class="card" id="card11">
-					<div class="card-header fs-5 fw-bold">Enter the molar extinction coefficient of the
-						peptide sequence
-
-					</div>
-					<div class="card-body">
-
-						<div class="row g-3 align-items-center">
-							<div class="col-auto">
-								<label for="inputmabs" class="col-form-label fs-5">ε =</label>
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									(
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmabs1" placeholder="nW " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									x 5500 ) + (
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmabs2" placeholder="nY " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									x 1490 ) + (
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmabs3" placeholder="nC " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									x 125 ) =
-								</span>
-							</div>
-
-							<div class="col-auto">
-								<input type="input" id="inputmabst" placeholder=" " class="form-control" readonly>
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									M <sup>-1</sup>cm <sup>-1</sup>
-								</span>
-							</div>
-						</div>
-
-						<button id="mabsbtn" type="button" class="btn btn-success border border-1  rounded-3 fs-6 m-2"
-							style="cursor: pointer; " onclick="checkmabsbtn()">Check</button>
-						<button id="mabsbtnshow" type="button"
-							class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
-							style="cursor: pointer;float: right; " onclick="showmabsbtn()" disabled>Show
-							Answer</button>
-
-					</div>
-				</div>
-
-
 			</div>
 		</div>
 
-
+		<!----------------------------------------------------------------------- pI ---------------------------------------------------------------->
 		<div class="row">
 			<div class="col-md-12">
 
-				<div class="card" id="card11">
-					<div class="card-header fs-5 fw-bold">Isoelectric point (pI)
+				<div class="card border-success border border-2" id="card11">
+					<div class="card-header fs-5 fw-bold border-success ">Isoelectric point (pI)
 
 						<!---->
 						<button class="btn btn-info  fs-5" type="button" style="float: right;" data-bs-toggle="collapse"
-							data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+							data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
 							Table of pKa and pI values
 						</button>
 
-						<div class="collapse" id="collapseExample2">
+						<div class="collapse" id="collapseExample4">
 							<div class="card card-body">
 								<div class="table-responsive">
 									<table class="table table-bordered border-primary table-hover">
@@ -927,7 +943,8 @@ Developer: Prakriti Dhang
 
 						<!---->
 					</div>
-					<div class="card-body">
+					<!----------------------------------------------------------------------- pI ---------------------------------------------------------------->
+					<div class="card-body  ">
 						<div class="row g-3 align-items-center">
 							<div class="col-auto">
 								<label for="inputpi" class="col-form-label fs-5">pI=</label>
@@ -974,15 +991,17 @@ Developer: Prakriti Dhang
 
 					</div>
 				</div>
-
 			</div>
 		</div>
 
+		<!----------------------------------------------------------------------- DNA sequence ---------------------------------------------------------------->
+		<div class="card border-info border border-2">
+			<div class="card-body">
 		<div class="row">
 			<div class="col-md-12">
 
-				<div class="card">
-					<div class="card-header fs-5 fw-bold">DNA</div>
+				<div class="card border-0">
+					<!--div class="card-header fs-5 fw-bold">DNA</div-->
 					<div class="card-body">
 						<div class="form-group m-2 fs-5">
 							<label class="fs-5" for="Textarea2">Please enter the DNA sequence ( 10-15 bases)
@@ -991,8 +1010,8 @@ Developer: Prakriti Dhang
 								rows="1"></textarea>
 						</div>
 
-						<button id="dnaseqbtn" type="button" class="btn btn-primary border border-1  rounded-3 fs-6 m-2"
-							style="cursor: pointer; " onclick="dnaseqbtn()">Enter</button>
+						<button id="dnaseqbtn" type="button" class="btn btn-purple border border-1  rounded-3 fs-6 m-2"
+							style="cursor: pointer; " onclick="dnaseqbtn()">Submit</button>
 						<!--button id="dnabtn" type="button"
 									class="btn btn-purple border border-1   rounded-3 fs-6 m-2"
 									style="cursor: pointer; " onclick="dnabtn()">Calculate Melting Temperature </button>
@@ -1009,11 +1028,11 @@ Developer: Prakriti Dhang
 
 			</div>
 		</div>
-		<!----------------------------------------------------------------------- Approx molecular weight ---------------------------------------------------------------->
+		<!----------------------------------------------------------------------- Approx molecular weight dna ---------------------------------------------------------------->
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card ">
-					<div class="card-header fs-5 fw-bold">Enter the approximate molecular weight of the
+				<div class="card border-0">
+					<div class="card-header border-info fs-5 fw-bold">Enter the approximate molecular weight of the
 						DNA sequence :
 					</div>
 					<div class="card-body">
@@ -1036,7 +1055,7 @@ Developer: Prakriti Dhang
 							</div>
 
 							<div class="col-auto">
-								<input type="input" id="inputmwdna" placeholder=" " readonly class="form-control">
+								<input type="input" id="inputmwdnar" placeholder=" " readonly class="form-control">
 							</div>
 							<div class="col-auto">
 								<span class="form-text fs-5">
@@ -1051,11 +1070,11 @@ Developer: Prakriti Dhang
 				</div>
 			</div>
 		</div>
-		<!----------------------------------------------------------------------- Actual molecular weight ---------------------------------------------------------------->
+		<!----------------------------------------------------------------------- Actual molecular weight of dna sequence ---------------------------------------------------------------->
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card ">
-					<div class="card-header fs-5 fw-bold">Enter the actual molecular weight of the DNA
+				<div class="card border-0">
+					<div class="card-header border-info fs-5 fw-bold">Enter the actual molecular weight of the DNA
 						sequence :
 					</div>
 					<div class="card-body">
@@ -1128,8 +1147,8 @@ Developer: Prakriti Dhang
 		<!----------------------------------------------------------------------- Tm ---------------------------------------------------------------->
 		<div class="row">
 			<div class="col-md-12">
-				<div class="card  ">
-					<div class="card-header fs-5 fw-bold">Enter the melting temperature of the DNA
+				<div class="card  border-0">
+					<div class="card-header border-info fs-5 fw-bold">Enter the melting temperature of the DNA
 						sequence :
 					</div>
 					<div class="card-body">
@@ -1220,6 +1239,8 @@ Developer: Prakriti Dhang
 				</div>
 			</div>
 
+		</div>
+		</div>
 		</div>
 		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog">

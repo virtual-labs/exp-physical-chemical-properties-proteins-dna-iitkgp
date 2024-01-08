@@ -44,6 +44,9 @@ function aseqbtn() {
   }
 }
 
+
+/****************************************** Approx molecular weight amino acid ********************************** */
+
 var aminoacidSequence, mw, userinptmw;
 function checkmwbtn() {
   aminoacidSequence = document.getElementById("Textarea1").value.toUpperCase();
@@ -78,7 +81,7 @@ function checkmwbtn() {
   //}
 }
 
-/********************************************   Amino acid sequence -molecular weight of protein **********************************************************/
+/********************************************   Amino acid sequence -actual molecular weight of protein **********************************************************/
 
 var mw1, userinptmw1;
 function checkmw1btn() {
@@ -251,7 +254,7 @@ function showmabsbtn() {
 }
 
 
-/********************************************   DNA  **********************************************************/
+/********************************************   DNA sequence  **********************************************************/
 
 function dnaseqbtn() {
   var dnaSequence = document.getElementById("Textarea2").value.toUpperCase();
@@ -278,14 +281,34 @@ function dnaseqbtn() {
 
 
 
+/****************************************** Approx molecular weight dna ********************************** */
 
+function apdnabtn(){
+  var dnaSequence = document.getElementById("Textarea2").value;
+  var mwdna = dnaSequence.length;
+  console.log(`Molecular Weight: ${mwdna} `);
+  var userinputmwdna = document.getElementById("inputmwdna").value;
 
+  if (userinputmwdna == mwdna) {
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Correct answer');
+    var resultmwdna = mwdna * 330;
+    document.getElementById("inputmwdnar").value = resultmwdna;
 
+  }
+  else {
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Incorrect number of bases.');
+    //document.getElementById("mwbtnshow").disabled = false;
+    //document.getElementById("inputmwar").value = "";
+  }
+}
 
+/****************************************** Tm dna ********************************** */
 
 var totalBases, molarConcentrationA, molarConcentrationT, molarConcentrationG, molarConcentrationC, Tm, dataPointg = [];
 var totalcountA, totalcountT, totalcountG, totalcountC;
-function dnabtn() {
+function tmdnabtn() {
   document.getElementById("card31").style.display = "block";
   var dnaSequence = document.getElementById("Textarea2").value;
 
@@ -350,7 +373,7 @@ function dnabtn() {
       //Calculate melting temperature
       Tm = (4 * (totalcountG + totalcountC) + 2 * (totalcountA + totalcountT));
 
-
+      document.getElementById("inputdnatm").value= Tm; 
       document.getElementById("tm").innerHTML = "Melting temperature (T<sub>m</sub>): " + Tm + "&deg;C";
 
       dataPointg.push({ x: parseFloat(Tm), y: parseFloat(molarConcentrationG + molarConcentrationC) })
