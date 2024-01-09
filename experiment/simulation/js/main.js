@@ -230,18 +230,18 @@ function checkmabsbtn() {
     if (userinptW != countW) {
 
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect number of W is inserted');
+      $('.modal-body').text('Incorrect number of W is entered');
       document.getElementById("inputmabst").value = " ";
     }
     if (userinptY != countY) {
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect number of Y is inserted');
+      $('.modal-body').text('Incorrect number of Y is entered');
       document.getElementById("inputmabst").value = " ";
 
     }
     if (userinptC != countC) {
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect number of C is inserted');
+      $('.modal-body').text('Incorrect number of C is entered');
       document.getElementById("inputmabst").value = " ";
 
     }
@@ -377,7 +377,7 @@ function apdnabtn() {
 
 function showmwdnabtn() {
   $('#alertModal').modal('show');
-  $('.modal-body').text('Approximate molecular weight of the above DNA sequence is: ' + mwdna);
+  $('.modal-body').html('<p> Number of amino acid is: ' + mwdna + '</p><p>  Approximate molecular weight of the above DNA sequence is: ' + resultmwdna + '</p>');
 }
 
 
@@ -469,26 +469,30 @@ countA = 0;
     if (userinptA != countA) {
 
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect number of A is inserted');
+      $('.modal-body').text('Incorrect number of A is entered');
       document.getElementById("inputmw2dnaMWtot").value = " ";
+      document.getElementById("dnamw1btnshow").disabled = false;
     }
     if (userinptT != countT) {
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect number of T is inserted');
+      $('.modal-body').text('Incorrect number of T is entered');
       document.getElementById("inputmw2dnaMWtot").value = " ";
+      document.getElementById("dnamw1btnshow").disabled = false;
 
     }
     if (userinptdC != countdC) {
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect number of C is inserted');
+      $('.modal-body').text('Incorrect number of C is entered');
       document.getElementById("inputmw2dnaMWtot").value = " ";
+      document.getElementById("dnamw1btnshow").disabled = false;
 
     }
 
     if (userinptG != countG) {
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect number of G is inserted');
+      $('.modal-body').text('Incorrect number of G is entered');
       document.getElementById("inputmw2dnaMWtot").value = " ";
+      document.getElementById("dnamw1btnshow").disabled = false;
 
     }
 
@@ -538,7 +542,7 @@ function tmdnabtn() {
     let countA = 0;
     let countT = 0;
     let countG = 0;
-    let countC = 0;
+    let countCtm = 0;
 
     // Iterate through the DNA sequence
     for (let i = 0; i < dnaSequence12.length; i++) {
@@ -556,7 +560,7 @@ function tmdnabtn() {
           countG++;
           break;
         case 'C':
-          countC++;
+          countCtm++;
           break;
         // You can add handling for other characters if needed
       }
@@ -572,7 +576,7 @@ function tmdnabtn() {
     totalcountA = countA;
     totalcountT = countT;
     totalcountG = countG;
-    totalcountC = countC;
+    totalcountC = countCtm;
 
     //displaying the result
     // document.getElementById("atgc").innerHTML = " <i>Count of A:</i> " + countA + "<br><br> <i>Count of T:</i> " + countT + "<br><br> <i>Count of G:</i> " + countG +
@@ -596,8 +600,8 @@ function tmdnabtn() {
     else {
 
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect melting temperature. Count number of A, T, G, C from the above DNA sequences.');
-
+      $('.modal-body').text('Incorrect melting temperature.');
+      document.getElementById("dnatmbtnshow").disable=false;
       document.getElementById("inputdnatm").value = "";
 
     }
@@ -619,7 +623,7 @@ function tmdnabtn() {
       countA,
       countT,
       countG,
-      countC,
+      countCtm,
       molarConcentrationA,
       molarConcentrationT,
       molarConcentrationG,
@@ -632,6 +636,11 @@ function tmdnabtn() {
 
 
   // }
+}
+
+function showtmdnabtn(){
+  $('#alertModal').modal('show');
+  $('.modal-body').text('Tm of the above DNA sequence is: ' + Tm);
 }
 
 
