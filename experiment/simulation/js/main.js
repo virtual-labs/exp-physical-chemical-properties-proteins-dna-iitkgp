@@ -41,6 +41,9 @@ function aseqbtn() {
   else {
     document.getElementById("Textarea1").readOnly = true;
     document.getElementById("aseqbtn").disabled = true;
+    document.getElementById("mwbtn").disabled = false;
+    document.getElementById("mw1btn").disabled = false;
+    document.getElementById("mecbtn").disabled = false;
   }
 }
 
@@ -69,7 +72,7 @@ function checkmwbtn() {
   }
   else {
     $('#alertModal').modal('show');
-    $('.modal-body').text('Incorrect answer. Please number of amino acid.');
+    $('.modal-body').text('Incorrect number of amino acid is entered.');
     document.getElementById("mwbtnshow").disabled = false;
     document.getElementById("inputmwar").value = "";
     document.getElementById("inputmwa").value = "";
@@ -335,8 +338,7 @@ function dnaseqbtn() {
       document.getElementById("inputdna2").readOnly = true;
       document.getElementById("dnaseqbtn").disabled = true;
 
-      $('#alertModal').modal('show');
-      $('.modal-body').text('Correct compliment sequence');
+    
     }
     else {
       $('#alertModal').modal('show');
@@ -345,6 +347,10 @@ function dnaseqbtn() {
       document.getElementById("inputdna2").readOnly = false;
       document.getElementById("dnaseqbtn").disabled = false;
     }
+
+    document.getElementById("mwdnabtn").disabled = false;
+    document.getElementById("actdnabtn").disabled = false;
+    document.getElementById("tmdnabtn").disabled = false;
   }
 }
 
@@ -454,6 +460,10 @@ countA = 0;
       document.getElementById("inputtmdnaT").value =countT;
       document.getElementById("inputtmdnaC").value =countdC;
       document.getElementById("inputtmdnaG").value =countG;
+      document.getElementById("inputtmdnaA").readOnly=true;
+      document.getElementById("inputtmdnaT").readOnly=true;
+      document.getElementById("inputtmdnaC").readOnly=true;
+      document.getElementById("inputtmdnaG").readOnly=true;
       document.getElementById("dnamw1btnshow").disabled = true;
 
 
@@ -524,7 +534,7 @@ function tmdnabtn() {
   var dnaSequence1 = document.getElementById("inputdna1").value;
   var dnaSequence2 = document.getElementById("inputdna2").value;
   var dnaSequence12 = dnaSequence1 + dnaSequence2;
-  alert(dnaSequence12);
+ // alert(dnaSequence12);
 
   /*if (!/^[ATGC]+$/i.test(dnaSequence)) {
 
@@ -601,7 +611,7 @@ function tmdnabtn() {
 
       $('#alertModal').modal('show');
       $('.modal-body').text('Incorrect melting temperature.');
-      document.getElementById("dnatmbtnshow").disable=false;
+      document.getElementById("dnatmbtnshow").disabled=false;
       document.getElementById("inputdnatm").value = "";
 
     }
@@ -640,7 +650,7 @@ function tmdnabtn() {
 
 function showtmdnabtn(){
   $('#alertModal').modal('show');
-  $('.modal-body').text('Tm of the above DNA sequence is: ' + Tm);
+  $('.modal-body').text('Tm of the above DNA sequence is: ' + Tm );
 }
 
 
