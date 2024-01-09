@@ -32,50 +32,76 @@ Developer: Prakriti Dhang
 					</div>
 					<div class="card-body">
 						<ol>
-							<li>Click on the button "Table of molecular weights of amino acid". Click on Table of pka
-								and pI values. Click on respective buttons to hide the table.</li>
+							<li>Click on the button "Table of molecular weights of amino acid" to see the 1-letter code and corresponding molecular weight. 
+								Click on "Table of pka
+								and pI values" to see the specific values for each amino acid. Click on respective buttons to hide the table.</li>
 							<li>Enter any Amino acid sequence in the input box and click on the button "Submit".</li>
-							<li>Approximate molecular weight of
-								the sequence </li>
-							<ol>
-								<li>Enter number of amino acid in the input box </li>
-								<li>Click on the button "Check". Click on "Show answer"
-									button to view correct answer.</li>
-							</ol>
-
-
-							<li>
-								Actual
-								molecular weight of the sequence
+							<ul type="disc">
+								<li>Approximate molecular weight of
+									the sequence </li>
 								<ol>
-									<li>Enter calculated molecular weight of amino acid in the input </li>
-									<li>Click on the "check" button. Click on "Show answer"
-										button to view correct answer.
-									</li>
+									<li>Enter number of amino acid in the input box. </li>
+									<li>Click on "Check" button to display a message indicating correctness.
+										To reveal the correct answer, click on the "Show Answer" button.</li>
 								</ol>
 
 
-							<li>Molar extinction coefficient of peptide sequence</li>
+								<li>
+									Actual
+									molecular weight of the sequence
+									<ol>
+										<li>Enter the calculated molecular weight of amino acid in the input box. </li>
+										<li>Click on "Check" button to display a message indicating correctness.
+											To reveal the correct answer, click on the "Show Answer" button.
+										</li>
+									</ol>
+
+
+								<li>Molar extinction coefficient of peptide sequence</li>
+								<ol>
+									<li>Enter number W, Y and C in the respective input boxes. </li>
+									<li>Click on "Check" button to display a message indicating correctness.
+										To reveal the correct answer, click on the "Show Answer" button. </li>
+										</ol>
+							</ul>
+						
+						<li>Isoelectric point (pI) Calculation</li>
+						<ol>
+							<li></li>
+							<li></li>
+						</ol>
+
+						<li>Enter DNA sequence in the input box 1 and enter compliment of the first DNA sequence. Click on the "Submit" button.</li>
+						<ul type="disc">
+							<li>Approximate molecular weight of double-standed DNA sequence</li>
 							<ol>
-								<li>Enter no. of W, Y and C in the respective input boxes. </li>
-								<li>Click on the button "Check". Click on "Show answer"
-									button to view correct answer. </li>
-							</ol>
-							<li>Isoelectric point (pI) Calculation</li>
-							<ol>
-								<li></li>
-								<li></li>
+								<li>Enter number of bases from single strand DNA sequence in the input box. </li>
+								<li>Click on "Check" button to display a message indicating correctness.
+									To reveal the correct answer, click on the "Show Answer" button.</li>
 							</ol>
 
-							<li>Enter DNA sequence in the input box and click on the "Submit" button.</li>
+							<li>Actual
+								molecular
+								weight of  double-stranded DNA sequence</li>
 							<ol>
-								<li>Enter number of bases in the input box. Click on "Check" button.</li>
-								<li>Enter number of A, T, C, G in the respective input boxes of "Enter the actual molecular
-									weight of the DNA sequence" section. Next click on "Check" button. </li>
-								<li>Enter number of A, T, C, G in the respective input boxes of "Enter the melting
-									temperature of the DNA sequence" section. Next click on "Check" button. </li>
-								<li>Click on "Plot Tm Vs GC" button. </li>
+								<li>Enter total number of A, T, C, G from the double strand DNA in the respective input
+									boxes </li>
+								<li>Next Click on "Check" button to display a message indicating correctness.
+									To reveal the correct answer, click on the "Show Answer" button. </li>
 							</ol>
+							<li>
+								Melting temperature (Tm) of double-stranded DNA sequence
+							</li>
+							<ol>
+
+								<li>Enter the melting
+									temperature of the DNA sequence in the input box "Enter calculated Tm". </li>
+								<li>Click on "Check" button to display a message indicating correctness.
+									To reveal the correct answer, click on the "Show Answer" button. </li>
+							
+</ol>
+							<li>Click on "Plot Tm Vs GC" button. </li>
+						</ul>
 
 
 						</ol>
@@ -417,7 +443,7 @@ Developer: Prakriti Dhang
 
 
 								<div class="form-group m-2 fs-5">
-									<label class="fs-5" for="Textarea1">Please enter the amino acid sequence ( 15-20
+									<label class="fs-5" for="Textarea1">Please enter the amino acid sequence (5-20
 										amino acid)
 									</label>
 									<textarea class="form-control" placeholder="Enter any amino acid sequence"
@@ -439,8 +465,9 @@ Developer: Prakriti Dhang
 					<div class="col-md-12">
 
 						<div class="card border-0">
-							<div class="card-header border-primary fs-5 fw-bold">Enter the approximate molecular weight of the
-								sequence 
+							<div class="card-header border-primary fs-5 fw-bold">Calculate the approximate molecular
+								weight of the
+								peptide sequence
 							</div>
 							<div class="card-body">
 
@@ -452,9 +479,9 @@ Developer: Prakriti Dhang
 										<label for="inputmwa" class="col-form-label fs-5">M.W.
 											=</label>
 									</div>
-									<div class="col-auto">
-										<input type="input" id="inputmwa" placeholder="Number of amino acids "
-											class="form-control">
+									<div class="col-md-2">
+										<input type="input" id="inputmwa" placeholder="Enter number of amino acids "
+											class="form-control ">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -504,8 +531,9 @@ Developer: Prakriti Dhang
 					<div class="col-md-12">
 
 						<div class="card border-0">
-							<div class="card-header border-primary fs-5 fw-bold">Enter the actual molecular weight of the
-								sequence:
+							<div class="card-header border-primary fs-5 fw-bold">Enter the actual molecular weight of
+								the
+								peptide sequence
 								<!-- -->
 
 								<!--button class="btn btn-info  fs-5" type="button" style="float: right;"
@@ -699,8 +727,9 @@ Developer: Prakriti Dhang
 				<div class="row">
 					<div class="col-md-12">
 
-						<div class="card border-0" >
-							<div class="card-header border-primary fs-5 fw-bold">Enter the molar extinction coefficient of the
+						<div class="card border-0">
+							<div class="card-header border-primary fs-5 fw-bold">Calculate the molar extinction
+								coefficient of the
 								peptide sequence
 
 							</div>
@@ -716,7 +745,7 @@ Developer: Prakriti Dhang
 										</span>
 									</div>
 									<div class="col-auto">
-										<input type="input" id="inputmabs1" placeholder="nW " class="form-control">
+										<input type="input" id="inputmabs1" placeholder="Enter number of W " class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -724,7 +753,7 @@ Developer: Prakriti Dhang
 										</span>
 									</div>
 									<div class="col-auto">
-										<input type="input" id="inputmabs2" placeholder="nY " class="form-control">
+										<input type="input" id="inputmabs2" placeholder="Enter number of Y " class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -732,7 +761,7 @@ Developer: Prakriti Dhang
 										</span>
 									</div>
 									<div class="col-auto">
-										<input type="input" id="inputmabs3" placeholder="nC " class="form-control">
+										<input type="input" id="inputmabs3" placeholder="Enter number of C " class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -997,250 +1026,308 @@ Developer: Prakriti Dhang
 		<!----------------------------------------------------------------------- DNA sequence ---------------------------------------------------------------->
 		<div class="card border-info border border-2">
 			<div class="card-body">
-		<div class="row">
-			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12">
 
-				<div class="card border-0">
-					<!--div class="card-header fs-5 fw-bold">DNA</div-->
-					<div class="card-body">
-						<div class="form-group m-2 fs-5">
-							<label class="fs-5" for="Textarea2">Please enter the DNA sequence ( 10-15 bases)
-							</label>
-							<textarea class="form-control" placeholder="Enter any DNA sequence" id="Textarea2"
-								rows="1"></textarea>
-						</div>
+						<div class="card border-0">
+							<!--div class="card-header fs-5 fw-bold">DNA</div-->
+							<div class="card-body">
+								<div class="form-group m-2 fs-5">
+									<label class="fs-5" for="Textarea2">Please enter the DNA sequence (5-15 bases)
+									</label>
+									<!--textarea class="form-control" placeholder="Enter any DNA sequence" id="Textarea2"
+										rows="1"></textarea-->
+								</div>
 
-						<button id="dnaseqbtn" type="button" class="btn btn-purple border border-1  rounded-3 fs-6 m-2"
-							style="cursor: pointer; " onclick="dnaseqbtn()">Submit</button>
-						<!--button id="dnabtn" type="button"
+								<div class="row g-2 mb-2 align-items-center">
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											<sup>5'</sup>
+										</span>
+									</div>
+									<div class="col-md-6">
+										<input type="input" id="inputdna1" placeholder="Enter any DNA sequence "
+											class="form-control col-md-6">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											<sup>3'</sup>
+										</span>
+									</div>
+								</div>
+
+								<div class="row g-2 align-items-center">
+
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											<sup>3'</sup>
+										</span>
+									</div>
+									<div class="col-md-6">
+										<input type="input" id="inputdna2"
+											placeholder="Enter compliment of the above DNA sequence "
+											class="form-control col-md-6">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											<sup>5'</sup>
+										</span>
+									</div>
+								</div>
+								<button id="dnaseqbtn" type="button"
+									class="btn btn-purple border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
+									onclick="dnaseqbtn()">Submit</button>
+								<!--button id="dnabtn" type="button"
 									class="btn btn-purple border border-1   rounded-3 fs-6 m-2"
 									style="cursor: pointer; " onclick="dnabtn()">Calculate Melting Temperature </button>
 								<button id="dnabtn" type="button"
 									class="btn btn-success border border-1  rounded-3 fs-6 m-2"
 									style="cursor: pointer; " onclick="dnatmgraph()">Plot GC concentration and Tm
 								</button-->
-					</div>
-
-
-
-
-				</div>
-
-			</div>
-		</div>
-		<!----------------------------------------------------------------------- Approx molecular weight dna ---------------------------------------------------------------->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card border-0">
-					<div class="card-header border-info fs-5 fw-bold">Enter the approximate molecular weight of the
-						DNA sequence :
-					</div>
-					<div class="card-body">
-						<label class="fs-5" for="Textarea21"></label>
-						<div class="row g-3 align-items-center">
-
-
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									330 x
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmwdna" placeholder="Number of bases " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									=
-								</span>
 							</div>
 
-							<div class="col-auto">
-								<input type="input" id="inputmwdnar" placeholder=" " readonly class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									Da
-								</span>
-							</div>
+
+
 
 						</div>
-						<button id="mwdnabtn" type="button" class="btn btn-success border border-1   rounded-3 fs-6 m-2"
-							style="cursor: pointer; " onclick="apdnabtn()">Check </button>
+
 					</div>
 				</div>
-			</div>
-		</div>
-		<!----------------------------------------------------------------------- Actual molecular weight of dna sequence ---------------------------------------------------------------->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card border-0">
-					<div class="card-header border-info fs-5 fw-bold">Enter the actual molecular weight of the DNA
-						sequence :
-					</div>
-					<div class="card-body">
-						<label class="fs-5" for="Textarea22">
-						</label>
-						<div class="row g-3 align-items-center">
-							<div class="col-auto">
-								<label for="inputmw2dna" class="col-form-label fs-5">M.W =</label>
+				<!----------------------------------------------------------------------- Approx molecular weight dna ---------------------------------------------------------------->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card border-0">
+							<div class="card-header border-info fs-5 fw-bold">Calculate the approximate molecular weight
+								of double-standed DNA sequence
 							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									(
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmw2dnaA" placeholder="nA " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									x 313.2 ) + (
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmw2dnaT" placeholder="nT " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									x 304.2 ) + (
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmw2dnaC" placeholder="nC " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									x 289.2 ) + (
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmw2dnaG" placeholder="nG " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									x 329.2 )
-								</span>
-							</div>
+							<div class="card-body">
+								<label class="fs-5" for="Textarea21"></label>
+								<div class="row g-3 align-items-center">
 
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									=
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputmw2dnaMWtot" placeholder="Molecular weight "
-									class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									Da
-								</span>
+
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											660 x
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmwdna" placeholder="Enter number of bases "
+											class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											=
+										</span>
+									</div>
+
+									<div class="col-auto">
+										<input type="input" id="inputmwdnar" placeholder=" " readonly
+											class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											Da
+										</span>
+									</div>
+
+								</div>
+								<button id="mwdnabtn" type="button"
+									class="btn btn-success border border-1   rounded-3 fs-6 m-2"
+									style="cursor: pointer; " onclick="apdnabtn()">Check </button>
+								<button id="dnamwbtnshow" type="button"
+									class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
+									style="cursor: pointer;float: right; " onclick="showmwdnabtn()" disabled>Show
+									Answer</button>
 							</div>
 						</div>
-						<button id="actdnabtn" type="button"
-							class="btn btn-success border border-1   rounded-3 fs-6 m-2" style="cursor: pointer; "
-							onclick="actdnabtn()">Check </button>
 					</div>
 				</div>
-			</div>
-		</div>
-		<!----------------------------------------------------------------------- Tm ---------------------------------------------------------------->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card  border-0">
-					<div class="card-header border-info fs-5 fw-bold">Enter the melting temperature of the DNA
-						sequence :
-					</div>
-					<div class="card-body">
-						<label class="fs-5" for="Textarea23"></label>
-						<div class="row g-3 align-items-center">
-							<div class="col-auto">
-								<label for="inputtmdna" class="col-form-label fs-5">Tm =</label>
+				<!----------------------------------------------------------------------- Actual molecular weight of dna sequence ---------------------------------------------------------------->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card border-0">
+							<div class="card-header border-info fs-5 fw-bold">Calculate the actual molecular weight of
+								the double-stranded DNA
+								sequence 
 							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									(
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputtmdnaA" placeholder="nA " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									+
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputtmdnaT" placeholder="nT " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									) x 2 + (
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputtmdnaC" placeholder="nC " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									+
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputtmdnaG" placeholder="nG " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									) x 4
-								</span>
-							</div>
+							<div class="card-body">
+								<label class="fs-5" for="Textarea22">
+								</label>
+								<div class="row g-3 align-items-center">
+									<div class="col-auto">
+										<label for="inputmw2dna" class="col-form-label fs-5">M.W =</label>
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											(
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmw2dnaA" placeholder="Enter number of A "
+											class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											x 313.2 ) + (
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmw2dnaT" placeholder="Enter number of T "
+											class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											x 304.2 ) + (
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmw2dnaC" placeholder="Enter number of C "
+											class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											x 289.2 ) + (
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmw2dnaG" placeholder="Enter number of G "
+											class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											x 329.2 )
+										</span>
+									</div>
 
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									=
-								</span>
-							</div>
-							<div class="col-auto">
-								<input type="input" id="inputdnatm" placeholder="Tm " class="form-control">
-							</div>
-							<div class="col-auto">
-								<span class="form-text fs-5">
-									&deg;C
-								</span>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											=
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputmw2dnaMWtot" placeholder="Molecular weight "
+											class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											Da
+										</span>
+									</div>
+								</div>
+								<button id="actdnabtn" type="button"
+									class="btn btn-success border border-1   rounded-3 fs-6 m-2"
+									style="cursor: pointer; " onclick="actdnabtn()">Check </button>
+								<button id="dnamw1btnshow" type="button"
+									class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
+									style="cursor: pointer;float: right; " onclick="showmw1dnabtn()" disabled>Show
+									Answer</button>
 							</div>
 						</div>
-						<button id="actdnabtn" type="button"
-							class="btn btn-success border border-1   rounded-3 fs-6 m-2" style="cursor: pointer; "
-							onclick="tmdnabtn()">Check </button>
+					</div>
+				</div>
+				<!----------------------------------------------------------------------- Tm ---------------------------------------------------------------->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card  border-0">
+							<div class="card-header border-info fs-5 fw-bold">Calculate the melting temperature (Tm) of
+								double-stranded DNA
+								sequence 
+							</div>
+							<div class="card-body">
+								<label class="fs-5" for="Textarea23"></label>
+								<div class="row g-3 align-items-center">
+									<div class="col-auto">
+										<label for="inputtmdna" class="col-form-label fs-5">Tm =</label>
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											(
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputtmdnaA" placeholder="nA " class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											+
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputtmdnaT" placeholder="nT " class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											) x 2 + (
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputtmdnaC" placeholder="nC " class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											+
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputtmdnaG" placeholder="nG " class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											) x 4
+										</span>
+									</div>
+
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											=
+										</span>
+									</div>
+									<div class="col-auto">
+										<input type="input" id="inputdnatm" placeholder="Enter calculated Tm "
+											class="form-control">
+									</div>
+									<div class="col-auto">
+										<span class="form-text fs-5">
+											&deg;C
+										</span>
+									</div>
+								</div>
+								<button id="actdnabtn" type="button"
+									class="btn btn-success border border-1   rounded-3 fs-6 m-2"
+									style="cursor: pointer; " onclick="tmdnabtn()">Check </button>
+								<button id="dnatmbtnshow" type="button"
+									class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
+									style="cursor: pointer;float: right; " onclick="showtmdnabtn()" disabled>Show
+									Answer</button>
+							</div>
+
+
+						</div>
+
+
+
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card card-body border-1" id="card31" style="display:none;">
+								<p id="atgc">
+
+								</p>
+								<p id="tm">
+
+								</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="card card-body border-1" id="card32" style="display:none;">
+								<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+								<!--button class="btn btn-olive" id="exportChart">Export Chart</button-->
+							</div>
+						</div>
 					</div>
 
-
 				</div>
-
-
-
 			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="card card-body border-1" id="card31" style="display:none;">
-						<p id="atgc">
-
-						</p>
-						<p id="tm">
-
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="card card-body border-1" id="card32" style="display:none;">
-						<div id="chartContainer" style="height: 500px; width: 100%;"></div>
-						<!--button class="btn btn-olive" id="exportChart">Export Chart</button-->
-					</div>
-				</div>
-			</div>
-
-		</div>
-		</div>
 		</div>
 		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog">

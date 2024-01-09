@@ -29,13 +29,13 @@ function aseqbtn() {
     $('#alertModal').modal('show');
     $('.modal-body').text('Please enter only 1-letter code of amino acid.');
   }
-  if (/^[0-9]+$/i.test(aminoacidSequence)) {
+  else if (/^[0-9]+$/i.test(aminoacidSequence)) {
     $('#alertModal').modal('show');
     $('.modal-body').text('Invalid Amino acid sequence. Please enter only 1-letter code of amino acid.');
   }
-  if(aminoacidSequence.length >20){
+  else if ((aminoacidSequence.length < 5) || (aminoacidSequence.length > 20)) {
     $('#alertModal').modal('show');
-    $('.modal-body').text('Please enter 15-20 amino acids.');
+    $('.modal-body').text('Please enter 5-20 amino acids.');
   }
 
   else {
@@ -72,6 +72,7 @@ function checkmwbtn() {
     $('.modal-body').text('Incorrect answer. Please number of amino acid.');
     document.getElementById("mwbtnshow").disabled = false;
     document.getElementById("inputmwar").value = "";
+    document.getElementById("inputmwa").value = "";
   }
 
 
@@ -81,6 +82,12 @@ function checkmwbtn() {
   //}
 }
 
+
+
+function showmwbtn() {
+  $('#alertModal').modal('show');
+  $('.modal-body').text('Number of amino acid in the above sequence is: ' + mw);
+}
 /********************************************   Amino acid sequence -actual molecular weight of protein **********************************************************/
 
 var mw1, userinptmw1;
@@ -92,6 +99,7 @@ function checkmw1btn() {
   }
 
   else {*/
+  var amacidlength = aminoacidSequence.length;
 
   const molecularWeights = {
     'A': 89.1,
@@ -119,7 +127,7 @@ function checkmw1btn() {
     return sum + (molecularWeights[aminoAcid] || 0);
   }, 0);
 
-  mw1 = totalWeight.toFixed(2);
+  mw1 = (totalWeight - ((amacidlength - 1) * 18)).toFixed(2);
   console.log(`Molecular Weight: ${mw1} `);
   userinptmw1 = document.getElementById("inputmwa1").value;
 
@@ -139,17 +147,17 @@ function checkmw1btn() {
 
 function showmw1btn() {
   $('#alertModal').modal('show');
-  $('.modal-body').text('Molecular weight of the above sequence is: ' + mw1);
+  $('.modal-body').text('Actual molecular weight of the above sequence is: ' + mw1);
 }
 
 /************************************************************************ Molar extinction coefficient of protein    *******************************************************************************************/
-var userinptW, userinptY, userinptC;
+var userinptW, userinptY, userinptC,countW,countY,counC;
 
 
 function checkmabsbtn() {
-  let countW = 0;
-  let countY = 0;
-  let countC = 0;
+  countW = 0;
+  countY = 0;
+  countC = 0;
   aminoacidSequence = document.getElementById("Textarea1").value.toUpperCase();
   /* if (/^[0-9]+$/i.test(aminoacidSequence)) {
      $('#alertModal').modal('show');
@@ -187,22 +195,34 @@ function checkmabsbtn() {
     userinptY = document.getElementById("inputmabs2").value;
     userinptC = document.getElementById("inputmabs3").value;
 
-   console.log(countW);
-   console.log(countY);
+
+    console.log(countW);
+    console.log(countY);
     console.log(countC);
+
     var mwact = (countW * 5500) + (countY * 1490) + (countC * 125);
-   
-    /*  if ((userinptW === null || userinptW === '') &&
-        (userinptY === null || userinptY === '') &&
-        (userinptC === null || userinptC === '')) {
-        $('#alertModal').modal('show');
-        $('.modal-body').text('Enter number of W, Y, C');
-      }*/
-    if ((userinptW == countW) && (userinptY == countY) && (userinptC == countC)) {
+    var userinptwyc = document.getElementById("inputmabst").value = mwact;
+
+    /* if (((userinptW == countW) && (userinptY == countY) && (userinptC == countC)) && (userinptwyc !== '0') ) {
+       $('#alertModal').modal('show');
+       $('.modal-body').text('Correct answer');
+       
+       document.getElementById("inputmabst").value = mwact;
+     }*/
+
+    if (
+      (userinptW !== '0' && userinptW == countW) ||
+      (userinptY !== '0' && userinptY == countY) ||
+      (userinptC !== '0' && userinptC == countC)
+    ) {
       $('#alertModal').modal('show');
       $('.modal-body').text('Correct answer');
-      
       document.getElementById("inputmabst").value = mwact;
+    }
+    else {
+      document.getElementById("inputmabst").value = 0;
+      $('#alertModal').modal('show');
+      $('.modal-body').text('To calculate the molar extinction coefficient, the peptide sequence must contain Tryptophan, Tyrosine, Cysteine');
     }
 
     // else {
@@ -210,24 +230,24 @@ function checkmabsbtn() {
     if (userinptW != countW) {
 
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect answer. Please enter number of W correctly');
+      $('.modal-body').text('Incorrect number of W is inserted');
       document.getElementById("inputmabst").value = " ";
     }
     if (userinptY != countY) {
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect answer. Please enter number of Y correctly');
+      $('.modal-body').text('Incorrect number of Y is inserted');
       document.getElementById("inputmabst").value = " ";
 
     }
     if (userinptC != countC) {
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect answer. Please enter number of C correctly');
+      $('.modal-body').text('Incorrect number of C is inserted');
       document.getElementById("inputmabst").value = " ";
 
     }
     // document.getElementById("Textarea1").value="";
     document.getElementById("mabsbtnshow").disabled = false;
-    
+
     // }
 
 
@@ -257,60 +277,250 @@ function showmabsbtn() {
 /********************************************   DNA sequence  **********************************************************/
 
 function dnaseqbtn() {
-  var dnaSequence = document.getElementById("Textarea2").value.toUpperCase();
+  var dnaSequence = document.getElementById("inputdna1").value;
+  var userinputdna2 = document.getElementById("inputdna2").value.toUpperCase();
 
   if (dnaSequence == "") {
     $('#alertModal').modal('show');
     $('.modal-body').text('Please enter only 1-letter code of amino acid.');
   }
 
-  if(dnaSequence.length >15){
+  else if ((dnaSequence.length < 5) || (dnaSequence.length > 15)) {
     $('#alertModal').modal('show');
-    $('.modal-body').text('Please enter 10-15 DNA bases.');
+    $('.modal-body').text('Please enter 5-15 DNA bases.');
+
+
   }
-  if (!/^[ATGC]+$/i.test(dnaSequence)) {
+  else if (!/^[ATGC]+$/i.test(dnaSequence)) {
 
     $('#alertModal').modal('show');
     $('.modal-body').text('Invalid DNA sequence. Please enter only A, T, G, and C letters.');
   }
   else {
-    document.getElementById("Textarea2").readOnly = true;
-    document.getElementById("dnaseqbtn").disabled = true;
+
+
+    function generateComplementaryStrand(dnaSequence) {
+      var complementaryStrand = "";
+
+      for (var i = 0; i < dnaSequence.length; i++) {
+        switch (dnaSequence[i].toUpperCase()) {
+          case 'A':
+            complementaryStrand += 'T';
+            break;
+          case 'T':
+            complementaryStrand += 'A';
+            break;
+          case 'G':
+            complementaryStrand += 'C';
+            break;
+          case 'C':
+            complementaryStrand += 'G';
+            break;
+          default:
+            // Handle other characters if needed
+            complementaryStrand += dnaSequence[i];
+        }
+      }
+
+      return complementaryStrand;
+    }
+
+    // var originalSequence = "agtca";
+    var complementarySequence = generateComplementaryStrand(dnaSequence);
+
+    //console.log(complementarySequence);
+
+    if (userinputdna2 == complementarySequence) {
+      document.getElementById("inputdna1").readOnly = true;
+      document.getElementById("inputdna2").readOnly = true;
+      document.getElementById("dnaseqbtn").disabled = true;
+
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Correct compliment sequence');
+    }
+    else {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Incorrect compliment sequence of the above sequence');
+      document.getElementById("inputdna1").readOnly = true;
+      document.getElementById("inputdna2").readOnly = false;
+      document.getElementById("dnaseqbtn").disabled = false;
+    }
   }
 }
 
 
 
 /****************************************** Approx molecular weight dna ********************************** */
-
-function apdnabtn(){
-  var dnaSequence = document.getElementById("Textarea2").value;
-  var mwdna = dnaSequence.length;
+var mwdna;
+function apdnabtn() {
+  var dnaSequence = document.getElementById("inputdna1").value;
+  mwdna = dnaSequence.length;
   console.log(`Molecular Weight: ${mwdna} `);
   var userinputmwdna = document.getElementById("inputmwdna").value;
 
   if (userinputmwdna == mwdna) {
     $('#alertModal').modal('show');
     $('.modal-body').text('Correct answer');
-    var resultmwdna = mwdna * 330;
+    var resultmwdna = mwdna * 660;
     document.getElementById("inputmwdnar").value = resultmwdna;
 
   }
   else {
     $('#alertModal').modal('show');
     $('.modal-body').text('Incorrect number of bases.');
-    //document.getElementById("mwbtnshow").disabled = false;
-    //document.getElementById("inputmwar").value = "";
+    document.getElementById("dnaseqbtn").disabled = false;
+    document.getElementById("dnamwbtnshow").disabled = false;
+    document.getElementById("inputmwdna").value = "";
   }
 }
+
+
+function showmwdnabtn() {
+  $('#alertModal').modal('show');
+  $('.modal-body').text('Approximate molecular weight of the above DNA sequence is: ' + mwdna);
+}
+
+
+/****************************************** Actual mw dna ********************************** */
+var userinptA, userinptT, userinptdC, userinptG,countA,countT,countdC,countG;
+function actdnabtn() {
+countA = 0;
+  countT = 0;
+  countdC = 0;
+ countG = 0;
+  var dnaSequence1 = document.getElementById("inputdna1").value;
+  var dnaSequence2 = document.getElementById("inputdna2").value;
+  var dnaSequence12 = dnaSequence1 + dnaSequence2;
+  countatcg(dnaSequence12);
+  function countatcg(dnaSequence12) {
+    // Initialize counters
+
+
+
+    for (let i = 0; i < dnaSequence12.length; i++) {
+      let atcg = dnaSequence12[i].toUpperCase(); // Convert to uppercase for case-insensitivity
+
+      // Count each nucleotide
+      switch (atcg) {
+        case 'A':
+          countA++;
+          break;
+        case 'T':
+          countT++;
+          break;
+        case 'C':
+          countdC++;
+          break;
+        case 'G':
+          countG++;
+          break;
+
+
+      }
+    }
+
+
+
+    userinptA = document.getElementById("inputmw2dnaA").value;
+    userinptT = document.getElementById("inputmw2dnaT").value;
+    userinptdC = document.getElementById("inputmw2dnaC").value;
+    userinptG = document.getElementById("inputmw2dnaG").value;
+
+    console.log(countA);
+    console.log(countT);
+    console.log(countdC);
+    console.log(countG);
+
+    var mwactdna = ((countA * 313.2) + (countT * 304.2) + (countdC * 289.2) + (countG * 329.2)).toFixed(2);
+    //var userinptatcg = document.getElementById("inputmw2dnaMWtot").value = mwactdna;
+
+    /* if (((userinptW == countW) && (userinptY == countY) && (userinptC == countC)) && (userinptwyc !== '0') ) {
+       $('#alertModal').modal('show');
+       $('.modal-body').text('Correct answer');
+       
+       document.getElementById("inputmabst").value = mwact;
+     }*/
+
+    if (
+      (userinptA == countA) &&
+      (userinptT == countT) &&
+      (userinptdC == countdC) &&
+      (userinptG == countG)
+    ) {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Correct answer');
+      document.getElementById("inputmw2dnaMWtot").value = mwactdna;
+      document.getElementById("inputtmdnaA").value =countA;
+      document.getElementById("inputtmdnaT").value =countT;
+      document.getElementById("inputtmdnaC").value =countdC;
+      document.getElementById("inputtmdnaG").value =countG;
+      document.getElementById("dnamw1btnshow").disabled = true;
+
+
+    }
+    else {
+
+      $('#alertModal').modal('show');
+      $('.modal-body').text('To calculate the molar extinction coefficient, the peptide sequence must contain Tryptophan, Tyrosine, Cysteine');
+    }
+
+    // else {
+
+    if (userinptA != countA) {
+
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Incorrect number of A is inserted');
+      document.getElementById("inputmw2dnaMWtot").value = " ";
+    }
+    if (userinptT != countT) {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Incorrect number of T is inserted');
+      document.getElementById("inputmw2dnaMWtot").value = " ";
+
+    }
+    if (userinptdC != countdC) {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Incorrect number of C is inserted');
+      document.getElementById("inputmw2dnaMWtot").value = " ";
+
+    }
+
+    if (userinptG != countG) {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Incorrect number of G is inserted');
+      document.getElementById("inputmw2dnaMWtot").value = " ";
+
+    }
+
+
+
+    // document.getElementById("Textarea1").value="";
+    
+
+
+  }
+
+
+}
+
+
+function showmw1dnabtn() {
+  $('#alertModal').modal('show');
+  $('.modal-body').html('<p>Number of A in the above sequence is : ' + countA + ' </p> <p>Number of T in the above sequence is: ' + countT + ' </p><p>Number of C in the above sequence is :  ' + countdC + ' </p> <p>Number of G in the above sequence is :  ' + countG+ '</p>' );
+}
+
+
 
 /****************************************** Tm dna ********************************** */
 
 var totalBases, molarConcentrationA, molarConcentrationT, molarConcentrationG, molarConcentrationC, Tm, dataPointg = [];
 var totalcountA, totalcountT, totalcountG, totalcountC;
 function tmdnabtn() {
-  document.getElementById("card31").style.display = "block";
-  var dnaSequence = document.getElementById("Textarea2").value;
+
+  var dnaSequence1 = document.getElementById("inputdna1").value;
+  var dnaSequence2 = document.getElementById("inputdna2").value;
+  var dnaSequence12 = dnaSequence1 + dnaSequence2;
+  alert(dnaSequence12);
 
   /*if (!/^[ATGC]+$/i.test(dnaSequence)) {
 
@@ -321,89 +531,107 @@ function tmdnabtn() {
   else {*/
 
 
-    countNucleotides(dnaSequence);
+  countNucleotides(dnaSequence12);
 
-    function countNucleotides(dnaSequence) {
-      // Initialize counters
-      let countA = 0;
-      let countT = 0;
-      let countG = 0;
-      let countC = 0;
+  function countNucleotides(dnaSequence12) {
+    // Initialize counters
+    let countA = 0;
+    let countT = 0;
+    let countG = 0;
+    let countC = 0;
 
-      // Iterate through the DNA sequence
-      for (let i = 0; i < dnaSequence.length; i++) {
-        let nucleotide = dnaSequence[i].toUpperCase(); // Convert to uppercase for case-insensitivity
+    // Iterate through the DNA sequence
+    for (let i = 0; i < dnaSequence12.length; i++) {
+      let nucleotide = dnaSequence12[i].toUpperCase(); // Convert to uppercase for case-insensitivity
 
-        // Count each nucleotide
-        switch (nucleotide) {
-          case 'A':
-            countA++;
-            break;
-          case 'T':
-            countT++;
-            break;
-          case 'G':
-            countG++;
-            break;
-          case 'C':
-            countC++;
-            break;
-          // You can add handling for other characters if needed
-        }
+      // Count each nucleotide
+      switch (nucleotide) {
+        case 'A':
+          countA++;
+          break;
+        case 'T':
+          countT++;
+          break;
+        case 'G':
+          countG++;
+          break;
+        case 'C':
+          countC++;
+          break;
+        // You can add handling for other characters if needed
       }
+    }
 
-      // Optional: Calculate molar concentrations
-      /*totalBases = (dnaSequence.length);
-      molarConcentrationA = (countA / totalBases);
-      molarConcentrationT = (countT / totalBases);
-      molarConcentrationG = (countG / totalBases);
-      molarConcentrationC = (countC / totalBases);*/
+    // Optional: Calculate molar concentrations
+    /*totalBases = (dnaSequence.length);
+    molarConcentrationA = (countA / totalBases);
+    molarConcentrationT = (countT / totalBases);
+    molarConcentrationG = (countG / totalBases);
+    molarConcentrationC = (countC / totalBases);*/
 
-      totalcountA = countA;
-      totalcountT = countT;
-      totalcountG = countG;
-      totalcountC = countC;
+    totalcountA = countA;
+    totalcountT = countT;
+    totalcountG = countG;
+    totalcountC = countC;
 
-      //displaying the result
-      document.getElementById("atgc").innerHTML = " <i>Count of A:</i> " + countA + "<br><br> <i>Count of T:</i> " + countT + "<br><br> <i>Count of G:</i> " + countG +
-        "<br><br> <i>Count of C:</i> " + countC;
-      //+ "<br><br><br><i> Molar Concentration of A:</i>  " + molarConcentrationA + "<br><br> <i>Molar Concentration of T:</i>  " + molarConcentrationT +
-      //"<br><br> <i>Molar Concentration of G:</i>  " + molarConcentrationG + "<br><br> <i>Molar Concentration of C:</i>  " + molarConcentrationC;
+    //displaying the result
+    // document.getElementById("atgc").innerHTML = " <i>Count of A:</i> " + countA + "<br><br> <i>Count of T:</i> " + countT + "<br><br> <i>Count of G:</i> " + countG +
+    //   "<br><br> <i>Count of C:</i> " + countC;
+    //+ "<br><br><br><i> Molar Concentration of A:</i>  " + molarConcentrationA + "<br><br> <i>Molar Concentration of T:</i>  " + molarConcentrationT +
+    //"<br><br> <i>Molar Concentration of G:</i>  " + molarConcentrationG + "<br><br> <i>Molar Concentration of C:</i>  " + molarConcentrationC;
 
-      //Calculate melting temperature
-      Tm = (4 * (totalcountG + totalcountC) + 2 * (totalcountA + totalcountT));
+    //Calculate melting temperature
+    Tm = (4 * (totalcountG + totalcountC) + 2 * (totalcountA + totalcountT));
 
-      document.getElementById("inputdnatm").value= Tm; 
-      document.getElementById("tm").innerHTML = "Melting temperature (T<sub>m</sub>): " + Tm + "&deg;C";
+    //document.getElementById("inputdnatm").value= Tm; 
+    var userinputtm = document.getElementById("inputdnatm").value
+    // document.getElementById("tm").innerHTML = "Melting temperature (T<sub>m</sub>): " + Tm + "&deg;C";
 
-      dataPointg.push({ x: parseFloat(Tm), y: parseFloat(molarConcentrationG + molarConcentrationC) })
-      // console.log('Count of A:', countA);
-      // console.log('Count of T:', countT);
-      // console.log('Count of G:', countG);
-      // console.log('Count of C:', countC);
-      //console.log('Molar Concentration of A:', molarConcentrationA);
-      //console.log('Molar Concentration of T:', molarConcentrationT);
-      //console.log('Molar Concentration of G:', molarConcentrationG);
-      //console.log('Molar Concentration of C:', molarConcentrationC);
+    if ((userinputtm == Tm)) {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Correct answer');
 
-      // Return the results
-      return {
-        countA,
-        countT,
-        countG,
-        countC,
-        molarConcentrationA,
-        molarConcentrationT,
-        molarConcentrationG,
-        molarConcentrationC,
-      };
+      document.getElementById("inputdnatm").value = Tm;
+    }
+    else {
+
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Incorrect melting temperature. Count number of A, T, G, C from the above DNA sequences.');
+
+      document.getElementById("inputdnatm").value = "";
+
     }
 
 
 
+    //dataPointg.push({ x: parseFloat(Tm), y: parseFloat(molarConcentrationG + molarConcentrationC) })
+    // console.log('Count of A:', countA);
+    // console.log('Count of T:', countT);
+    // console.log('Count of G:', countG);
+    // console.log('Count of C:', countC);
+    //console.log('Molar Concentration of A:', molarConcentrationA);
+    //console.log('Molar Concentration of T:', molarConcentrationT);
+    //console.log('Molar Concentration of G:', molarConcentrationG);
+    //console.log('Molar Concentration of C:', molarConcentrationC);
+
+    // Return the results
+    return {
+      countA,
+      countT,
+      countG,
+      countC,
+      molarConcentrationA,
+      molarConcentrationT,
+      molarConcentrationG,
+      molarConcentrationC,
+    };
+  }
 
 
- // }
+
+
+
+  // }
 }
 
 
@@ -411,7 +639,7 @@ function cancelmsg() {
 
   document.getElementById("alertModal").style.display = "none";
   document.getElementById("alertModal").classList.remove("show");
-  document.getElementById("Textarea2").value = "";
+
 }
 
 
