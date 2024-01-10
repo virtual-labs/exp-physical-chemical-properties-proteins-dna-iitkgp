@@ -7,13 +7,6 @@ Developer: Prakriti Dhang
 
 */
 
-/*function computebtn() {
-
-  document.getElementById("computebtn").disabled = true;
-  document.getElementById("ressetbtn").disabled = false;
-
-  
-}*/
 
 
 
@@ -53,17 +46,16 @@ function aseqbtn() {
 var aminoacidSequence, mw, userinptmw;
 function checkmwbtn() {
   aminoacidSequence = document.getElementById("Textarea1").value.toUpperCase();
-  /* if (/^[0-9]+$/i.test(aminoacidSequence)) {
-     $('#alertModal').modal('show');
-     $('.modal-body').text('Invalid Amino acid sequence. Please enter only 1-letter code of amino acid.');
-   }
  
-   else {*/
   mw = aminoacidSequence.length;
   console.log(`Molecular Weight: ${mw} `);
   userinptmw = document.getElementById("inputmwa").value;
 
-  if (userinptmw == mw) {
+  if (userinptmw == "") {
+    $('#alertModal').modal('show');
+    $('.modal-body').text('The input box for  number of amino acid cannot be empty.');
+  }
+  else if (userinptmw == mw) {
     $('#alertModal').modal('show');
     $('.modal-body').text('Correct answer');
     var resultmw = mw * 110;
@@ -82,26 +74,21 @@ function checkmwbtn() {
 
 
 
-  //}
+  
 }
 
 
 
 function showmwbtn() {
   $('#alertModal').modal('show');
-  $('.modal-body').text('Number of amino acid in the above sequence is: ' + mw);
+  $('.modal-body').text('The total number of amino acid in the above sequence is: ' + mw);
 }
 /********************************************   Amino acid sequence -actual molecular weight of protein **********************************************************/
 
 var mw1, userinptmw1;
 function checkmw1btn() {
   aminoacidSequence = document.getElementById("Textarea1").value.toUpperCase();
-  /*if (/^[0-9]+$/i.test(aminoacidSequence)) {
-    $('#alertModal').modal('show');
-    $('.modal-body').text('Invalid Amino acid sequence. Please enter only 1-letter code of amino acid.');
-  }
-
-  else {*/
+ 
   var amacidlength = aminoacidSequence.length;
 
   const molecularWeights = {
@@ -134,7 +121,11 @@ function checkmw1btn() {
   console.log(`Molecular Weight: ${mw1} `);
   userinptmw1 = document.getElementById("inputmwa1").value;
 
-  if (userinptmw1 == mw1) {
+  if (userinptmw1 == "") {
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Input box cannot be empty');
+  }
+  else if (userinptmw1 == mw1) {
     $('#alertModal').modal('show');
     $('.modal-body').text('Correct answer');
 
@@ -144,7 +135,7 @@ function checkmw1btn() {
     $('.modal-body').text('Incorrect answer. Please calculate the molecular weight of amino acid. Refer to the table above (click on the button Molecular weight table).');
     document.getElementById("mw1btnshow").disabled = false;
   }
-  // }
+ 
 
 }
 
@@ -154,7 +145,7 @@ function showmw1btn() {
 }
 
 /************************************************************************ Molar extinction coefficient of protein    *******************************************************************************************/
-var userinptW, userinptY, userinptC,countW,countY,counC;
+var userinptW, userinptY, userinptC, countW, countY, countC;
 
 
 function checkmabsbtn() {
@@ -162,13 +153,7 @@ function checkmabsbtn() {
   countY = 0;
   countC = 0;
   aminoacidSequence = document.getElementById("Textarea1").value.toUpperCase();
-  /* if (/^[0-9]+$/i.test(aminoacidSequence)) {
-     $('#alertModal').modal('show');
-     $('.modal-body').text('Invalid Amino acid sequence. Please enter only 1-letter code of amino acid.');
-   }
  
-   else {*/
-  // document.getElementById("sequence").value=aminoacidSequence;
   countwyc(aminoacidSequence);
   function countwyc(aminoacidSequence) {
     // Initialize counters
@@ -206,12 +191,7 @@ function checkmabsbtn() {
     var mwact = (countW * 5500) + (countY * 1490) + (countC * 125);
     var userinptwyc = document.getElementById("inputmabst").value = mwact;
 
-    /* if (((userinptW == countW) && (userinptY == countY) && (userinptC == countC)) && (userinptwyc !== '0') ) {
-       $('#alertModal').modal('show');
-       $('.modal-body').text('Correct answer');
-       
-       document.getElementById("inputmabst").value = mwact;
-     }*/
+ 
 
     if (
       (userinptW !== '0' && userinptW == countW) ||
@@ -248,6 +228,25 @@ function checkmabsbtn() {
       document.getElementById("inputmabst").value = " ";
 
     }
+
+    if (userinptW == "") {
+
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Input box for  number of W cannot be empty');
+      document.getElementById("inputmabst").value = " ";
+    }
+    if (userinptY == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Input box for number of Y cannot be empty');
+      document.getElementById("inputmabst").value = " ";
+
+    }
+    if (userinptC == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Input box for number of C cannot be empty');
+      document.getElementById("inputmabst").value = " ";
+
+    }
     // document.getElementById("Textarea1").value="";
     document.getElementById("mabsbtnshow").disabled = false;
 
@@ -266,7 +265,7 @@ function checkmabsbtn() {
 
   }
 
-  // }
+  
 }
 
 
@@ -277,6 +276,43 @@ function showmabsbtn() {
 }
 
 
+/************************************************************************ Peptide ****************************************************************************/
+ function pseqbtn(){
+  var peptideSequence = document.getElementById("Textarea2").value;
+
+  if (peptideSequence == "") {
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Input box cannot be empty');
+  }
+
+  else if ((peptideSequence.length < 5) || (peptideSequence.length > 15)) {
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Please enter 5-15 peptides');
+
+
+  }
+  else if (/^[0-9]+$/i.test(peptideSequence)) {
+
+    $('#alertModal').modal('show');
+    $('.modal-body').text('Invalid sequence. Numeric value is not allowed.');
+  }
+  else {
+    document.getElementById("Textarea2").readOnly = true;
+    document.getElementById("pseqbtn").disabled = true;
+    document.getElementById("pibtn").disabled = false;
+    
+  }
+
+ }
+
+
+
+
+
+
+
+
+
 /********************************************   DNA sequence  **********************************************************/
 
 function dnaseqbtn() {
@@ -285,7 +321,7 @@ function dnaseqbtn() {
 
   if (dnaSequence == "") {
     $('#alertModal').modal('show');
-    $('.modal-body').text('Please enter only 1-letter code of amino acid.');
+    $('.modal-body').text('Input box cannot be empty');
   }
 
   else if ((dnaSequence.length < 5) || (dnaSequence.length > 15)) {
@@ -328,17 +364,22 @@ function dnaseqbtn() {
       return complementaryStrand;
     }
 
-    // var originalSequence = "agtca";
+   
     var complementarySequence = generateComplementaryStrand(dnaSequence);
 
     //console.log(complementarySequence);
 
-    if (userinputdna2 == complementarySequence) {
+    if(userinputdna2 == ""){
+      $('#alertModal').modal('show');
+      $('.modal-body').text('Input box for compliment sequence of the above sequence cannot be empty');
+    }
+    
+    else if (userinputdna2 == complementarySequence) {
       document.getElementById("inputdna1").readOnly = true;
       document.getElementById("inputdna2").readOnly = true;
       document.getElementById("dnaseqbtn").disabled = true;
 
-    
+
     }
     else {
       $('#alertModal').modal('show');
@@ -357,17 +398,21 @@ function dnaseqbtn() {
 
 
 /****************************************** Approx molecular weight dna ********************************** */
-var mwdna;
+var mwdna,resultmwdna;
 function apdnabtn() {
   var dnaSequence = document.getElementById("inputdna1").value;
   mwdna = dnaSequence.length;
   console.log(`Molecular Weight: ${mwdna} `);
   var userinputmwdna = document.getElementById("inputmwdna").value;
 
-  if (userinputmwdna == mwdna) {
+  if (userinputmwdna == "") {
+    $('#alertModal').modal('show');
+    $('.modal-body').text('The input box for  number of bases cannot be empty');
+  }
+  else if (userinputmwdna == mwdna) {
     $('#alertModal').modal('show');
     $('.modal-body').text('Correct answer');
-    var resultmwdna = mwdna * 660;
+    resultmwdna = mwdna * 660;
     document.getElementById("inputmwdnar").value = resultmwdna;
 
   }
@@ -383,17 +428,17 @@ function apdnabtn() {
 
 function showmwdnabtn() {
   $('#alertModal').modal('show');
-  $('.modal-body').html('<p> Number of amino acid is: ' + mwdna + '</p><p>  Approximate molecular weight of the above DNA sequence is: ' + resultmwdna + '</p>');
+  $('.modal-body').html('<p> The total number of bases of the above sequence is: ' + mwdna + '</p>');
 }
 
 
 /****************************************** Actual mw dna ********************************** */
-var userinptA, userinptT, userinptdC, userinptG,countA,countT,countdC,countG;
+var userinptA, userinptT, userinptdC, userinptG, countA, countT, countdC, countG;
 function actdnabtn() {
-countA = 0;
+  countA = 0;
   countT = 0;
   countdC = 0;
- countG = 0;
+  countG = 0;
   var dnaSequence1 = document.getElementById("inputdna1").value;
   var dnaSequence2 = document.getElementById("inputdna2").value;
   var dnaSequence12 = dnaSequence1 + dnaSequence2;
@@ -438,14 +483,7 @@ countA = 0;
     console.log(countG);
 
     var mwactdna = ((countA * 313.2) + (countT * 304.2) + (countdC * 289.2) + (countG * 329.2)).toFixed(2);
-    //var userinptatcg = document.getElementById("inputmw2dnaMWtot").value = mwactdna;
-
-    /* if (((userinptW == countW) && (userinptY == countY) && (userinptC == countC)) && (userinptwyc !== '0') ) {
-       $('#alertModal').modal('show');
-       $('.modal-body').text('Correct answer');
-       
-       document.getElementById("inputmabst").value = mwact;
-     }*/
+    
 
     if (
       (userinptA == countA) &&
@@ -456,15 +494,15 @@ countA = 0;
       $('#alertModal').modal('show');
       $('.modal-body').text('Correct answer');
       document.getElementById("inputmw2dnaMWtot").value = mwactdna;
-      document.getElementById("inputtmdnaA").value =countA;
-      document.getElementById("inputtmdnaT").value =countT;
-      document.getElementById("inputtmdnaC").value =countdC;
-      document.getElementById("inputtmdnaG").value =countG;
-      document.getElementById("inputtmdnaA").readOnly=true;
-      document.getElementById("inputtmdnaT").readOnly=true;
-      document.getElementById("inputtmdnaC").readOnly=true;
-      document.getElementById("inputtmdnaG").readOnly=true;
-      document.getElementById("dnamw1btnshow").disabled = true;
+      document.getElementById("inputtmdnaA").value = countA;
+      document.getElementById("inputtmdnaT").value = countT;
+      document.getElementById("inputtmdnaC").value = countdC;
+      document.getElementById("inputtmdnaG").value = countG;
+      document.getElementById("inputtmdnaA").readOnly = true;
+      document.getElementById("inputtmdnaT").readOnly = true;
+      document.getElementById("inputtmdnaC").readOnly = true;
+      document.getElementById("inputtmdnaG").readOnly = true;
+      
 
 
     }
@@ -506,10 +544,40 @@ countA = 0;
 
     }
 
+    if (userinptA == "") {
+
+      $('#alertModal').modal('show');
+      $('.modal-body').text('The input box for number of A cannot be empty');
+      document.getElementById("inputmw2dnaMWtot").value = " ";
+      document.getElementById("dnamw1btnshow").disabled = false;
+    }
+    if (userinptT == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('The input box for number of T cannot be empty');
+      document.getElementById("inputmw2dnaMWtot").value = " ";
+      document.getElementById("dnamw1btnshow").disabled = false;
+
+    }
+    if (userinptdC == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('The input box for number of C cannot be empty');
+      document.getElementById("inputmw2dnaMWtot").value = " ";
+      document.getElementById("dnamw1btnshow").disabled = false;
+
+    }
+
+    if (userinptG == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('The input box for number of G cannot be empty');
+      document.getElementById("inputmw2dnaMWtot").value = " ";
+      document.getElementById("dnamw1btnshow").disabled = false;
+
+    }
 
 
-    // document.getElementById("Textarea1").value="";
+
     
+
 
 
   }
@@ -520,7 +588,7 @@ countA = 0;
 
 function showmw1dnabtn() {
   $('#alertModal').modal('show');
-  $('.modal-body').html('<p>Number of A in the above sequence is : ' + countA + ' </p> <p>Number of T in the above sequence is: ' + countT + ' </p><p>Number of C in the above sequence is :  ' + countdC + ' </p> <p>Number of G in the above sequence is :  ' + countG+ '</p>' );
+  $('.modal-body').html('<p>Number of A in the above sequence is : ' + countA + ' </p> <p>Number of T in the above sequence is: ' + countT + ' </p><p>Number of C in the above sequence is :  ' + countdC + ' </p> <p>Number of G in the above sequence is :  ' + countG + '</p>');
 }
 
 
@@ -534,15 +602,9 @@ function tmdnabtn() {
   var dnaSequence1 = document.getElementById("inputdna1").value;
   var dnaSequence2 = document.getElementById("inputdna2").value;
   var dnaSequence12 = dnaSequence1 + dnaSequence2;
- // alert(dnaSequence12);
+  // alert(dnaSequence12);
 
-  /*if (!/^[ATGC]+$/i.test(dnaSequence)) {
-
-    $('#alertModal').modal('show');
-    $('.modal-body').text('Invalid DNA sequence. Please enter only A, T, G, and C letters.');
-  }
-
-  else {*/
+  
 
 
   countNucleotides(dnaSequence12);
@@ -601,17 +663,21 @@ function tmdnabtn() {
     var userinputtm = document.getElementById("inputdnatm").value
     // document.getElementById("tm").innerHTML = "Melting temperature (T<sub>m</sub>): " + Tm + "&deg;C";
 
-    if ((userinputtm == Tm)) {
+    if (userinputtm == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').text('The input box for melting temperature(Tm) cannot be empty');
+    }
+    else if ((userinputtm == Tm)) {
       $('#alertModal').modal('show');
       $('.modal-body').text('Correct answer');
-
+     
       document.getElementById("inputdnatm").value = Tm;
     }
     else {
 
       $('#alertModal').modal('show');
       $('.modal-body').text('Incorrect melting temperature.');
-      document.getElementById("dnatmbtnshow").disabled=false;
+      document.getElementById("dnatmbtnshow").disabled = false;
       document.getElementById("inputdnatm").value = "";
 
     }
@@ -645,12 +711,12 @@ function tmdnabtn() {
 
 
 
-  // }
+ 
 }
 
-function showtmdnabtn(){
+function showtmdnabtn() {
   $('#alertModal').modal('show');
-  $('.modal-body').text('Tm of the above DNA sequence is: ' + Tm );
+  $('.modal-body').text('Melting temperature (Tm) of the above DNA sequence is: ' + Tm);
 }
 
 
@@ -662,22 +728,29 @@ function cancelmsg() {
 }
 
 
-function dnatmgraph() {
+function plottm() {
+  
   document.getElementById("card32").style.display = "block";
+  window.scrollBy(0,700);
   const chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
     title: {
-      text: "Tm and GC Concentration "
+      text: "Tm Vs Percentage of single stranded DNA "
     },
     axisY: {
-      title: "GC concentration",
-
+      title: "Percentage of single stranded DNA",
+      minimum: 0,
+      maximum: 100,
+      interval: 50,
       gridThickness: 0
 
     },
     axisX: {
       title: "Tm",
-      minimum: 0
+      minimum: 0,
+      maximum: 95,
+      interval: 10,
+
 
     },
 
@@ -687,14 +760,14 @@ function dnatmgraph() {
     },
 
 
-    {
-      type: "line",
-      color: "purple",
-
-      dataPoints: [{ x: 0, y: 0 },
-      { x: parseFloat(Tm), y: parseFloat(molarConcentrationG + molarConcentrationC), indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside" }], //,indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside", indexLabelWrap: true, indexLabelBackgroundColor: "black" 
-
-    },
+      /*{
+        type: "line",
+        color: "purple",
+  
+        dataPoints: [{ x: 0, y: 0 },
+        { x: parseFloat(Tm), y: parseFloat(molarConcentrationG + molarConcentrationC), indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside" }], //,indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside", indexLabelWrap: true, indexLabelBackgroundColor: "black" 
+  
+      },*/
 
 
 

@@ -7,6 +7,8 @@ Developer: Prakriti Dhang */
     margin-bottom: 10px;
 }
 
+
+
 .img-container {
     
     display: inline-block;
@@ -40,21 +42,19 @@ Developer: Prakriti Dhang */
     --bs-btn-disabled-border-color:#a646ff;
 }
 
-.btn-lime {
-    --bs-btn-color: #000;
-    --bs-btn-bg: #00FF00;
-    --bs-btn-border-color: #00FF00;
-    --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: #00E600;
-    --bs-btn-hover-border-color: #00FF00;
-    --bs-btn-focus-shadow-rgb: 0, 255, 0;
-    --bs-btn-active-color: #000;
-    --bs-btn-active-bg: #00FF00;
-    --bs-btn-active-border-color: #00B300;
+.btn-slate-blue-grey {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #6A5ACD;
+    --bs-btn-border-color: #6A5ACD;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #483D8B;
+    --bs-btn-hover-border-color: #6A5ACD;
+    --bs-btn-focus-shadow-rgb: 106, 90, 205;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #6A5ACD;
+    --bs-btn-active-border-color: #4B0082;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #000;
-    --bs-btn-disabled-bg: #00FF00;
-    --bs-btn-disabled-border-color: #00FF00;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #6A5ACD;
+    --bs-btn-disabled-border-color: #6A5ACD;
   }
-
-  
