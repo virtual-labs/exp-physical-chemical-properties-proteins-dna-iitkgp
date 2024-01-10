@@ -32,9 +32,10 @@ Developer: Prakriti Dhang
 					</div>
 					<div class="card-body">
 						<ol>
-							<li>Click on the button "Table of molecular weights of amino acid" to see the 1-letter code and corresponding molecular weight. 
-								Click on "Table of pka
-								and pI values" to see the specific values for each amino acid. Click on respective buttons to hide the table.</li>
+							<li>Click on the button "Table of molecular weights of amino acid and corresponding 3-letter code and 1-letter code" to see the 1-letter code
+								and corresponding molecular weight.
+								 Click on the
+								button to hide the table.</li>
 							<li>Enter any Amino acid sequence in the input box and click on the button "Submit".</li>
 							<ul type="disc">
 								<li>Approximate molecular weight of
@@ -62,46 +63,50 @@ Developer: Prakriti Dhang
 									<li>Enter number W, Y and C in the respective input boxes. </li>
 									<li>Click on "Check" button to display a message indicating correctness.
 										To reveal the correct answer, click on the "Show Answer" button. </li>
-										</ol>
+								</ol>
 							</ul>
-						
-						<li>Isoelectric point (pI) Calculation</li>
-						<ol>
-							<li></li>
-							<li></li>
-						</ol>
 
-						<li>Enter DNA sequence in the input box 1 and enter compliment of the first DNA sequence. Click on the "Submit" button.</li>
-						<ul type="disc">
-							<li>Approximate molecular weight of double-standed DNA sequence</li>
+							<li>Isoelectric point (pI) Calculation</li>
 							<ol>
-								<li>Enter number of bases from single strand DNA sequence in the input box. </li>
-								<li>Click on "Check" button to display a message indicating correctness.
-									To reveal the correct answer, click on the "Show Answer" button.</li>
+								<li>Click on "Table of pka
+									and pI values" to see the specific values for each amino acid. Click on
+									the button to hide the table. </li>
+								<li></li>
 							</ol>
 
-							<li>Actual
-								molecular
-								weight of  double-stranded DNA sequence</li>
-							<ol>
-								<li>Enter total number of A, T, C, G from the double strand DNA in the respective input
-									boxes </li>
-								<li>Next Click on "Check" button to display a message indicating correctness.
-									To reveal the correct answer, click on the "Show Answer" button. </li>
-							</ol>
-							<li>
-								Melting temperature (Tm) of double-stranded DNA sequence
-							</li>
-							<ol>
+							<li>Enter DNA sequence in the input box 1 and enter compliment of the first DNA sequence.
+								Click on the "Submit" button.</li>
+							<ul type="disc">
+								<li>Approximate molecular weight of double-standed DNA sequence</li>
+								<ol>
+									<li>Enter number of bases from single strand DNA sequence in the input box. </li>
+									<li>Click on "Check" button to display a message indicating correctness.
+										To reveal the correct answer, click on the "Show Answer" button.</li>
+								</ol>
 
-								<li>Enter the melting
-									temperature of the DNA sequence in the input box "Enter calculated Tm". </li>
-								<li>Click on "Check" button to display a message indicating correctness.
-									To reveal the correct answer, click on the "Show Answer" button. </li>
-							
-</ol>
-							<li>Click on "Plot Tm Vs GC" button. </li>
-						</ul>
+								<li>Actual
+									molecular
+									weight of double-stranded DNA sequence</li>
+								<ol>
+									<li>Enter total number of A, T, C, G from the double strand DNA in the respective
+										input
+										boxes </li>
+									<li>Next Click on "Check" button to display a message indicating correctness.
+										To reveal the correct answer, click on the "Show Answer" button. </li>
+								</ol>
+								<li>
+									Melting temperature (Tm) of double-stranded DNA sequence
+								</li>
+								<ol>
+
+									<li>Enter the melting
+										temperature of the DNA sequence in the input box "Enter calculated Tm". </li>
+									<li>Click on "Check" button to display a message indicating correctness.
+										To reveal the correct answer, click on the "Show Answer" button. </li>
+
+								</ol>
+								<li>Click on "Plot Tm Vs Percentage of single stranded DNA" button. </li>
+							</ul>
 
 
 						</ol>
@@ -113,17 +118,18 @@ Developer: Prakriti Dhang
 
 		<div class="row">
 
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="card card-body">
 					<button class="btn btn-info col-md-12 fs-5" type="button" data-bs-toggle="collapse"
 						data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-						Table of molecular weights of amino acid
+						Table of molecular weights of amino acid and corresponding 3-letter code and 1-letter code
+						
 					</button>
 
 					<div class="collapse" id="collapseExample1">
 						<div class="card card-body border-0">
 							<div class="table-responsive">
-								<table class="table table-bordered border-primary table-hover">
+								<table class="table table-bordered border-primary table-hover ">
 									<thead>
 										<tr>
 											<th scope="col">Amino Acid</th>
@@ -261,7 +267,7 @@ Developer: Prakriti Dhang
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<!--div class="col-md-6">
 				<div class="card card-body ">
 					<button class="btn btn-info col-md-12 fs-5" type="button" data-bs-toggle="collapse"
 						data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
@@ -429,7 +435,7 @@ Developer: Prakriti Dhang
 					</div>
 
 				</div>
-			</div>
+			</div-->
 		</div>
 		<div class="card border-primary border border-2">
 			<div class="card-body ">
@@ -443,11 +449,14 @@ Developer: Prakriti Dhang
 
 
 								<div class="form-group m-2 fs-5">
-									<label class="fs-5" for="Textarea1">Please enter the amino acid sequence (5-20
+									<label class="fs-5 fw-bold" for="Textarea1">Please enter the amino acid sequence
+										(5-20
 										amino acid)
 									</label>
-									<textarea class="form-control" placeholder="Enter any amino acid sequence"
-										id="Textarea1" rows="1"></textarea>
+									<input type="input" id="Textarea1" placeholder="Enter any amino acid sequence "
+										class="form-control ">
+									<!--textarea class="form-control" placeholder="Enter any amino acid sequence"
+										id="Textarea1" rows="1"></textarea-->
 								</div>
 								<button id="aseqbtn" type="button"
 									class="btn btn-purple border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
@@ -531,7 +540,7 @@ Developer: Prakriti Dhang
 					<div class="col-md-12">
 
 						<div class="card border-0">
-							<div class="card-header border-primary fs-5 fw-bold">Enter the actual molecular weight of
+							<div class="card-header border-primary fs-5 fw-bold">Calculate the actual molecular weight of
 								the
 								peptide sequence
 								<!-- -->
@@ -695,8 +704,8 @@ Developer: Prakriti Dhang
 										<label for="inputmwa1" class="col-form-label fs-5">M.W.
 											=</label>
 									</div>
-									<div class="col-auto">
-										<input type="input" id="inputmwa1" placeholder=" " class="form-control">
+									<div class="col-md-2">
+										<input type="input" id="inputmwa1" placeholder="Enter molecular weight " class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -745,7 +754,8 @@ Developer: Prakriti Dhang
 										</span>
 									</div>
 									<div class="col-auto">
-										<input type="input" id="inputmabs1" placeholder="Enter number of W " class="form-control">
+										<input type="input" id="inputmabs1" placeholder="Enter number of W "
+											class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -753,7 +763,8 @@ Developer: Prakriti Dhang
 										</span>
 									</div>
 									<div class="col-auto">
-										<input type="input" id="inputmabs2" placeholder="Enter number of Y " class="form-control">
+										<input type="input" id="inputmabs2" placeholder="Enter number of Y "
+											class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -761,7 +772,8 @@ Developer: Prakriti Dhang
 										</span>
 									</div>
 									<div class="col-auto">
-										<input type="input" id="inputmabs3" placeholder="Enter number of C " class="form-control">
+										<input type="input" id="inputmabs3" placeholder="Enter number of C "
+											class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -798,14 +810,18 @@ Developer: Prakriti Dhang
 		</div>
 
 		<!----------------------------------------------------------------------- pI ---------------------------------------------------------------->
+		<div class="card border-info border border-2" id="card11">
+			<div class="card-body">
+
+			
 		<div class="row">
 			<div class="col-md-12">
 
-				<div class="card border-success border border-2" id="card11">
-					<div class="card-header fs-5 fw-bold border-success ">Isoelectric point (pI)
+				<div class="card  border-0" id="card11">
+					<!--div class="card-header fs-5 fw-bold border-success ">Isoelectric point (pI) calculation-->
 
 						<!---->
-						<button class="btn btn-info  fs-5" type="button" style="float: right;" data-bs-toggle="collapse"
+						<button class="btn btn-info  fs-5 " type="button" style="float: right; " data-bs-toggle="collapse"
 							data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
 							Table of pKa and pI values
 						</button>
@@ -974,6 +990,29 @@ Developer: Prakriti Dhang
 					</div>
 					<!----------------------------------------------------------------------- pI ---------------------------------------------------------------->
 					<div class="card-body  ">
+
+
+						<div class="form-group m-2 fs-5">
+							<label class="fs-5 fw-bold" for="Textarea2">Please enter the sequence (5-20
+								peptides)
+							</label>
+							<input type="input" id="Textarea2" placeholder="Enter any  sequence " class="form-control ">
+							<!--textarea class="form-control" placeholder="Enter any amino acid sequence"
+								id="Textarea1" rows="1"></textarea-->
+						</div>
+						<button id="pseqbtn" type="button" class="btn btn-purple border border-1  rounded-3 fs-6 m-2"
+							style="cursor: pointer; " onclick="pseqbtn()">Submit</button>
+					</div>
+				</div>
+			</div>
+	
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card border-0">
+					<div class="card-header border-info fs-5 fw-bold">Calculate the pI
+					</div>
+					<div class="card-body">
+
 						<div class="row g-3 align-items-center">
 							<div class="col-auto">
 								<label for="inputpi" class="col-form-label fs-5">pI=</label>
@@ -1013,7 +1052,7 @@ Developer: Prakriti Dhang
 						</div>
 
 						<button id="pibtn" type="button" class="btn btn-success border border-1  rounded-3 fs-6 m-2"
-							style="cursor: pointer; " onclick="checpibtn()">Check</button>
+							style="cursor: pointer; " onclick="checpibtn()" disabled>Check</button>
 						<button id="pibtnshow" type="button" class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
 							style="cursor: pointer;float: right; " onclick="showpibtn()" disabled>Show
 							Answer</button>
@@ -1023,8 +1062,10 @@ Developer: Prakriti Dhang
 			</div>
 		</div>
 
+	</div>
+</div>
 		<!----------------------------------------------------------------------- DNA sequence ---------------------------------------------------------------->
-		<div class="card border-info border border-2">
+		<div class="card border-success border border-2">
 			<div class="card-body">
 				<div class="row">
 					<div class="col-md-12">
@@ -1033,10 +1074,10 @@ Developer: Prakriti Dhang
 							<!--div class="card-header fs-5 fw-bold">DNA</div-->
 							<div class="card-body">
 								<div class="form-group m-2 fs-5">
-									<label class="fs-5" for="Textarea2">Please enter the DNA sequence (5-15 bases)
+									<label class="fs-5 fw-bold" for="input12">Please enter the DNA sequence (5-15
+										bases)
 									</label>
-									<!--textarea class="form-control" placeholder="Enter any DNA sequence" id="Textarea2"
-										rows="1"></textarea-->
+									
 								</div>
 
 								<div class="row g-2 mb-2 align-items-center">
@@ -1148,7 +1189,7 @@ Developer: Prakriti Dhang
 						<div class="card border-0">
 							<div class="card-header border-info fs-5 fw-bold">Calculate the actual molecular weight of
 								the double-stranded DNA
-								sequence 
+								sequence
 							</div>
 							<div class="card-body">
 								<label class="fs-5" for="Textarea22">
@@ -1231,7 +1272,7 @@ Developer: Prakriti Dhang
 						<div class="card  border-0">
 							<div class="card-header border-info fs-5 fw-bold">Calculate the melting temperature (Tm) of
 								double-stranded DNA
-								sequence 
+								sequence
 							</div>
 							<div class="card-body">
 								<label class="fs-5" for="Textarea23"></label>
@@ -1245,7 +1286,7 @@ Developer: Prakriti Dhang
 										</span>
 									</div>
 									<div class="col-auto">
-										<input type="input" id="inputtmdnaA" placeholder="nA " class="form-control" >
+										<input type="input" id="inputtmdnaA" placeholder="nA " class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -1253,7 +1294,7 @@ Developer: Prakriti Dhang
 										</span>
 									</div>
 									<div class="col-auto">
-										<input type="input" id="inputtmdnaT" placeholder="nT " class="form-control" >
+										<input type="input" id="inputtmdnaT" placeholder="nT " class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -1261,7 +1302,7 @@ Developer: Prakriti Dhang
 										</span>
 									</div>
 									<div class="col-auto">
-										<input type="input" id="inputtmdnaC" placeholder="nC " class="form-control" >
+										<input type="input" id="inputtmdnaC" placeholder="nC " class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -1269,7 +1310,7 @@ Developer: Prakriti Dhang
 										</span>
 									</div>
 									<div class="col-auto">
-										<input type="input" id="inputtmdnaG" placeholder="nG " class="form-control" >
+										<input type="input" id="inputtmdnaG" placeholder="nG " class="form-control">
 									</div>
 									<div class="col-auto">
 										<span class="form-text fs-5">
@@ -1299,36 +1340,39 @@ Developer: Prakriti Dhang
 									class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
 									style="cursor: pointer;float: right; " onclick="showtmdnabtn()" disabled>Show
 									Answer</button>
+
+
 							</div>
 
-
+							<div class="card card-body border-0">
+								<button id="tmdnaplotbtn" type="button"
+									class="btn btn-slate-blue-grey border border-1 col-md-3  rounded-3 fs-6 m-2"
+									style="cursor: pointer; " onclick="plottm()">Plot Tm Vs Percentage of single
+									stranded DNA </button>
+							</div>
 						</div>
 
 
 
 					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="card card-body border-1" id="card31" style="display:none;">
-								<p id="atgc">
 
-								</p>
-								<p id="tm">
-
-								</p>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="card card-body border-1" id="card32" style="display:none;">
-								<div id="chartContainer" style="height: 500px; width: 100%;"></div>
-								<!--button class="btn btn-olive" id="exportChart">Export Chart</button-->
-							</div>
-						</div>
-					</div>
 
 				</div>
 			</div>
 		</div>
+
+
+		<div class="row">
+
+			<div class="col-md-8">
+				<div class="card card-body border border-2 border-warning" id="card32" style="display:none;">
+					<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+					<!--button class="btn btn-olive" id="exportChart">Export Chart</button-->
+				</div>
+			</div>
+		</div>
+
+
 		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
