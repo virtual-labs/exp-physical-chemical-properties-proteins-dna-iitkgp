@@ -119,7 +119,7 @@ function checkmw1btn() {
 
   mw1 = (totalWeight - ((amacidlength - 1) * 18)).toFixed(2);
   console.log(`Molecular Weight: ${mw1} `);
-  userinptmw1 = document.getElementById("inputmwa1").value;
+  userinptmw1 = parseFloat(document.getElementById("inputmwa1").value).toFixed(2);
 
   if (userinptmw1 == "") {
     $('#alertModal').modal('show');
