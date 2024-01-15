@@ -92,17 +92,17 @@ function checkmw1btn() {
   var amacidlength = aminoacidSequence.length;
 
   const molecularWeights = {
-    'A': 89.1,
-    'R': 174.2,
-    'N': 132.1,
-    'D': 133.1,
-    'C': 121.2,
-    'E': 147.1,
-    'Q': 146.2,
-    'G': 75.1,
-    'H': 155.2,
-    'I': 131.17,
-    'L': 131.17,
+    'A': 89.09,
+    'R': 174.20,
+    'N': 132.12,
+    'D': 133.10,
+    'C': 121.15,
+    'E': 147.13,
+    'Q': 146.15,
+    'G': 75.07,
+    'H': 155.16,
+    'I': 131.18,
+    'L': 131.18,
     'K': 146.19,
     'M': 149.21,
     'F': 165.19,
@@ -116,16 +116,19 @@ function checkmw1btn() {
   const totalWeight = aminoacidSequence.split('').reduce((sum, aminoAcid) => {
     return sum + (molecularWeights[aminoAcid] || 0);
   }, 0);
+var rwater = ((amacidlength - 1) * 18.01528);
 
-  mw1 = (totalWeight - ((amacidlength - 1) * 18)).toFixed(2);
+  mw1 = (totalWeight - rwater).toFixed(2);
+
+
   console.log(`Molecular Weight: ${mw1} `);
-  userinptmw1 = parseFloat(document.getElementById("inputmwa1").value).toFixed(2);
+  userinptmw1 = document.getElementById("inputmwa1").value;
 
   if (userinptmw1 == "") {
     $('#alertModal').modal('show');
     $('.modal-body').text('Input box cannot be empty');
   }
-  else if (userinptmw1 == mw1) {
+  else if (parseFloat(userinptmw1).toFixed(2) == mw1) {
     $('#alertModal').modal('show');
     $('.modal-body').text('Correct answer');
 
@@ -134,6 +137,7 @@ function checkmw1btn() {
     $('#alertModal').modal('show');
     $('.modal-body').text('Incorrect answer. Please calculate the molecular weight of amino acid. Refer to the table above (click on the button Molecular weight table).');
     document.getElementById("mw1btnshow").disabled = false;
+    document.getElementById("inputmwa1").value="";
   }
  
 
@@ -639,11 +643,11 @@ function tmdnabtn() {
     }
 
     // Optional: Calculate molar concentrations
-    /*totalBases = (dnaSequence.length);
+    totalBases = (dnaSequence12.length);
     molarConcentrationA = (countA / totalBases);
     molarConcentrationT = (countT / totalBases);
     molarConcentrationG = (countG / totalBases);
-    molarConcentrationC = (countC / totalBases);*/
+    molarConcentrationC = (countCtm / totalBases);
 
     totalcountA = countA;
     totalcountT = countT;
@@ -670,7 +674,7 @@ function tmdnabtn() {
     else if ((userinputtm == Tm)) {
       $('#alertModal').modal('show');
       $('.modal-body').text('Correct answer');
-     
+      document.getElementById("tmdnaplotbtn").disabled = false;
       document.getElementById("inputdnatm").value = Tm;
     }
     else {
@@ -684,7 +688,7 @@ function tmdnabtn() {
 
 
 
-    //dataPointg.push({ x: parseFloat(Tm), y: parseFloat(molarConcentrationG + molarConcentrationC) })
+    dataPointg.push({ x: parseFloat(Tm), y: parseFloat((molarConcentrationG + molarConcentrationC)*100) })
     // console.log('Count of A:', countA);
     // console.log('Count of T:', countT);
     // console.log('Count of G:', countG);
@@ -739,9 +743,8 @@ function plottm() {
     },
     axisY: {
       title: "Percentage of single stranded DNA",
-      minimum: 0,
-      maximum: 100,
-      interval: 50,
+      
+      
       gridThickness: 0
 
     },
@@ -760,18 +763,32 @@ function plottm() {
     },
 
 
-      /*{
+      {
         type: "line",
         color: "purple",
-  
         dataPoints: [{ x: 0, y: 0 },
-        { x: parseFloat(Tm), y: parseFloat(molarConcentrationG + molarConcentrationC), indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside" }], //,indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside", indexLabelWrap: true, indexLabelBackgroundColor: "black" 
+        { x: parseFloat(Tm), y: parseFloat((molarConcentrationG + molarConcentrationC)*100), indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside" }], //,indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside", indexLabelWrap: true, indexLabelBackgroundColor: "black" 
   
-      },*/
-
-
-
+      },
     ],
+      axisY2: {
+        title: "Y2 Axis",
+        stripLines: [{
+          value: 40,
+          lineDashType: "dash", // set to "dash" for dashed line
+          color: "red"
+        }]
+      },
+      axisX2: {
+        title: "X2 Axis",
+        stripLines: [{
+          value: 56,
+          lineDashType: "dash", // set to "dash" for dashed line
+          color: "blue"
+        }]
+      }
+
+    
     /* annotations:  [
       {
         type: "rectangle",
@@ -789,3 +806,43 @@ function plottm() {
       chart.exportChart({format: "jpg"});
     }); */
 }
+
+/* window.onload = function () {
+  var chart = new CanvasJS.Chart("chartContainer", {
+    title: {
+      text: "Line Chart with Stroke Marks"
+    },
+    axisX: {
+      title: "X Axis"
+    },
+    axisY: {
+      title: "Y Axis"
+    },
+    data: [{
+      type: "line",
+      dataPoints: [
+        { x: 10, y: 71 },
+        { x: 20, y: 55 },
+        { x: 30, y: 50 },
+        { x: 40, y: 65 },
+        { x: 50, y: 95 }
+      ]
+    }],
+    axisY2: {
+      title: "Y2 Axis",
+      stripLines: [{
+        value: 50,
+        color: "red"
+      }]
+    },
+    axisX2: {
+      title: "X2 Axis",
+      stripLines: [{
+        value: 30,
+        color: "blue"
+      }]
+    }
+  });
+
+  chart.render();
+} */
