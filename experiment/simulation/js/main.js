@@ -46,7 +46,7 @@ function aseqbtn() {
 var aminoacidSequence, mw, userinptmw;
 function checkmwbtn() {
   aminoacidSequence = document.getElementById("Textarea1").value.toUpperCase();
- 
+
   mw = aminoacidSequence.length;
   console.log(`Molecular Weight: ${mw} `);
   userinptmw = document.getElementById("inputmwa").value;
@@ -74,7 +74,7 @@ function checkmwbtn() {
 
 
 
-  
+
 }
 
 
@@ -88,7 +88,7 @@ function showmwbtn() {
 var mw1, userinptmw1;
 function checkmw1btn() {
   aminoacidSequence = document.getElementById("Textarea1").value.toUpperCase();
- 
+
   var amacidlength = aminoacidSequence.length;
 
   const molecularWeights = {
@@ -116,7 +116,7 @@ function checkmw1btn() {
   const totalWeight = aminoacidSequence.split('').reduce((sum, aminoAcid) => {
     return sum + (molecularWeights[aminoAcid] || 0);
   }, 0);
-var rwater = ((amacidlength - 1) * 18.01528);
+  var rwater = ((amacidlength - 1) * 18.01528);
 
   mw1 = (totalWeight - rwater).toFixed(2);
 
@@ -137,9 +137,9 @@ var rwater = ((amacidlength - 1) * 18.01528);
     $('#alertModal').modal('show');
     $('.modal-body').text('Incorrect answer. Please calculate the molecular weight of amino acid. Refer to the table above (click on the button Molecular weight table).');
     document.getElementById("mw1btnshow").disabled = false;
-    document.getElementById("inputmwa1").value="";
+    document.getElementById("inputmwa1").value = "";
   }
- 
+
 
 }
 
@@ -157,7 +157,7 @@ function checkmabsbtn() {
   countY = 0;
   countC = 0;
   aminoacidSequence = document.getElementById("Textarea1").value.toUpperCase();
- 
+
   countwyc(aminoacidSequence);
   function countwyc(aminoacidSequence) {
     // Initialize counters
@@ -195,7 +195,7 @@ function checkmabsbtn() {
     var mwact = (countW * 5500) + (countY * 1490) + (countC * 125);
     var userinptwyc = document.getElementById("inputmabst").value = mwact;
 
- 
+
 
     if (
       (userinptW !== '0' && userinptW == countW) ||
@@ -269,7 +269,7 @@ function checkmabsbtn() {
 
   }
 
-  
+
 }
 
 
@@ -281,7 +281,7 @@ function showmabsbtn() {
 
 
 /************************************************************************ Peptide ****************************************************************************/
- function pseqbtn(){
+function pseqbtn() {
   var peptideSequence = document.getElementById("Textarea2").value;
 
   if (peptideSequence == "") {
@@ -304,10 +304,10 @@ function showmabsbtn() {
     document.getElementById("Textarea2").readOnly = true;
     document.getElementById("pseqbtn").disabled = true;
     document.getElementById("pibtn").disabled = false;
-    
+
   }
 
- }
+}
 
 
 
@@ -368,16 +368,16 @@ function dnaseqbtn() {
       return complementaryStrand;
     }
 
-   
+
     var complementarySequence = generateComplementaryStrand(dnaSequence);
 
     //console.log(complementarySequence);
 
-    if(userinputdna2 == ""){
+    if (userinputdna2 == "") {
       $('#alertModal').modal('show');
       $('.modal-body').text('Input box for compliment sequence of the above sequence cannot be empty');
     }
-    
+
     else if (userinputdna2 == complementarySequence) {
       document.getElementById("inputdna1").readOnly = true;
       document.getElementById("inputdna2").readOnly = true;
@@ -402,7 +402,7 @@ function dnaseqbtn() {
 
 
 /****************************************** Approx molecular weight dna ********************************** */
-var mwdna,resultmwdna;
+var mwdna, resultmwdna;
 function apdnabtn() {
   var dnaSequence = document.getElementById("inputdna1").value;
   mwdna = dnaSequence.length;
@@ -487,7 +487,7 @@ function actdnabtn() {
     console.log(countG);
 
     var mwactdna = ((countA * 313.2) + (countT * 304.2) + (countdC * 289.2) + (countG * 329.2)).toFixed(2);
-    
+
 
     if (
       (userinptA == countA) &&
@@ -506,7 +506,7 @@ function actdnabtn() {
       document.getElementById("inputtmdnaT").readOnly = true;
       document.getElementById("inputtmdnaC").readOnly = true;
       document.getElementById("inputtmdnaG").readOnly = true;
-      
+
 
 
     }
@@ -580,7 +580,7 @@ function actdnabtn() {
 
 
 
-    
+
 
 
 
@@ -608,7 +608,7 @@ function tmdnabtn() {
   var dnaSequence12 = dnaSequence1 + dnaSequence2;
   // alert(dnaSequence12);
 
-  
+
 
 
   countNucleotides(dnaSequence12);
@@ -688,7 +688,7 @@ function tmdnabtn() {
 
 
 
-    dataPointg.push({ x: parseFloat(Tm), y: parseFloat((molarConcentrationG + molarConcentrationC)*100) })
+    dataPointg.push({ x: parseFloat(Tm), y: parseFloat((molarConcentrationG + molarConcentrationC) * 100) })
     // console.log('Count of A:', countA);
     // console.log('Count of T:', countT);
     // console.log('Count of G:', countG);
@@ -715,7 +715,7 @@ function tmdnabtn() {
 
 
 
- 
+
 }
 
 function showtmdnabtn() {
@@ -733,9 +733,9 @@ function cancelmsg() {
 
 
 function plottm() {
-  
+
   document.getElementById("card32").style.display = "block";
-  window.scrollBy(0,700);
+  window.scrollBy(0, 700);
   const chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
     title: {
@@ -743,8 +743,8 @@ function plottm() {
     },
     axisY: {
       title: "Percentage of single stranded DNA",
-      
-      
+
+
       gridThickness: 0
 
     },
@@ -763,32 +763,32 @@ function plottm() {
     },
 
 
-      {
-        type: "line",
-        color: "purple",
-        dataPoints: [{ x: 0, y: 0 },
-        { x: parseFloat(Tm), y: parseFloat((molarConcentrationG + molarConcentrationC)*100), indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside" }], //,indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside", indexLabelWrap: true, indexLabelBackgroundColor: "black" 
-  
-      },
-    ],
-      axisY2: {
-        title: "Y2 Axis",
-        stripLines: [{
-          value: 40,
-          lineDashType: "dash", // set to "dash" for dashed line
-          color: "red"
-        }]
-      },
-      axisX2: {
-        title: "X2 Axis",
-        stripLines: [{
-          value: 56,
-          lineDashType: "dash", // set to "dash" for dashed line
-          color: "blue"
-        }]
-      }
+    {
+      type: "line",
+      color: "purple",
+      dataPoints: [{ x: 0, y: 0 },
+      { x: parseFloat(Tm), y: parseFloat((molarConcentrationG + molarConcentrationC) * 100), indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside" }], //,indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside", indexLabelWrap: true, indexLabelBackgroundColor: "black" 
 
-    
+    },
+    ],
+    axisY2: {
+      title: "Y2 Axis",
+      stripLines: [{
+        value: 40,
+        lineDashType: "dash", // set to "dash" for dashed line
+        color: "red"
+      }]
+    },
+    axisX2: {
+      title: "X2 Axis",
+      stripLines: [{
+        value: 56,
+        lineDashType: "dash", // set to "dash" for dashed line
+        color: "blue"
+      }]
+    }
+
+
     /* annotations:  [
       {
         type: "rectangle",
