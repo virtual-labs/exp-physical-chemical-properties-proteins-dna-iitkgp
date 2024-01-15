@@ -91,7 +91,7 @@ function checkmw1btn() {
 
   var amacidlength = aminoacidSequence.length;
 
-  const molecularWeights = {
+  /*const molecularWeights = {
     'A': 89.09,
     'R': 174.20,
     'N': 132.12,
@@ -112,11 +112,34 @@ function checkmw1btn() {
     'W': 204.23,
     'Y': 181.19,
     'V': 117.15
+  };*/
+  const molecularWeights = {
+    'A': 89.1,
+    'R': 174.2,
+    'N': 132.1,
+    'D': 133.1,
+    'C': 121.2,
+    'E': 147.1,
+    'Q': 146.2,
+    'G': 75.1,
+    'H': 155.2,
+    'I': 131.2,
+    'L': 131.2,
+    'K': 146.2,
+    'M': 149.2,
+    'F': 165.2,
+    'P': 115.1,
+    'S': 105.1,
+    'T': 119.1,
+    'W': 204.2,
+    'Y': 181.2,
+    'V': 117.1
   };
+
   const totalWeight = aminoacidSequence.split('').reduce((sum, aminoAcid) => {
     return sum + (molecularWeights[aminoAcid] || 0);
   }, 0);
-  var rwater = ((amacidlength - 1) * 18.01528);
+  var rwater = ((amacidlength - 1) * 18.01);
 
   mw1 = (totalWeight - rwater).toFixed(2);
 
