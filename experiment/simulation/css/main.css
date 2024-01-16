@@ -58,3 +58,34 @@ Developer: Prakriti Dhang */
     --bs-btn-disabled-bg: #6A5ACD;
     --bs-btn-disabled-border-color: #6A5ACD;
   }
+
+  .btn-pink {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #ad1457;
+    --bs-btn-border-color: #e91e63;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #c2185b;
+    --bs-btn-hover-border-color: #e91e63;
+    --bs-btn-focus-shadow-rgb: 233, 30, 99;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #e91e63;
+    --bs-btn-active-border-color: #ad1457;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #e91e63;
+    --bs-btn-disabled-border-color: #e91e63;
+  }
+  
+  
+.calculator
+{
+    background-color:#3d4543;
+    height:360px;
+    width:300px;
+    position:relative;
+    top:20px;
+    left:50px;
+    z-index: 1;
+    display: none;
+    
+} 
