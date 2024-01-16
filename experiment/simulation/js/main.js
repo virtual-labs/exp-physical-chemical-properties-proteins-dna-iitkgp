@@ -85,11 +85,11 @@ function showmwbtn() {
 }
 /********************************************   Amino acid sequence -actual molecular weight of protein **********************************************************/
 
-var mw1, userinptmw1;
+var mw1, userinptmw1,amacidlength,  totalWeight;
 function checkmw1btn() {
   aminoacidSequence = document.getElementById("Textarea1").value.toUpperCase();
 
-  var amacidlength = aminoacidSequence.length;
+  amacidlength = aminoacidSequence.length;
 
   /*const molecularWeights = {
     'A': 89.09,
@@ -136,7 +136,7 @@ function checkmw1btn() {
     'V': 117.1
   };
 
-  const totalWeight = aminoacidSequence.split('').reduce((sum, aminoAcid) => {
+  totalWeight= aminoacidSequence.split('').reduce((sum, aminoAcid) => {
     return sum + (molecularWeights[aminoAcid] || 0);
   }, 0);
   var rwater = ((amacidlength - 1) * 18.01);
@@ -158,9 +158,10 @@ function checkmw1btn() {
   }
   else {
     $('#alertModal').modal('show');
-    $('.modal-body').text('Incorrect answer. Please calculate the molecular weight of amino acid. Refer to the table above (click on the button Molecular weight table).');
+    $('.modal-body').text('Incorrect answer. Please calculate the molecular weight of amino acid.  Refer to the table above (click on the button Molecular weight table).');
     document.getElementById("mw1btnshow").disabled = false;
     document.getElementById("inputmwa1").value = "";
+    
   }
 
 
@@ -168,7 +169,8 @@ function checkmw1btn() {
 
 function showmw1btn() {
   $('#alertModal').modal('show');
-  $('.modal-body').text('Actual molecular weight of the above sequence is: ' + mw1);
+  $('.modal-body').html('Actual molecular weight of the above sequence is: ' + mw1 + ' <br><br>Hint: Total molecular weight of amino acid - ((total length of the sequence -1 ) * molecular weight of water )  <br>' + totalWeight.toFixed(2) + '- ((' +amacidlength +  '- 1) * 18.01)' );
+ 
 }
 
 /************************************************************************ Molar extinction coefficient of protein    *******************************************************************************************/
@@ -298,7 +300,7 @@ function checkmabsbtn() {
 
 function showmabsbtn() {
   $('#alertModal').modal('show');
-  $('.modal-body').html('<p>Number of W in the above sequence is : ' + countW + ' </p> <p>Number of Y in the above sequence is: ' + countY + ' </p><p>Number of C in the above sequence is :  ' + countC + ' </p>');
+  $('.modal-body').html('Number of W in the above sequence is : ' + countW + ' <br>Number of Y in the above sequence is: ' + countY + ' <br>Number of C in the above sequence is :  ' + countC );
 
 }
 
@@ -615,7 +617,7 @@ function actdnabtn() {
 
 function showmw1dnabtn() {
   $('#alertModal').modal('show');
-  $('.modal-body').html('<p>Number of A in the above sequence is : ' + countA + ' </p> <p>Number of T in the above sequence is: ' + countT + ' </p><p>Number of C in the above sequence is :  ' + countdC + ' </p> <p>Number of G in the above sequence is :  ' + countG + '</p>');
+  $('.modal-body').html('Number of A in the above sequence is : ' + countA + '<br>Number of T in the above sequence is: ' + countT + ' <br>Number of C in the above sequence is :  ' + countdC + ' <br>Number of G in the above sequence is :  ' + countG);
 }
 
 
@@ -830,42 +832,31 @@ function plottm() {
     }); */
 }
 
-/* window.onload = function () {
+ window.onload = function () {
   var chart = new CanvasJS.Chart("chartContainer", {
     title: {
-      text: "Line Chart with Stroke Marks"
+      text: "Tm Vs Percentage of single stranded DNA"
     },
     axisX: {
-      title: "X Axis"
+      title: "Tm",
+      minimum: 0,
+      maximum: 95,
+      interval: 10,
+      
     },
     axisY: {
-      title: "Y Axis"
+      title: "Percentage of single stranded DNA",
+      minimum: 0,
+      maximum: 100,
+      interval: 50,
+      gridThickness:0
     },
     data: [{
       type: "line",
-      dataPoints: [
-        { x: 10, y: 71 },
-        { x: 20, y: 55 },
-        { x: 30, y: 50 },
-        { x: 40, y: 65 },
-        { x: 50, y: 95 }
-      ]
-    }],
-    axisY2: {
-      title: "Y2 Axis",
-      stripLines: [{
-        value: 50,
-        color: "red"
-      }]
-    },
-    axisX2: {
-      title: "X2 Axis",
-      stripLines: [{
-        value: 30,
-        color: "blue"
-      }]
-    }
+      
+    }]
+   
   });
 
   chart.render();
-} */
+} 
