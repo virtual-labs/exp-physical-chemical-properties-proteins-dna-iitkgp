@@ -27,7 +27,8 @@ Developer: Prakriti Dhang */
 
 
 
-.btn-purple{--bs-btn-color:#fff;
+.btn-purple{
+  --bs-btn-color:#fff;
     --bs-btn-bg:#a646ff;
     --bs-btn-border-color:#a646ff;
     --bs-btn-hover-color:#fff;--bs-btn-hover-bg:#9130ec;
@@ -76,14 +77,52 @@ Developer: Prakriti Dhang */
     --bs-btn-disabled-border-color: #e91e63;
   }
   
+
   
+
+  .btn-indian-red {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #CD5C5C;
+    --bs-btn-border-color: #CD5C5C;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #B22222;
+    --bs-btn-hover-border-color: #CD5C5C;
+    --bs-btn-focus-shadow-rgb: 205, 92, 92;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #CD5C5C;
+    --bs-btn-active-border-color: #8B0000;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #CD5C5C;
+    --bs-btn-disabled-border-color: #CD5C5C;
+  }
+  
+  .btn-olive {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #808000;
+    --bs-btn-border-color: #808000;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #6b6b00;
+    --bs-btn-hover-border-color: #808000;
+    --bs-btn-focus-shadow-rgb: 128, 128, 0;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #808000;
+    --bs-btn-active-border-color: #595900;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #808000;
+    --bs-btn-disabled-border-color: #808000;
+  }
+
+  
+
 .calculator
 {
     background-color:#3d4543;
     height:360px;
     width:300px;
     position:relative;
-    top:10px;
+    top:2px;
     left:10px;
     z-index: 1;
     display: none;
