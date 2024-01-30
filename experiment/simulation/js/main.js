@@ -85,7 +85,7 @@ function showmwbtn() {
 }
 /********************************************   Amino acid sequence -actual molecular weight of protein **********************************************************/
 
-var mw1, userinptmw1,amacidlength,  totalWeight;
+var mw1, userinptmw1, amacidlength, totalWeight;
 function checkmw1btn() {
   aminoacidSequence = document.getElementById("Textarea1").value.toUpperCase();
 
@@ -136,7 +136,7 @@ function checkmw1btn() {
     'V': 117.1
   };
 
-  totalWeight= aminoacidSequence.split('').reduce((sum, aminoAcid) => {
+  totalWeight = aminoacidSequence.split('').reduce((sum, aminoAcid) => {
     return sum + (molecularWeights[aminoAcid] || 0);
   }, 0);
   var rwater = ((amacidlength - 1) * 18.01);
@@ -161,7 +161,7 @@ function checkmw1btn() {
     $('.modal-body').text('Incorrect answer. Please calculate the molecular weight of amino acid.  Refer to the table above (click on the button Molecular weight table).');
     document.getElementById("mw1btnshow").disabled = false;
     document.getElementById("inputmwa1").value = "";
-    
+
   }
 
 
@@ -169,8 +169,8 @@ function checkmw1btn() {
 
 function showmw1btn() {
   $('#alertModal').modal('show');
-  $('.modal-body').html('Actual molecular weight of the above sequence is: ' + mw1 + ' <br><br>Hint: Total molecular weight of amino acid - ((total length of the sequence -1 ) * molecular weight of water )  <br>' + totalWeight.toFixed(2) + '- ((' +amacidlength +  '- 1) * 18.01)' );
- 
+  $('.modal-body').html('Actual molecular weight of the above sequence is: ' + mw1 + ' <br><br>Hint: Total molecular weight of amino acid - ((total length of the sequence -1 ) * molecular weight of water )  <br>' + totalWeight.toFixed(2) + '- ((' + amacidlength + '- 1) * 18.01)');
+
 }
 
 /************************************************************************ Molar extinction coefficient of protein    *******************************************************************************************/
@@ -300,39 +300,217 @@ function checkmabsbtn() {
 
 function showmabsbtn() {
   $('#alertModal').modal('show');
-  $('.modal-body').html('Number of W in the above sequence is : ' + countW + ' <br>Number of Y in the above sequence is: ' + countY + ' <br>Number of C in the above sequence is :  ' + countC );
+  $('.modal-body').html('Number of W in the above sequence is : ' + countW + ' <br>Number of Y in the above sequence is: ' + countY + ' <br>Number of C in the above sequence is :  ' + countC);
 
 }
 
 
 /************************************************************************ Peptide ****************************************************************************/
+var selectpeptide = document.getElementById('peptidesel');
 function pseqbtn() {
-  var peptideSequence = document.getElementById("Textarea2").value;
 
-  if (peptideSequence == "") {
-    $('#alertModal').modal('show');
-    $('.modal-body').text('Input box cannot be empty');
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 1) {
+    document.getElementById("peptide1").style.display = "block";
+  }
+  else if (selectpeptide.options[selectpeptide.selectedIndex].value == 2) {
+    document.getElementById("peptide2").style.display = "block";
+  }
+  else if (selectpeptide.options[selectpeptide.selectedIndex].value == 3) {
+    document.getElementById("peptide3").style.display = "block";
   }
 
-  else if ((peptideSequence.length < 5) || (peptideSequence.length > 15)) {
-    $('#alertModal').modal('show');
-    $('.modal-body').text('Please enter 5-15 peptides');
-
-
-  }
-  else if (/^[0-9]+$/i.test(peptideSequence)) {
-
-    $('#alertModal').modal('show');
-    $('.modal-body').text('Invalid sequence. Numeric value is not allowed.');
-  }
   else {
-    document.getElementById("Textarea2").readOnly = true;
-    document.getElementById("pseqbtn").disabled = true;
-    document.getElementById("pibtn").disabled = false;
-
+    $('#alertModal').modal('show');
+    $('.modal-body').html('Please select any peptide sequence from the select menu ')
+      ;
   }
+  /* var peptideSequence = document.getElementById("Textarea2").value;
+ 
+   if (peptideSequence == "") {
+     $('#alertModal').modal('show');
+     $('.modal-body').text('Input box cannot be empty');
+   }
+ 
+   else if ((peptideSequence.length < 5) || (peptideSequence.length > 15)) {
+     $('#alertModal').modal('show');
+     $('.modal-body').text('Please enter 5-15 peptides');
+ 
+ 
+   }
+   else if (/^[0-9]+$/i.test(peptideSequence)) {
+ 
+     $('#alertModal').modal('show');
+     $('.modal-body').text('Invalid sequence. Numeric value is not allowed.');
+   }
+   else {
+     document.getElementById("Textarea2").readOnly = true;
+     document.getElementById("pseqbtn").disabled = true;
+     document.getElementById("pibtn").disabled = false;
+ 
+   }*/
 
 }
+ 
+/****************************************  Net charge *************************************** */
+
+function checkb1() {
+
+  var usrinpnc1 = document.getElementById("netcharge1").value;
+  var usrinpnc2 = document.getElementById("netcharge2").value;
+  var usrinpnc3 = document.getElementById("netcharge3").value;
+  var usrinpnc4 = document.getElementById("netcharge4").value;
+  var usrinpnc5 = document.getElementById("netcharge5").value;
+
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 1) {
+    if (usrinpnc1 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("netcharge1").style.border = "2px solid blue";
+    }
+    else if (usrinpnc1 == "+2") {
+      document.getElementById("netcharge1").value = "+2";
+      document.getElementById("netcharge1").style.border = "2px solid green";
+    }
+
+    else {
+      document.getElementById("netcharge1").style.border = "2px solid red";
+      document.getElementById("showsteppb1").disabled = false;
+    }
+
+    if (usrinpnc2 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("netcharge2").style.border = "2px solid blue";
+    }
+    else if (usrinpnc2 == "+1") {
+      document.getElementById("netcharge2").value = "+1";
+      document.getElementById("netcharge2").style.border = "2px solid green";
+    }
+
+    else {
+
+      document.getElementById("netcharge2").style.border = "2px solid red";
+      document.getElementById("showsteppb1").disabled = false;
+    }
+
+
+    if (usrinpnc3 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("netcharge3").style.border = "2px solid blue";
+    }
+    else if (usrinpnc3 == "0") {
+      document.getElementById("netcharge3").value = "0";
+      document.getElementById("netcharge3").style.border = "2px solid green";
+    }
+
+    else {
+
+      document.getElementById("netcharge3").style.border = "2px solid red";
+      document.getElementById("showsteppb1").disabled = false;
+    }
+
+
+    if (usrinpnc4 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("netcharge4").style.border = "2px solid blue";
+    }
+    else if (usrinpnc4 == "-1") {
+      document.getElementById("netcharge4").value = "-1";
+      document.getElementById("netcharge4").style.border = "2px solid green";
+    }
+
+    else {
+
+      document.getElementById("netcharge4").style.border = "2px solid red";
+      document.getElementById("showsteppb1").disabled = false;
+    }
+
+    if (usrinpnc5 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("netcharge5").style.border = "2px solid blue";
+    }
+    else if (usrinpnc5 == "-2") {
+      document.getElementById("netcharge5").value = "-2";
+      document.getElementById("netcharge5").style.border = "2px solid green";
+    }
+
+    else {
+
+      document.getElementById("netcharge5").style.border = "2px solid red";
+      document.getElementById("showsteppb1").disabled = false;
+    }
+  }
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 2) {
+
+  }
+ if (selectpeptide.options[selectpeptide.selectedIndex].value == 3) {
+    
+  }
+}
+
+function showansb1() {
+  document.getElementById("netcharge1").value = "+2";
+  document.getElementById("netcharge2").value = "+1";
+  document.getElementById("netcharge3").value = "0";
+  document.getElementById("netcharge4").value = "-1";
+  document.getElementById("netcharge5").value = "-2";
+
+
+  document.getElementById("netcharge1").style.border = "2px solid green";
+  document.getElementById("netcharge2").style.border = "2px solid green";
+  document.getElementById("netcharge3").style.border = "2px solid green";
+  document.getElementById("netcharge4").style.border = "2px solid green";
+  document.getElementById("netcharge5").style.border = "2px solid green";
+
+}
+
+/****************************************  pI *************************************** */
+function checpibtn() {
+
+  var usrinpvalue1 = document.getElementById("inputpib1").value;
+  var usrinpvalue2 = document.getElementById("inputpib2").value;
+
+  if (usrinpvalue1 == "") {
+    $('#alertModal').modal('show');
+    $('.modal-body').html('Input box cannot be empty');
+    document.getElementById("inputpib1").style.border = "2px solid blue";
+  }
+  else if (usrinpvalue1 == "4.8") {
+    document.getElementById("inputpib1").value = 4.8;
+    document.getElementById("inputpib1").style.border = "2px solid green";
+
+  }
+
+  else {
+
+    document.getElementById("inputpib1").style.border = "2px solid red";
+    document.getElementById("showsteppb2").disabled = false;
+  }
+
+  if (usrinpvalue2 == "") {
+    $('#alertModal').modal('show');
+    $('.modal-body').html('Input box cannot be empty');
+    document.getElementById("inputpib2").style.border = "2px solid blue";
+  }
+
+  else if (usrinpvalue2 == "9") {
+    document.getElementById("inputpib2").value = 9;
+    document.getElementById("inputpib2").style.border = "2px solid green";
+  }
+  else {
+
+    document.getElementById("inputpib2").style.border = "2px solid red";
+    document.getElementById("showsteppb2").disabled = false;
+  }
+}
+
+function showpibtn() {
+  document.getElementById("partbans2").style.display = "block";
+}
+
 
 
 
@@ -832,7 +1010,7 @@ function plottm() {
     }); */
 }
 
- window.onload = function () {
+window.onload = function () {
   var chart = new CanvasJS.Chart("chartContainer", {
     title: {
       text: "Tm Vs Percentage of single stranded DNA"
@@ -842,20 +1020,20 @@ function plottm() {
       minimum: 0,
       maximum: 95,
       interval: 10,
-      
+
     },
     axisY: {
       title: "Percentage of single stranded DNA",
       minimum: 0,
       maximum: 100,
       interval: 50,
-      gridThickness:0
+      gridThickness: 0
     },
     data: [{
       type: "line",
-      
+
     }]
-   
+
   });
 
   chart.render();
