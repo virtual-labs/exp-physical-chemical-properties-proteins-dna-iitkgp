@@ -18,6 +18,37 @@ Developer: Prakriti Dhang
 	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 	<link rel="stylesheet" href="./css/virtualc.css">
 	<link rel="stylesheet" href="./css/main.css">
+
+	<style>
+		.table-container {
+            max-height: 400px; /* Set the maximum height for tbody to enable scrolling */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        
+        }
+
+      
+
+        thead {
+            position: sticky;
+            top: 0;
+            background-color: #dbdbdb;
+        }
+
+		
+	</style>
+
+	 
 </head>
 
 <body>
@@ -33,11 +64,11 @@ Developer: Prakriti Dhang
 					<div class="card-body">
 						<ol>
 							<li>Click on "Part A - Amino Acid" button to calculate the molecular weight and molar extinction coefficient of a sequence. Click on the
-								button to close part A section.</li>
+								button to hide part A section.</li>
 							<li>Click on "Part B - Peptide" button to calculate the net charges and pI of a selected peptide. Click on the
-								button to close part B section.</li>
+								button to hide part B section.</li>
 							<li>Click on "Part C - DNA" button to calculate the molecular weight and melting temperature of a sequence. Click on the
-								button to close part C section.</li>
+								button to hide  part C section.</li>
 						</ol>
 						<!--ol style="list-style: none;">
 							<li class="fs-6 fw-bold">
@@ -236,7 +267,7 @@ Developer: Prakriti Dhang
 
 							<div class="collapse" id="collapseExample1">
 								<div class="card card-body border-0">
-									<div class="table-responsive">
+									<div class="table-responsive table-container">
 										<table class="table table-bordered border-primary table-hover ">
 											<thead>
 												<tr>
@@ -249,121 +280,121 @@ Developer: Prakriti Dhang
 											</thead>
 											<tbody>
 												<tr>
-													<th scope="row">Alanine</th>
+													<th scope="row" >Alanine</th>
 													<td>Ala</td>
 													<td>A</td>
 													<td>89.1</td>
 												</tr>
 												<tr>
-													<th scope="row">Arginine</th>
+													<th scope="row" >Arginine</th>
 													<td> Arg</td>
 													<td> R</td>
 													<td> 174.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Asparagine</th>
+													<th scope="row" >Asparagine</th>
 													<td> Asn</td>
 													<td> N</td>
 													<td> 132.1</td>
 												</tr>
 												<tr>
-													<th scope="row">Aspartate</th>
+													<th scope="row" >Aspartate</th>
 													<td> Asp</td>
 													<td> D</td>
 													<td> 133.1</td>
 												</tr>
 												<tr>
-													<th scope="row">Cysteine</th>
+													<th scope="row" >Cysteine</th>
 													<td> Cys</td>
 													<td> C</td>
 													<td> 121.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Glutamate</th>
+													<th scope="row" >Glutamate</th>
 													<td> Glu</td>
 													<td> E</td>
 													<td> 147.1</td>
 												</tr>
 												<tr>
-													<th scope="row">Glutamine</th>
+													<th scope="row" >Glutamine</th>
 													<td> Gln</td>
 													<td> Q</td>
 													<td> 146.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Glycine</th>
+													<th scope="row" >Glycine</th>
 													<td> Gly</td>
 													<td> G</td>
 													<td> 75.1</td>
 												</tr>
 												<tr>
-													<th scope="row">Histidine</th>
+													<th scope="row" >Histidine</th>
 													<td> His</td>
 													<td> H</td>
 													<td> 155.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Isoleucine</td>
+													<th scope="row" >Isoleucine</td>
 													<td> Ile</td>
 													<td> I</td>
 													<td> 131.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Leucine</th>
+													<th scope="row" >Leucine</th>
 													<td> Leu</td>
 													<td> L</td>
 													<td> 131.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Lysine</th>
+													<th scope="row" >Lysine</th>
 													<td> Lys</td>
 													<td> K</td>
 													<td> 146.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Methionine</th>
+													<th scope="row" >Methionine</th>
 													<td> Met</td>
 													<td> M</td>
 													<td> 149.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Phenylalanine</th>
+													<th scope="row" >Phenylalanine</th>
 													<td> Phe</td>
 													<td> F</td>
 													<td> 165.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Proline</th>
+													<th scope="row" >Proline</th>
 													<td> Pro</td>
 													<td> P</td>
 													<td> 115.1</td>
 												</tr>
 												<tr>
-													<th scope="row">Serine</th>
+													<th scope="row" >Serine</th>
 													<td> Ser</td>
 													<td> S</td>
 													<td> 105.1</td>
 												</tr>
 												<tr>
-													<th scope="row">Threonine</th>
+													<th scope="row" >Threonine</th>
 													<td> Thr</td>
 													<td> T</td>
 													<td> 119.1</td>
 												</tr>
 												<tr>
-													<th scope="row">Tryptophan</th>
+													<th scope="row" >Tryptophan</th>
 													<td> Trp</td>
 													<td> W</td>
 													<td> 204.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Tyrosine</th>
+													<th scope="row" >Tyrosine</th>
 													<td> Tyr</td>
 													<td> Y</td>
 													<td> 181.2</td>
 												</tr>
 												<tr>
-													<th scope="row">Valine</th>
+													<th scope="row" >Valine</th>
 													<td> Val</td>
 													<td> V</td>
 													<td> 117.1</td>
@@ -389,7 +420,7 @@ Developer: Prakriti Dhang
 
 
 										<div class="form-group m-2 fs-5">
-											<label class="fs-5 fw-bold" for="Textarea1">Please enter the amino acid
+											<label class="fs-5 fw-bold" for="Textarea1">Enter the amino acid
 												sequence
 												(5-20
 												amino acid)
@@ -415,7 +446,7 @@ Developer: Prakriti Dhang
 							<div class="col-md-12">
 
 								<div class="card border-0">
-									<div class="card-header border-primary fs-5 fw-bold">Calculate the approximate
+									<div class="card-header border-secondary fs-5 fw-bold">Calculate the approximate
 										molecular
 										weight of the
 										peptide sequence
@@ -482,7 +513,7 @@ Developer: Prakriti Dhang
 							<div class="col-md-12">
 
 								<div class="card border-0">
-									<div class="card-header border-primary fs-5 fw-bold">Calculate the actual
+									<div class="card-header border-secondary fs-5 fw-bold">Calculate the actual
 										molecular weight
 										of
 										the
@@ -828,7 +859,7 @@ Developer: Prakriti Dhang
 							<div class="col-md-12">
 
 								<div class="card border-0">
-									<div class="card-header border-primary fs-5 fw-bold">Calculate the molar
+									<div class="card-header border-secondary fs-5 fw-bold">Calculate the molar
 										extinction
 										coefficient of the
 										peptide sequence
@@ -968,8 +999,24 @@ Developer: Prakriti Dhang
 
 									<div class="collapse" id="collapseExample4">
 										<div class="card card-body">
-											<div class="table-responsive">
-												<table class="table table-bordered border-primary table-hover">
+											<!--div class="table-responsive table-container">
+												<table class="table table-bordered border-primary table-hover" >
+													<thead>
+														<tr>
+															<th >Amino Acid</th>
+															<th >pk<sub>a1</sub></th>
+															<th>pk<sub>a2</sub></th>
+															<th >pk<sub>a3</sub></th>
+															<th >pI</th>
+														</tr>
+													</thead>
+													
+												
+														</table>
+														</div-->
+
+											<div class="table-responsive table-container">
+												<table class="table table-bordered border-primary table-hover" >
 													<thead>
 														<tr>
 															<th scope="col">Amino Acid</th>
@@ -979,7 +1026,9 @@ Developer: Prakriti Dhang
 															<th scope="col">pI</th>
 														</tr>
 													</thead>
+													
 													<tbody>
+													
 														<tr>
 															<th scope="row">Glycine</th>
 															<td>2.34</td>
@@ -1135,10 +1184,10 @@ Developer: Prakriti Dhang
 
 
 							<div class="form-group m-2 fs-5">
-								<label class="fs-5 fw-bold" for="Textarea2">Please select a
+								<label class="fs-5 fw-bold" for="Textarea2">Select a
 									peptide
 								</label>
-								<select class="form-select" id="peptidesel" aria-label="Default select example">
+								<select class="form-select" id="peptidesel" aria-label="Default select example" onchange="pseqbtn()">
 									<option value="0" selected>Choose a peptide</option>
 									<option value="1">Peptide 1</option>
 									<option value="2">Peptide 2</option>
@@ -1149,9 +1198,9 @@ Developer: Prakriti Dhang
 								<!--textarea class="form-control" placeholder="Enter any amino acid sequence"
 								id="Textarea1" rows="1"></textarea-->
 							</div>
-							<button id="pseqbtn" type="button"
+							<!--button id="pseqbtn" type="button"
 								class="btn btn-purple border border-1  rounded-3 fs-6 m-2" style="cursor: pointer; "
-								onclick="pseqbtn()">Submit</button>
+								onclick="pseqbtn()">Submit</button-->
 						</div>
 
 						<div class="row">
@@ -1159,9 +1208,9 @@ Developer: Prakriti Dhang
 							<div class="col-md-12">
 								<div class="card card-body">
 									<div class="img-container">
-										<img src="./images/peptide.png" id="peptide1">
-										<img src="./images/peptide1.png" id="peptide2">
-										<img src="./images/peptide2.png" id="peptide3">
+										<img src="./images/peptide.png" id="peptide1" alt="peptide 1" style="display: none;">
+										<img src="./images/peptide1.png" id="peptide2" alt="peptide 2" style="display: none;">
+										<img src="./images/peptide2.png" id="peptide3" alt="peptide 3" style="display: none;">
 									</div>
 								</div>
 							</div>
@@ -1172,6 +1221,7 @@ Developer: Prakriti Dhang
 								<div class="card">
 
 									<div class="card-body">
+										<div class="table-responsive">
 										<table class="table table-bordered">
 
 											<tr>
@@ -1203,11 +1253,11 @@ Developer: Prakriti Dhang
 
 											</tr>
 										</table>
-
+									</div>
 
 										<button id="steppb1" type="button"
 											class="btn btn-success border border-1  rounded-3 fs-6 m-1"
-											style="cursor: pointer; " onclick="checkb1()">Check</button>
+											style="cursor: pointer; " onclick="checkb1()" disabled>Check</button>
 										<button id="showsteppb1" type="button"
 											class="btn btn-warning border border-1  rounded-3 fs-6 m-1"
 											style="cursor: pointer; float: right;" onclick="showansb1()" disabled>Show
@@ -1221,7 +1271,7 @@ Developer: Prakriti Dhang
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card border-0">
-									<div class="card-header border-info fs-5 fw-bold">Calculate pI
+									<div class="card-header border-secondary fs-5 fw-bold">Calculate Isoelectic point (pI)
 									</div>
 									<div class="card-body">
 
@@ -1288,7 +1338,7 @@ Developer: Prakriti Dhang
 						<div class=" row">
 							<div class="col-md-12">
 								<div class="card border-1" id="partbans2" style="display: block;">
-									<div class="card-header border-info fs-5 fw-bold">Correct answer
+									<div class="card-header border-secondary fs-5 fw-bold">Correct answer
 									</div>
 									<div class="card-body">
 
@@ -1435,7 +1485,7 @@ Developer: Prakriti Dhang
 									<!--div class="card-header fs-5 fw-bold">DNA</div-->
 									<div class="card-body">
 										<div class="form-group m-2 fs-5">
-											<label class="fs-5 fw-bold" for="input12">Please enter the DNA
+											<label class="fs-5 fw-bold" for="input12">Enter the DNA
 												sequence (5-15
 												bases)
 											</label>
@@ -1500,7 +1550,7 @@ Developer: Prakriti Dhang
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card border-0">
-									<div class="card-header border-info fs-5 fw-bold">Calculate the approximate
+									<div class="card-header border-secondary  fs-5 fw-bold">Calculate the approximate
 										molecular weight
 										of double-standed DNA sequence
 									</div>
@@ -1552,7 +1602,7 @@ Developer: Prakriti Dhang
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card border-0">
-									<div class="card-header border-info fs-5 fw-bold">Calculate the actual
+									<div class="card-header border-secondary fs-5 fw-bold">Calculate the actual
 										molecular weight of
 										the double-stranded DNA
 										sequence
@@ -1784,7 +1834,7 @@ Developer: Prakriti Dhang
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card  border-0">
-									<div class="card-header border-info fs-5 fw-bold">Calculate the melting
+									<div class="card-header border-secondary fs-5 fw-bold">Calculate the melting
 										temperature (Tm) of
 										double-stranded DNA
 										sequence
@@ -1887,7 +1937,7 @@ Developer: Prakriti Dhang
 				<div class="row">
 
 					<div class="col-md-6">
-						<div class="card card-body " id="card32" style="display:block;">
+						<div class="card card-body " id="carddnapartc" style="display:none;">
 							<div id="chartContainer" style="height: 450px; width: 100%;"></div>
 							<!--button class="btn btn-olive" id="exportChart">Export Chart</button-->
 						</div>
@@ -2051,6 +2101,10 @@ Developer: Prakriti Dhang
 			document.getElementById("calc2").style.display = "none";
 		}
 	</script>
+
+
+
+
 </body>
 
 </html>
