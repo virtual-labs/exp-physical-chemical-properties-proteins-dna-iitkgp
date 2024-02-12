@@ -54,12 +54,14 @@ function checkmwbtn() {
   if (userinptmw == "") {
     $('#alertModal').modal('show');
     $('.modal-body').text('The input box for  number of amino acid cannot be empty.');
+    document.getElementById("inputmwa").style.border = "2px solid blue";
   }
   else if (userinptmw == mw) {
-    $('#alertModal').modal('show');
-    $('.modal-body').text('Correct answer');
+    /*$('#alertModal').modal('show');
+    $('.modal-body').text('Correct answer');*/
     var resultmw = mw * 110;
     document.getElementById("inputmwar").value = resultmw;
+    document.getElementById("inputmwa").style.border = "2px solid green";
 
   }
   else {
@@ -68,6 +70,7 @@ function checkmwbtn() {
     document.getElementById("mwbtnshow").disabled = false;
     document.getElementById("inputmwar").value = "";
     document.getElementById("inputmwa").value = "";
+    document.getElementById("inputmwa").style.border = "2px solid red";
   }
 
 
@@ -150,17 +153,19 @@ function checkmw1btn() {
   if (userinptmw1 == "") {
     $('#alertModal').modal('show');
     $('.modal-body').text('Input box cannot be empty');
+    document.getElementById("inputmwa1").style.border = "2px solid blue";
   }
   else if (parseFloat(userinptmw1).toFixed(2) == mw1) {
-    $('#alertModal').modal('show');
-    $('.modal-body').text('Correct answer');
-
+    /*$('#alertModal').modal('show');
+    $('.modal-body').text('Correct answer');*/
+    document.getElementById("inputmwa1").style.border = "2px solid green";
   }
   else {
     $('#alertModal').modal('show');
     $('.modal-body').text('Incorrect answer. Please calculate the molecular weight of amino acid.  Refer to the table above (click on the button Molecular weight table).');
     document.getElementById("mw1btnshow").disabled = false;
     document.getElementById("inputmwa1").value = "";
+    document.getElementById("inputmwa1").style.border = "2px solid red";
 
   }
 
@@ -227,8 +232,11 @@ function checkmabsbtn() {
       (userinptY !== '0' && userinptY == countY) ||
       (userinptC !== '0' && userinptC == countC)
     ) {
-      $('#alertModal').modal('show');
-      $('.modal-body').text('Correct answer');
+      /*$('#alertModal').modal('show');
+      $('.modal-body').text('Correct answer');*/
+      document.getElementById("inputmabs1").style.border = "2px solid green";
+      document.getElementById("inputmabs2").style.border = "2px solid green";
+      document.getElementById("inputmabs3").style.border = "2px solid green";
       document.getElementById("inputmabst").value = mwact;
     }
     else {
@@ -244,17 +252,20 @@ function checkmabsbtn() {
       $('#alertModal').modal('show');
       $('.modal-body').text('Incorrect number of W is entered');
       document.getElementById("inputmabst").value = " ";
+      document.getElementById("inputmabs1").style.border = "2px solid red";
     }
     if (userinptY != countY) {
       $('#alertModal').modal('show');
       $('.modal-body').text('Incorrect number of Y is entered');
       document.getElementById("inputmabst").value = " ";
+      document.getElementById("inputmabs2").style.border = "2px solid red";
 
     }
     if (userinptC != countC) {
       $('#alertModal').modal('show');
       $('.modal-body').text('Incorrect number of C is entered');
       document.getElementById("inputmabst").value = " ";
+      document.getElementById("inputmabs3").style.border = "2px solid red";
 
     }
 
@@ -263,17 +274,20 @@ function checkmabsbtn() {
       $('#alertModal').modal('show');
       $('.modal-body').text('Input box for  number of W cannot be empty');
       document.getElementById("inputmabst").value = " ";
+      document.getElementById("inputmabs1").style.border = "2px solid blue";
     }
     if (userinptY == "") {
       $('#alertModal').modal('show');
       $('.modal-body').text('Input box for number of Y cannot be empty');
       document.getElementById("inputmabst").value = " ";
+      document.getElementById("inputmabs2").style.border = "2px solid blue";
 
     }
     if (userinptC == "") {
       $('#alertModal').modal('show');
       $('.modal-body').text('Input box for number of C cannot be empty');
       document.getElementById("inputmabst").value = " ";
+      document.getElementById("inputmabs3").style.border = "2px solid blue";
 
     }
     // document.getElementById("Textarea1").value="";
@@ -311,18 +325,101 @@ function pseqbtn() {
 
   if (selectpeptide.options[selectpeptide.selectedIndex].value == 1) {
     document.getElementById("peptide1").style.display = "block";
+    document.getElementById("peptide2").style.display = "none";
+    document.getElementById("peptide3").style.display = "none";
+    document.getElementById("netchargetable").style.display = "none";
+    document.getElementById("peptide5").style.display = "none";
+    document.getElementById("peptide4").style.display = "none";
+    document.getElementById("steppb1").disabled = false;
+    document.getElementById("pibtn").disabled = false;
+    document.getElementById("inputpib1").value = "";
+    document.getElementById("inputpib2").value = "";
+    document.getElementById("inputpib1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
+    document.getElementById("pk1").innerHTML = "pK<sub>a2</sub>";
+    document.getElementById("pk2").innerHTML = "pK<sub>a3</sub>";
+
   }
   else if (selectpeptide.options[selectpeptide.selectedIndex].value == 2) {
     document.getElementById("peptide2").style.display = "block";
+    document.getElementById("peptide1").style.display = "none";
+    document.getElementById("peptide3").style.display = "none";
+    document.getElementById("netchargetable").style.display = "none";
+    document.getElementById("peptide5").style.display = "none";
+    document.getElementById("peptide4").style.display = "none";
+    document.getElementById("steppb1").disabled = false;
+    document.getElementById("pibtn").disabled = false;
+    document.getElementById("inputpib1").value = "";
+    document.getElementById("inputpib2").value = "";
+    document.getElementById("inputpib1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
+    document.getElementById("pk1").innerHTML = "pK<sub>a1</sub>";
+    document.getElementById("pk2").innerHTML = "pK<sub>a3</sub>";
   }
   else if (selectpeptide.options[selectpeptide.selectedIndex].value == 3) {
     document.getElementById("peptide3").style.display = "block";
+    document.getElementById("peptide2").style.display = "none";
+    document.getElementById("peptide1").style.display = "none";
+    document.getElementById("netchargetable").style.display = "none";
+    document.getElementById("peptide5").style.display = "none";
+    document.getElementById("peptide4").style.display = "none";
+    document.getElementById("steppb1").disabled = false;
+    document.getElementById("pibtn").disabled = false;
+    document.getElementById("inputpib1").value = "";
+    document.getElementById("inputpib2").value = "";
+    document.getElementById("inputpib1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
+    document.getElementById("pk1").innerHTML = "pK<sub>a1</sub>";
+    document.getElementById("pk2").innerHTML = "pK<sub>a2</sub>";
+  }
+  else if (selectpeptide.options[selectpeptide.selectedIndex].value == 4) {
+    document.getElementById("peptide4").style.display = "block";
+    document.getElementById("peptide5").style.display = "none";
+    document.getElementById("peptide3").style.display = "none";
+    document.getElementById("peptide2").style.display = "none";
+    document.getElementById("peptide1").style.display = "none";
+    document.getElementById("netchargetable").style.display = "none";
+    document.getElementById("steppb1").disabled = false;
+    document.getElementById("pibtn").disabled = false;
+    document.getElementById("inputpib1").value = "";
+    document.getElementById("inputpib2").value = "";
+    document.getElementById("inputpib1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
+    document.getElementById("pk1").innerHTML = "pK<sub>a1</sub>";
+    document.getElementById("pk2").innerHTML = "pK<sub>a2</sub>";
+  }
+  else if (selectpeptide.options[selectpeptide.selectedIndex].value == 5) {
+    document.getElementById("netchargetable").style.display = "block";
+    document.getElementById("peptide5").style.display = "block";
+    document.getElementById("peptide4").style.display = "none";
+    document.getElementById("peptide3").style.display = "none";
+    document.getElementById("peptide2").style.display = "none";
+    document.getElementById("peptide1").style.display = "none";
+    document.getElementById("steppb1").disabled = false;
+    document.getElementById("pibtn").disabled = false;
+    document.getElementById("inputpib1").value = "";
+    document.getElementById("inputpib2").value = "";
+    document.getElementById("inputpib1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
+    document.getElementById("pk1").innerHTML = "pK<sub>1</sub>";
+    document.getElementById("pk2").innerHTML = "pK<sub>2</sub>";
   }
 
   else {
     $('#alertModal').modal('show');
-    $('.modal-body').html('Please select any peptide sequence from the select menu ')
-      ;
+    $('.modal-body').html('Please select an peptide sequence from the select menu ');
+    document.getElementById("steppb1").disabled = true;
+    document.getElementById("pibtn").disabled = true;
+    document.getElementById("netchargetable").style.display = "none";
+    document.getElementById("peptide5").style.display = "none";
+    document.getElementById("peptide4").style.display = "none";
+    document.getElementById("peptide3").style.display = "none";
+    document.getElementById("peptide2").style.display = "none";
+    document.getElementById("peptide1").style.display = "none";
+    document.getElementById("inputpib1").value = "";
+    document.getElementById("inputpib2").value = "";
+    document.getElementById("inputpib1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
   }
   /* var peptideSequence = document.getElementById("Textarea2").value;
  
@@ -350,7 +447,7 @@ function pseqbtn() {
    }*/
 
 }
- 
+
 /****************************************  Net charge *************************************** */
 
 function checkb1() {
@@ -361,14 +458,17 @@ function checkb1() {
   var usrinpnc4 = document.getElementById("netcharge4").value;
   var usrinpnc5 = document.getElementById("netcharge5").value;
 
-  if (selectpeptide.options[selectpeptide.selectedIndex].value == 1) {
+
+
+
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 5) {
     if (usrinpnc1 == "") {
       $('#alertModal').modal('show');
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("netcharge1").style.border = "2px solid blue";
     }
-    else if (usrinpnc1 == "+2") {
-      document.getElementById("netcharge1").value = "+2";
+    else if (usrinpnc1 == "+1") {
+      document.getElementById("netcharge1").value = "+1";
       document.getElementById("netcharge1").style.border = "2px solid green";
     }
 
@@ -382,8 +482,8 @@ function checkb1() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("netcharge2").style.border = "2px solid blue";
     }
-    else if (usrinpnc2 == "+1") {
-      document.getElementById("netcharge2").value = "+1";
+    else if (usrinpnc2 == "0") {
+      document.getElementById("netcharge2").value = "0";
       document.getElementById("netcharge2").style.border = "2px solid green";
     }
 
@@ -399,8 +499,8 @@ function checkb1() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("netcharge3").style.border = "2px solid blue";
     }
-    else if (usrinpnc3 == "0") {
-      document.getElementById("netcharge3").value = "0";
+    else if (usrinpnc3 == "-1") {
+      document.getElementById("netcharge3").value = "-1";
       document.getElementById("netcharge3").style.border = "2px solid green";
     }
 
@@ -416,8 +516,8 @@ function checkb1() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("netcharge4").style.border = "2px solid blue";
     }
-    else if (usrinpnc4 == "-1") {
-      document.getElementById("netcharge4").value = "-1";
+    else if (usrinpnc4 == "-2") {
+      document.getElementById("netcharge4").value = "-2";
       document.getElementById("netcharge4").style.border = "2px solid green";
     }
 
@@ -432,8 +532,8 @@ function checkb1() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("netcharge5").style.border = "2px solid blue";
     }
-    else if (usrinpnc5 == "-2") {
-      document.getElementById("netcharge5").value = "-2";
+    else if (usrinpnc5 == "-3") {
+      document.getElementById("netcharge5").value = "-3";
       document.getElementById("netcharge5").style.border = "2px solid green";
     }
 
@@ -443,20 +543,15 @@ function checkb1() {
       document.getElementById("showsteppb1").disabled = false;
     }
   }
-  if (selectpeptide.options[selectpeptide.selectedIndex].value == 2) {
 
-  }
- if (selectpeptide.options[selectpeptide.selectedIndex].value == 3) {
-    
-  }
 }
 
 function showansb1() {
-  document.getElementById("netcharge1").value = "+2";
-  document.getElementById("netcharge2").value = "+1";
-  document.getElementById("netcharge3").value = "0";
-  document.getElementById("netcharge4").value = "-1";
-  document.getElementById("netcharge5").value = "-2";
+  document.getElementById("netcharge1").value = "+1";
+  document.getElementById("netcharge2").value = "0";
+  document.getElementById("netcharge3").value = "-1";
+  document.getElementById("netcharge4").value = "-2";
+  document.getElementById("netcharge5").value = "-3";
 
 
   document.getElementById("netcharge1").style.border = "2px solid green";
@@ -470,45 +565,247 @@ function showansb1() {
 /****************************************  pI *************************************** */
 function checpibtn() {
 
-  var usrinpvalue1 = document.getElementById("inputpib1").value;
-  var usrinpvalue2 = document.getElementById("inputpib2").value;
+  var usrinppi1 = document.getElementById("inputpib1").value;
+  var usrinppi2 = document.getElementById("inputpib2").value;
 
-  if (usrinpvalue1 == "") {
-    $('#alertModal').modal('show');
-    $('.modal-body').html('Input box cannot be empty');
-    document.getElementById("inputpib1").style.border = "2px solid blue";
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 1) {
+    if (usrinppi1 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("inputpib1").style.border = "2px solid blue";
+    }
+    else if ( (usrinppi1 == "9.04")) {
+      document.getElementById("inputpib1").value = usrinppi1;
+      document.getElementById("inputpib1").style.border = "2px solid green";
+    }
+
+    else {
+      document.getElementById("inputpib1").style.border = "2px solid red";
+      document.getElementById("pibtnshow").disabled = false;
+    }
+    if (usrinppi2 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("inputpib2").style.border = "2px solid blue";
+    }
+    else if ((usrinppi2 == "12.48") ) {
+      document.getElementById("inputpib2").value = usrinppi2;
+      document.getElementById("inputpib2").style.border = "2px solid green";
+    }
+
+    else {
+      document.getElementById("inputpib2").style.border = "2px solid red";
+      document.getElementById("pibtnshow").disabled = false;
+    }
+
+    if (((usrinppi1 == "9.04") && (usrinppi2 == "12.48")) ) {
+      document.getElementById("anspi").innerHTML = "10.76";
+    }
+    
+
+    else {
+      document.getElementById("anspi").innerHTML = "";
+    }
+
+
+
   }
-  else if (usrinpvalue1 == "4.8") {
-    document.getElementById("inputpib1").value = 4.8;
-    document.getElementById("inputpib1").style.border = "2px solid green";
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 2) {
+
+    if (usrinppi1 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("inputpib1").style.border = "2px solid blue";
+    }
+    else if ( (usrinppi1 == "1.88")) {
+      document.getElementById("inputpib1").value = usrinppi1;
+      document.getElementById("inputpib1").style.border = "2px solid green";
+    }
+
+    else {
+      document.getElementById("inputpib1").style.border = "2px solid red";
+      document.getElementById("pibtnshow").disabled = false;
+    }
+    if (usrinppi2 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("inputpib2").style.border = "2px solid blue";
+    }
+    else if ( (usrinppi2 == "3.65")) {
+      document.getElementById("inputpib2").value = usrinppi2;
+      document.getElementById("inputpib2").style.border = "2px solid green";
+    }
+
+    else {
+      document.getElementById("inputpib2").style.border = "2px solid red";
+      document.getElementById("pibtnshow").disabled = false;
+    }
+
+    if (((usrinppi1 == "1.88") && (usrinppi2 == "3.65")) ) {
+      document.getElementById("anspi").innerHTML = "2.77";
+    }
+    else {
+      document.getElementById("anspi").innerHTML = "";
+    }
+
+
 
   }
 
-  else {
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 3) {
+    if (usrinppi1 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("inputpib1").style.border = "2px solid blue";
+    }
+    else if ((usrinppi1 == "2.34") ) {
+      document.getElementById("inputpib1").value = usrinppi1;
+      document.getElementById("inputpib1").style.border = "2px solid green";
+    }
 
-    document.getElementById("inputpib1").style.border = "2px solid red";
-    document.getElementById("showsteppb2").disabled = false;
+    else {
+      document.getElementById("inputpib1").style.border = "2px solid red";
+      document.getElementById("pibtnshow").disabled = false;
+    }
+    if (usrinppi2 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("inputpib2").style.border = "2px solid blue";
+    }
+    else if ((usrinppi2 == "9.60") ) {
+      document.getElementById("inputpib2").value = usrinppi2;
+      document.getElementById("inputpib2").style.border = "2px solid green";
+    }
+
+    else {
+      document.getElementById("inputpib2").style.border = "2px solid red";
+      document.getElementById("pibtnshow").disabled = false;
+    }
+
+    if (((usrinppi1 == "2.34") && (usrinppi2 == "9.60")) ) {
+      document.getElementById("anspi").innerHTML = "5.97";
+    }
+    else {
+      document.getElementById("anspi").innerHTML = "";
+    }
+
+  }
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 4) {
+
+    if (usrinppi1 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("inputpib1").style.border = "2px solid blue";
+    }
+    else if ((usrinppi1 == "1.83") ) {
+      document.getElementById("inputpib1").value = usrinppi1;
+      document.getElementById("inputpib1").style.border = "2px solid green";
+    }
+
+    else {
+      document.getElementById("inputpib1").style.border = "2px solid red";
+      document.getElementById("pibtnshow").disabled = false;
+    }
+    if (usrinppi2 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("inputpib2").style.border = "2px solid blue";
+    }
+    else if ((usrinppi2 == "9.13") ) {
+      document.getElementById("inputpib2").value = usrinppi2;
+      document.getElementById("inputpib2").style.border = "2px solid green";
+    }
+
+    else {
+      document.getElementById("inputpib2").style.border = "2px solid red";
+      document.getElementById("pibtnshow").disabled = false;
+    }
+
+    if (((usrinppi1 == "1.83") && (usrinppi2 == "9.13")) ) {
+      document.getElementById("anspi").innerHTML = "5.48";
+    }
+    else {
+      document.getElementById("anspi").innerHTML = "";
+    }
+
+  }
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 5) {
+
+    if (usrinppi1 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("inputpib1").style.border = "2px solid blue";
+    }
+    else if ((usrinppi1 == "2.19") ) {
+      document.getElementById("inputpib1").value = usrinppi1;
+      document.getElementById("inputpib1").style.border = "2px solid green";
+    }
+
+    else {
+      document.getElementById("inputpib1").style.border = "2px solid red";
+      document.getElementById("pibtnshow").disabled = false;
+    }
+    if (usrinppi2 == "") {
+      $('#alertModal').modal('show');
+      $('.modal-body').html('Input box cannot be empty');
+      document.getElementById("inputpib2").style.border = "2px solid blue";
+    }
+    else if ((usrinppi2 == "3.86") ) {
+      document.getElementById("inputpib2").value = usrinppi2;
+      document.getElementById("inputpib2").style.border = "2px solid green";
+    }
+
+    else {
+      document.getElementById("inputpib2").style.border = "2px solid red";
+      document.getElementById("pibtnshow").disabled = false;
+    }
+
+    if (((usrinppi1 == "2.19") && (usrinppi2 == "3.86")) ) {
+      document.getElementById("anspi").innerHTML = "3.03";
+    }
+    else {
+      document.getElementById("anspi").innerHTML = "";
+    }
   }
 
-  if (usrinpvalue2 == "") {
-    $('#alertModal').modal('show');
-    $('.modal-body').html('Input box cannot be empty');
-    document.getElementById("inputpib2").style.border = "2px solid blue";
-  }
-
-  else if (usrinpvalue2 == "9") {
-    document.getElementById("inputpib2").value = 9;
-    document.getElementById("inputpib2").style.border = "2px solid green";
-  }
-  else {
-
-    document.getElementById("inputpib2").style.border = "2px solid red";
-    document.getElementById("showsteppb2").disabled = false;
-  }
 }
 
 function showpibtn() {
-  document.getElementById("partbans2").style.display = "block";
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 1) {
+    document.getElementById("inputpib1").value = " 9.04";
+    document.getElementById("inputpib2").value = "12.48";
+    document.getElementById("anspi").innerHTML = "10.76";
+    document.getElementById("inputpib1").style.border = "2px solid green";
+    document.getElementById("inputpib2").style.border = "2px solid green";
+  }
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 2) {
+    document.getElementById("inputpib1").value = "1.88";
+    document.getElementById("inputpib2").value = "3.65";
+    document.getElementById("anspi").innerHTML = "2.77";
+    document.getElementById("inputpib1").style.border = "2px solid green";
+    document.getElementById("inputpib2").style.border = "2px solid green";
+  }
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 3) {
+    document.getElementById("inputpib1").value = " 2.34";
+    document.getElementById("inputpib2").value = "9.60";
+    document.getElementById("anspi").innerHTML = "5.97";
+    document.getElementById("inputpib1").style.border = "2px solid green";
+    document.getElementById("inputpib2").style.border = "2px solid green";
+  }
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 4) {
+    document.getElementById("inputpib1").value = " 1.83";
+    document.getElementById("inputpib2").value = "9.13";
+    document.getElementById("anspi").innerHTML = "5.48";
+    document.getElementById("inputpib1").style.border = "2px solid green";
+    document.getElementById("inputpib2").style.border = "2px solid green";
+  }
+  if (selectpeptide.options[selectpeptide.selectedIndex].value == 5) {
+    document.getElementById("inputpib1").value = " 2.19";
+    document.getElementById("inputpib2").value = "3.86";
+    document.getElementById("anspi").innerHTML = "3.03";
+    document.getElementById("inputpib1").style.border = "2px solid green";
+    document.getElementById("inputpib2").style.border = "2px solid green";
+  }
 }
 
 
@@ -578,7 +875,7 @@ function dnaseqbtn() {
 
     if (userinputdna2 == "") {
       $('#alertModal').modal('show');
-      $('.modal-body').text('Input box for compliment sequence of the above sequence cannot be empty');
+      $('.modal-body').text('Input box of DNA compliment of the above sequence cannot be empty');
     }
 
     else if (userinputdna2 == complementarySequence) {
@@ -615,13 +912,14 @@ function apdnabtn() {
   if (userinputmwdna == "") {
     $('#alertModal').modal('show');
     $('.modal-body').text('The input box for  number of bases cannot be empty');
+    document.getElementById("inputmwdna").style.border = "2px solid blue";
   }
   else if (userinputmwdna == mwdna) {
-    $('#alertModal').modal('show');
-    $('.modal-body').text('Correct answer');
+    /*$('#alertModal').modal('show');
+    $('.modal-body').text('Correct answer');*/
     resultmwdna = mwdna * 660;
     document.getElementById("inputmwdnar").value = resultmwdna;
-
+    document.getElementById("inputmwdna").style.border = "2px solid green";
   }
   else {
     $('#alertModal').modal('show');
@@ -629,6 +927,7 @@ function apdnabtn() {
     document.getElementById("dnaseqbtn").disabled = false;
     document.getElementById("dnamwbtnshow").disabled = false;
     document.getElementById("inputmwdna").value = "";
+    document.getElementById("inputmwdna").style.border = "2px solid red";
   }
 }
 
@@ -693,13 +992,13 @@ function actdnabtn() {
 
 
     if (
-      (userinptA == countA) &&
-      (userinptT == countT) &&
-      (userinptdC == countdC) &&
+      (userinptA == countA) ||
+      (userinptT == countT) ||
+      (userinptdC == countdC) ||
       (userinptG == countG)
     ) {
-      $('#alertModal').modal('show');
-      $('.modal-body').text('Correct answer');
+      /*$('#alertModal').modal('show');
+      $('.modal-body').text('Correct answer');*/
       document.getElementById("inputmw2dnaMWtot").value = mwactdna;
       document.getElementById("inputtmdnaA").value = countA;
       document.getElementById("inputtmdnaT").value = countT;
@@ -709,15 +1008,19 @@ function actdnabtn() {
       document.getElementById("inputtmdnaT").readOnly = true;
       document.getElementById("inputtmdnaC").readOnly = true;
       document.getElementById("inputtmdnaG").readOnly = true;
+      document.getElementById("inputmw2dnaA").style.border = "2px solid green";
+      document.getElementById("inputmw2dnaT").style.border = "2px solid green";
+      document.getElementById("inputmw2dnaC").style.border = "2px solid green";
+      document.getElementById("inputmw2dnaG").style.border = "2px solid green";
 
 
 
     }
-    else {
-
-      $('#alertModal').modal('show');
-      $('.modal-body').text('To calculate the molar extinction coefficient, the peptide sequence must contain Tryptophan, Tyrosine, Cysteine');
-    }
+    /* else {
+ 
+       $('#alertModal').modal('show');
+       $('.modal-body').text('To calculate the molar extinction coefficient, the peptide sequence must contain Tryptophan, Tyrosine, Cysteine');
+     }*/
 
     // else {
 
@@ -727,12 +1030,14 @@ function actdnabtn() {
       $('.modal-body').text('Incorrect number of A is entered');
       document.getElementById("inputmw2dnaMWtot").value = " ";
       document.getElementById("dnamw1btnshow").disabled = false;
+      document.getElementById("inputmw2dnaA").style.border = "2px solid red";
     }
     if (userinptT != countT) {
       $('#alertModal').modal('show');
       $('.modal-body').text('Incorrect number of T is entered');
       document.getElementById("inputmw2dnaMWtot").value = " ";
       document.getElementById("dnamw1btnshow").disabled = false;
+      document.getElementById("inputmw2dnaT").style.border = "2px solid red";
 
     }
     if (userinptdC != countdC) {
@@ -740,6 +1045,7 @@ function actdnabtn() {
       $('.modal-body').text('Incorrect number of C is entered');
       document.getElementById("inputmw2dnaMWtot").value = " ";
       document.getElementById("dnamw1btnshow").disabled = false;
+      document.getElementById("inputmw2dnaC").style.border = "2px solid red";
 
     }
 
@@ -748,6 +1054,7 @@ function actdnabtn() {
       $('.modal-body').text('Incorrect number of G is entered');
       document.getElementById("inputmw2dnaMWtot").value = " ";
       document.getElementById("dnamw1btnshow").disabled = false;
+      document.getElementById("inputmw2dnaG").style.border = "2px solid red";
 
     }
 
@@ -757,12 +1064,14 @@ function actdnabtn() {
       $('.modal-body').text('The input box for number of A cannot be empty');
       document.getElementById("inputmw2dnaMWtot").value = " ";
       document.getElementById("dnamw1btnshow").disabled = false;
+      document.getElementById("inputmw2dnaA").style.border = "2px solid blue";
     }
     if (userinptT == "") {
       $('#alertModal').modal('show');
       $('.modal-body').text('The input box for number of T cannot be empty');
       document.getElementById("inputmw2dnaMWtot").value = " ";
       document.getElementById("dnamw1btnshow").disabled = false;
+      document.getElementById("inputmw2dnaT").style.border = "2px solid blue";
 
     }
     if (userinptdC == "") {
@@ -770,6 +1079,7 @@ function actdnabtn() {
       $('.modal-body').text('The input box for number of C cannot be empty');
       document.getElementById("inputmw2dnaMWtot").value = " ";
       document.getElementById("dnamw1btnshow").disabled = false;
+      document.getElementById("inputmw2dnaC").style.border = "2px solid blue";
 
     }
 
@@ -778,6 +1088,7 @@ function actdnabtn() {
       $('.modal-body').text('The input box for number of G cannot be empty');
       document.getElementById("inputmw2dnaMWtot").value = " ";
       document.getElementById("dnamw1btnshow").disabled = false;
+      document.getElementById("inputmw2dnaG").style.border = "2px solid blue";
 
     }
 
@@ -873,12 +1184,14 @@ function tmdnabtn() {
     if (userinputtm == "") {
       $('#alertModal').modal('show');
       $('.modal-body').text('The input box for melting temperature(Tm) cannot be empty');
+      document.getElementById("inputdnatm").style.border = "2px solid blue";
     }
     else if ((userinputtm == Tm)) {
-      $('#alertModal').modal('show');
-      $('.modal-body').text('Correct answer');
+      /* $('#alertModal').modal('show');
+       $('.modal-body').text('Correct answer');*/
       document.getElementById("tmdnaplotbtn").disabled = false;
       document.getElementById("inputdnatm").value = Tm;
+      document.getElementById("inputdnatm").style.border = "2px solid green";
     }
     else {
 
@@ -886,6 +1199,7 @@ function tmdnabtn() {
       $('.modal-body').text('Incorrect melting temperature.');
       document.getElementById("dnatmbtnshow").disabled = false;
       document.getElementById("inputdnatm").value = "";
+      document.getElementById("inputdnatm").style.border = "2px solid red";
 
     }
 
@@ -937,7 +1251,7 @@ function cancelmsg() {
 
 function plottm() {
 
-  document.getElementById("card32").style.display = "block";
+  document.getElementById("carddnapartc").style.display = "block";
   window.scrollBy(0, 700);
   const chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
@@ -1010,7 +1324,7 @@ function plottm() {
     }); */
 }
 
-window.onload = function () {
+/* window.onload = function () {
   var chart = new CanvasJS.Chart("chartContainer", {
     title: {
       text: "Tm Vs Percentage of single stranded DNA"
@@ -1019,22 +1333,23 @@ window.onload = function () {
       title: "Tm",
       minimum: 0,
       maximum: 95,
-      interval: 10,
+     
 
     },
     axisY: {
       title: "Percentage of single stranded DNA",
       minimum: 0,
       maximum: 100,
-      interval: 50,
+   
       gridThickness: 0
     },
     data: [{
       type: "line",
-
+      
     }]
 
   });
 
   chart.render();
 } 
+ */
