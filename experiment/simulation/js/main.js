@@ -875,7 +875,7 @@ function dnaseqbtn() {
 
     if (userinputdna2 == "") {
       $('#alertModal').modal('show');
-      $('.modal-body').text('Input box of DNA compliment of the above sequence cannot be empty');
+      $('.modal-body').text('Input box of DNA complementary cannot be empty');
     }
 
     else if (userinputdna2 == complementarySequence) {
@@ -887,7 +887,7 @@ function dnaseqbtn() {
     }
     else {
       $('#alertModal').modal('show');
-      $('.modal-body').text('Incorrect compliment sequence of the above sequence');
+      $('.modal-body').text('Incorrect complementary DNA sequence');
       document.getElementById("inputdna1").readOnly = true;
       document.getElementById("inputdna2").readOnly = false;
       document.getElementById("dnaseqbtn").disabled = false;
