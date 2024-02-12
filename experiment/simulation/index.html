@@ -720,7 +720,7 @@ Developer: Prakriti Dhang
 							<div class="col-md-8"></div>
 							<div class="col-md-4">
 
-								<div class="calculator border border-1 rounded-4 p-3 " id="calc"
+								<div class="calculator border border-4 border-secondary rounded-4 p-3 " id="calc"
 									style="background-color: #383636; ">
 									<button class="btn btn-indian-red btn-block mb-2 " onclick="closecalculate()"
 										style="float: right;">Close</button>
@@ -967,8 +967,7 @@ Developer: Prakriti Dhang
 											button to indicate the correctness. To reveal the correct answer, click on
 											the "Show
 											Answer" button.</li>
-										<li>To calculate pI of the selected peptide, enter the pK<sub>a1</sub> and
-											pK<sub>a2</sub> value in the given input box. Click the "ckeck" button to
+										<li>To calculate pI of the selected peptide, enter the pK<sub>a</sub> value in the given input box. Click the "ckeck" button to
 											indicate
 											the correctness. To reveal the correct answer, click on the "Show Answer"
 											button.
@@ -1020,9 +1019,9 @@ Developer: Prakriti Dhang
 													<thead>
 														<tr>
 															<th scope="col">Amino Acid</th>
-															<th scope="col">pk<sub>a1</sub></th>
-															<th scope="col">pk<sub>a2</sub></th>
-															<th scope="col">pk<sub>a3</sub></th>
+															<th scope="col">pK<sub>a1</sub></th>
+															<th scope="col">pK<sub>a2</sub></th>
+															<th scope="col">pK<sub>a3</sub></th>
 															<th scope="col">pI</th>
 														</tr>
 													</thead>
@@ -1189,9 +1188,11 @@ Developer: Prakriti Dhang
 								</label>
 								<select class="form-select" id="peptidesel" aria-label="Default select example" onchange="pseqbtn()">
 									<option value="0" selected>Choose a peptide</option>
-									<option value="1">Peptide 1</option>
-									<option value="2">Peptide 2</option>
-									<option value="3">Peptide 3</option>
+									<option value="1">Arginine</option>
+									<option value="2">Aspartic acid</option>
+									<option value="3">Glycine</option>
+									<option value="4">Phenylalanine</option>
+									<option value="5">Tripeptide (Asp-Gly-Glu)</option>
 								</select>
 								<!--input type="input" id="Textarea2" placeholder="Enter any  sequence "
 												class="form-control "-->
@@ -1204,21 +1205,24 @@ Developer: Prakriti Dhang
 						</div>
 
 						<div class="row">
-
-							<div class="col-md-12">
-								<div class="card card-body">
+							
+							<div class="col-md-6">
+								<div class="card card-body  border-0">
 									<div class="img-container">
-										<img src="./images/peptide.png" id="peptide1" alt="peptide 1" style="display: none;">
-										<img src="./images/peptide1.png" id="peptide2" alt="peptide 2" style="display: none;">
-										<img src="./images/peptide2.png" id="peptide3" alt="peptide 3" style="display: none;">
+										<img src="./images/Arginine.png" id="peptide1" alt="peptide 1" style="display: none;">
+										<img src="./images/Aspartic_acid.png" id="peptide2" alt="peptide 2" style="display: none;">
+										<img src="./images/Glycine.png" id="peptide3" alt="peptide 3" style="display: none;">
+										<img src="./images/Phenylalanine.png" id="peptide4" alt="peptide 4" style="display: none;">
+										<img src="./images/Tripeptide_Asp_Gly_Glu.png" id="peptide5" alt="peptide 5" style="display: none;">
 									</div>
 								</div>
 							</div>
+							
 						</div>
 
 						<div class="row">
 							<div class="col-md-12">
-								<div class="card">
+								<div class="card" id="netchargetable" style="display: none;">
 
 									<div class="card-body">
 										<div class="table-responsive">
@@ -1228,9 +1232,9 @@ Developer: Prakriti Dhang
 												<td style="text-align: center;" class="fs-5 fw-bold">pH</td>
 												<td style="text-align: center;" class="fs-5 fw-bold">1</td>
 												<td style="text-align: center;" class="fs-5 fw-bold">3</td>
-												<td style="text-align: center;" class="fs-5 fw-bold">7</td>
+												<td style="text-align: center;" class="fs-5 fw-bold">4</td>
+												<td style="text-align: center;" class="fs-5 fw-bold">5</td>
 												<td style="text-align: center;" class="fs-5 fw-bold">10</td>
-												<td style="text-align: center;" class="fs-5 fw-bold">13</td>
 
 											</tr>
 											<tr>
@@ -1285,10 +1289,10 @@ Developer: Prakriti Dhang
 												</span>
 											</div>
 											<div class="col-auto">
-												<input type="input" id="inputpi1" 
+												<input type="input" id="inputpib1" 
 													class="form-control">
-													<span class="form-text fs-5">
-														pK<sub>a1</sub>
+													<span class="form-text fs-5" id="pk1">
+														
 													</span>
 											</div>
 											<div class="col-auto">
@@ -1297,10 +1301,10 @@ Developer: Prakriti Dhang
 												</span>
 											</div>
 											<div class="col-auto">
-												<input type="input" id="inputpi2" 
+												<input type="input" id="inputpib2" 
 													class="form-control">
-													<span class="form-text fs-5">
-														pK<sub>a2</sub>
+													<span class="form-text fs-5" id="pk2">
+
 													</span>
 											</div>
 											<div class="col-auto">
@@ -1316,14 +1320,20 @@ Developer: Prakriti Dhang
 
 											<div class="col-auto">
 												<span class="form-text fs-5">
-													2
+													2 = 
+												</span>
+											</div>
+
+											<div class="col-auto">
+												<span class="form-text fs-5" id="anspi">
+													
 												</span>
 											</div>
 										</div>
 
 										<button id="pibtn" type="button"
 											class="btn btn-success border border-1  rounded-3 fs-6 m-2"
-											style="cursor: pointer; " onclick="checpibtn()" disabled>Check</button>
+											style="cursor: pointer; " onclick="checpibtn()" disabled >Check</button>
 										<button id="pibtnshow" type="button"
 											class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
 											style="cursor: pointer;float: right; " onclick="showpibtn()" disabled>Show
@@ -1335,64 +1345,7 @@ Developer: Prakriti Dhang
 						</div>
 
 
-						<div class=" row">
-							<div class="col-md-12">
-								<div class="card border-1" id="partbans2" style="display: block;">
-									<div class="card-header border-secondary fs-5 fw-bold">Correct answer
-									</div>
-									<div class="card-body">
-
-										<div class="row g-3 align-items-center">
-											<div class="col-auto">
-												<label for="inputpi" class="col-form-label fs-5">pI=</label>
-											</div>
-											<div class="col-auto">
-												<span class="form-text fs-5">
-													(
-												</span>
-											</div>
-											<div class="col-auto">
-												<input type="input" id="inputpibans1" placeholder=" " value="4.8"
-													class="form-control" readonly>
-											</div>
-											<div class="col-auto">
-												<span class="form-text fs-5">
-													+
-												</span>
-											</div>
-											<div class="col-auto">
-												<input type="input" id="inputpibans2" placeholder=" " value="9"
-													class="form-control" readonly>
-											</div>
-											<div class="col-auto">
-												<span class="form-text fs-5">
-													)
-												</span>
-											</div>
-											<div class="col-auto">
-												<span class="form-text fs-5">
-													/
-
-												</span>
-											</div>
-
-											<div class="col-auto">
-												<span class="form-text fs-5">
-													2
-												</span>
-											</div>
-											<div class="col-auto">
-												<span class="form-text fs-5">
-													= 6.9
-												</span>
-											</div>
-
-										</div>
-									</div>
-
-								</div>
-							</div>
-						</div>
+						
 
 					</div>
 
@@ -1698,7 +1651,7 @@ Developer: Prakriti Dhang
 							<div class="col-md-8"></div>
 							<div class="col-md-4">
 
-								<div class="calculator border border-1 rounded-4 p-3 " id="calc2"
+								<div class="calculator border border-4 border-secondary rounded-4 p-3 " id="calc2"
 									style="background-color: #383636; ">
 									<button class="btn btn-indian-red btn-block mb-2 " onclick="closecalculate2()"
 										style="float: right;">Close</button>
@@ -1938,7 +1891,8 @@ Developer: Prakriti Dhang
 
 					<div class="col-md-6">
 						<div class="card card-body " id="carddnapartc" style="display:none;">
-							<div id="chartContainer" style="height: 450px; width: 100%;"></div>
+							<img src="./images/DNA_melting_curve.png" id="meltingp" alt="Tm" >
+							<!--div id="chartContainer" style="height: 450px; width: 100%;"></div-->
 							<!--button class="btn btn-olive" id="exportChart">Export Chart</button-->
 						</div>
 					</div>
