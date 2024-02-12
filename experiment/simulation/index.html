@@ -63,11 +63,11 @@ Developer: Prakriti Dhang
 					</div>
 					<div class="card-body">
 						<ol>
-							<li>Click on "Part A - Amino Acid" button to calculate the molecular weight and molar extinction coefficient of a sequence. Click on the
+							<li>Click on "Part A - Calculation of molecular weight and molar extinction coefficient of amino acid sequence. Click on the
 								button to hide part A section.</li>
-							<li>Click on "Part B - Peptide" button to calculate the net charges and pI of a selected peptide. Click on the
+							<li>Click on "Part B - Calculation of pI of peptide and amino acid" button. Click on the
 								button to hide part B section.</li>
-							<li>Click on "Part C - DNA" button to calculate the molecular weight and melting temperature of a sequence. Click on the
+							<li>Click on "Part C - Calculation of melting temperature (Tm) of DNA sequence" button. Click on the
 								button to hide  part C section.</li>
 						</ol>
 						<!--ol style="list-style: none;">
@@ -185,7 +185,7 @@ Developer: Prakriti Dhang
 
 				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3 " type="button" data-bs-toggle="collapse"
 					data-bs-target="#collapseamino" aria-expanded="false" aria-controls="collapseExample">
-					Part A - Amino Acid
+					Part A - Calculation of molecular weight and molar extinction coefficient of amino acid sequence
 				</button>
 			</div>
 			<div class="collapse" id="collapseamino">
@@ -942,7 +942,7 @@ Developer: Prakriti Dhang
 
 				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3" type="button" data-bs-toggle="collapse"
 					data-bs-target="#collapsepeptide" aria-expanded="false" aria-controls="collapseExample">
-					Part B - Peptide
+					Part B - Calculation of pI of peptide and amino acid
 				</button>
 			</div>
 			<div class="collapse" id="collapsepeptide">
@@ -967,11 +967,14 @@ Developer: Prakriti Dhang
 											button to indicate the correctness. To reveal the correct answer, click on
 											the "Show
 											Answer" button.</li>
-										<li>To calculate pI of the selected peptide, enter the pK<sub>a</sub> value in the given input box. Click the "ckeck" button to
+										<li>To calculate pI of the selected peptide or amino acid, enter the pK<sub>a</sub> value in the given input box; 
+											where pK<sub>a1</sub> is &alpha; - carboxyl group, pK<sub>a2</sub> is &alpha;-ammonium ion, and pK<sub>a3</sub> is side chain group.
+											
+										</li>
+										<li>Click the "ckeck" button to
 											indicate
 											the correctness. To reveal the correct answer, click on the "Show Answer"
-											button.
-										</li>
+											button. </li> 
 									</ol>
 
 								</ol>
@@ -1184,10 +1187,10 @@ Developer: Prakriti Dhang
 
 							<div class="form-group m-2 fs-5">
 								<label class="fs-5 fw-bold" for="Textarea2">Select a
-									peptide
+									peptide or amino acid
 								</label>
 								<select class="form-select" id="peptidesel" aria-label="Default select example" onchange="pseqbtn()">
-									<option value="0" selected>Choose a peptide</option>
+									<option value="0" selected>Choose a peptide or amino acid</option>
 									<option value="1">Arginine</option>
 									<option value="2">Aspartic acid</option>
 									<option value="3">Glycine</option>
@@ -1361,7 +1364,7 @@ Developer: Prakriti Dhang
 
 				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3" type="button" data-bs-toggle="collapse"
 					data-bs-target="#collapsedna" aria-expanded="false" aria-controls="collapseExample">
-					Part C - DNA
+					Part C - Calculation of melting temperture (Tm) of DNA sequence
 				</button>
 			</div>
 			<div class="collapse" id="collapsedna">
@@ -1376,8 +1379,8 @@ Developer: Prakriti Dhang
 								<ol style="list-style: none;">
 									<li class="fs-6 fw-bold"></li>
 									<ol>
-										<li>Enter DNA sequence in the input box 1 and enter compliment of the first DNA
-											sequence.
+										<li>Enter DNA sequence in the input box 1 and enter complementary DNA
+											sequence in input box 2.
 											Click on the "Submit" button.</li>
 										<ul type="disc">
 											<li>Approximate molecular weight of double-standed DNA sequence</li>
@@ -1471,7 +1474,7 @@ Developer: Prakriti Dhang
 											</div>
 											<div class="col-md-6">
 												<input type="input" id="inputdna2"
-													placeholder="Enter compliment of the above DNA sequence "
+													placeholder="Enter complementary DNA "
 													class="form-control col-md-6">
 											</div>
 											<div class="col-auto">
@@ -1637,150 +1640,12 @@ Developer: Prakriti Dhang
 											disabled>Show
 											Answer</button>
 
-										<button id="calci" class="btn  border border-0" data-toggle="tooltip"
-											data-placement="top" title="Calculator" style="float:right"
-											onclick="calcul2()">
-											<img src="./images/Calculator.png" alt="Save icon"
-												class="img-fluid" /></button>
+										
 									</div>
 								</div>
 							</div>
 						</div>
-						<!--------------------------------------------  Calculator -------------------------------------------------------->
-						<div class="row ">
-							<div class="col-md-8"></div>
-							<div class="col-md-4">
-
-								<div class="calculator border border-4 border-secondary rounded-4 p-3 " id="calc2"
-									style="background-color: #383636; ">
-									<button class="btn btn-indian-red btn-block mb-2 " onclick="closecalculate2()"
-										style="float: right;">Close</button>
-									<!--div class="calculator" style="width: 300px;"-->
-									<input type="text" id="display2" class="form-control mb-3 " readonly>
-									<div class="row p-1">
-
-										<div class="col">
-											<button class="btn btn-pink btn-block "
-												onclick="clearDisplay2()">Clear</button>
-										</div>
-										<div class="col">
-											<!--button class="btn btn-danger btn-block " onclick="" disabled>AC</button-->
-										</div>
-										<div class="col">
-											<!--button class="btn btn-danger btn-block " onclick="" disabled>AC</button-->
-										</div>
-
-										<div class="col">
-											<button class="btn btn-warning btn-block" onclick="delback2()"> DEL
-											</button>
-											<!--&#9003;-->
-
-										</div>
-									</div>
-
-									<div class="row p-1">
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendNumber2('7')">7</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendNumber2('8')">8</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendNumber2('9')">9</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-slate-blue-grey btn-block fw-bold"
-												onclick="appendOperator2('/')">/</button>
-										</div>
-
-									</div>
-
-									<div class="row p-1">
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendNumber2('4')">4</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendNumber2('5')">5</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendNumber2('6')">6</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-slate-blue-grey btn-block fw-bold"
-												onclick="appendOperator2('*')">*</button>
-										</div>
-									</div>
-
-									<div class="row p-1">
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendNumber2('1')">1</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendNumber2('2')">2</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendNumber2('3')">3</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-slate-blue-grey btn-block fw-bold"
-												onclick="appendOperator2('+')">+</button>
-										</div>
-									</div>
-
-									<div class="row p-1">
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendNumber2('0')">0</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-secondary btn-block"
-												onclick="appendDecimal2('.')">.</button>
-										</div>
-
-										<div class="col">
-
-											<button class="btn btn-success btn-block  "
-												onclick="calculate2()">=</button>
-
-										</div>
-										<div class="col">
-											<button class="btn btn-slate-blue-grey btn-block fw-bold"
-												onclick="appendOperator2('-')">-</button>
-										</div>
-
-									</div>
-
-									<div class="row p-1">
-										<div class="col">
-											<button class="btn btn-olive btn-block" onclick="appendNumber2('(')"> (
-											</button>
-										</div>
-										<div class="col">
-											<button class="btn btn-olive 	 btn-block" onclick="appendNumber2(')')"> )
-											</button>
-										</div>
-
-										<div class="col"></div>
-										<div class="col">
-
-
-										</div>
-
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<!---------Calculator --------->
+						
 
 
 						<!----------------------------------------------------------------------- Tm ---------------------------------------------------------------->
@@ -1864,18 +1729,15 @@ Developer: Prakriti Dhang
 											style="cursor: pointer;float: right; " onclick="showtmdnabtn()"
 											disabled>Show
 											Answer</button>
-
+											<button id="calci" class="btn  border border-0" data-toggle="tooltip"
+											data-placement="top" title="Calculator" style="float:right"
+											onclick="calcul2()">
+											<img src="./images/Calculator.png" alt="Save icon"
+												class="img-fluid" /></button>
 
 									</div>
 
-									<div class="card card-body border-0">
-										<button id="tmdnaplotbtn" type="button"
-											class="btn btn-slate-blue-grey border border-1 col-md-5  rounded-3 fs-6 m-2"
-											style="cursor: pointer; " onclick="plottm()" disabled>Plot Tm Vs
-											Percentage of
-											single
-											stranded DNA </button>
-									</div>
+									
 								</div>
 
 
@@ -1884,14 +1746,165 @@ Developer: Prakriti Dhang
 
 
 						</div>
-					
+					<!--------------------------------------------  Calculator -------------------------------------------------------->
+					<div class="row ">
+						<div class="col-md-8"></div>
+						<div class="col-md-4">
 
+							<div class="calculator border border-4 border-secondary rounded-4 p-3 " id="calc2"
+								style="background-color: #383636; ">
+								<button class="btn btn-indian-red btn-block mb-2 " onclick="closecalculate2()"
+									style="float: right;">Close</button>
+								<!--div class="calculator" style="width: 300px;"-->
+								<input type="text" id="display2" class="form-control mb-3 " readonly>
+								<div class="row p-1">
+
+									<div class="col">
+										<button class="btn btn-pink btn-block "
+											onclick="clearDisplay2()">Clear</button>
+									</div>
+									<div class="col">
+										<!--button class="btn btn-danger btn-block " onclick="" disabled>AC</button-->
+									</div>
+									<div class="col">
+										<!--button class="btn btn-danger btn-block " onclick="" disabled>AC</button-->
+									</div>
+
+									<div class="col">
+										<button class="btn btn-warning btn-block" onclick="delback2()"> DEL
+										</button>
+										<!--&#9003;-->
+
+									</div>
+								</div>
+
+								<div class="row p-1">
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendNumber2('7')">7</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendNumber2('8')">8</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendNumber2('9')">9</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-slate-blue-grey btn-block fw-bold"
+											onclick="appendOperator2('/')">/</button>
+									</div>
+
+								</div>
+
+								<div class="row p-1">
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendNumber2('4')">4</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendNumber2('5')">5</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendNumber2('6')">6</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-slate-blue-grey btn-block fw-bold"
+											onclick="appendOperator2('*')">*</button>
+									</div>
+								</div>
+
+								<div class="row p-1">
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendNumber2('1')">1</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendNumber2('2')">2</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendNumber2('3')">3</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-slate-blue-grey btn-block fw-bold"
+											onclick="appendOperator2('+')">+</button>
+									</div>
+								</div>
+
+								<div class="row p-1">
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendNumber2('0')">0</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-secondary btn-block"
+											onclick="appendDecimal2('.')">.</button>
+									</div>
+
+									<div class="col">
+
+										<button class="btn btn-success btn-block  "
+											onclick="calculate2()">=</button>
+
+									</div>
+									<div class="col">
+										<button class="btn btn-slate-blue-grey btn-block fw-bold"
+											onclick="appendOperator2('-')">-</button>
+									</div>
+
+								</div>
+
+								<div class="row p-1">
+									<div class="col">
+										<button class="btn btn-olive btn-block" onclick="appendNumber2('(')"> (
+										</button>
+									</div>
+									<div class="col">
+										<button class="btn btn-olive 	 btn-block" onclick="appendNumber2(')')"> )
+										</button>
+									</div>
+
+									<div class="col"></div>
+									<div class="col">
+
+
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!---------Calculator --------->
+<div class="row">
+	<div class="col-md-8">
+		<div class="card card-body border-0">
+			<button id="tmdnaplotbtn" type="button"
+				class="btn btn-slate-blue-grey border border-1 col-md-5  rounded-3 fs-6 m-2"
+				style="cursor: pointer; " onclick="plottm()" disabled>Plot Tm Vs
+				Percentage of
+				single
+				stranded DNA </button>
+
+				
+		</div>
+	</div>
+</div>
 
 				<div class="row">
 
 					<div class="col-md-6">
 						<div class="card card-body " id="carddnapartc" style="display:none;">
 							<img src="./images/DNA_melting_curve.png" id="meltingp" alt="Tm" >
+							<br>
+							<br>
+							<p>Ref: Lehninger Principles of Biochemistry 7th edition (Fig 8-27) 
+							</p>
 							<!--div id="chartContainer" style="height: 450px; width: 100%;"></div-->
 							<!--button class="btn btn-olive" id="exportChart">Export Chart</button-->
 						</div>
