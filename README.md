@@ -37,3 +37,4 @@ SrNo | Name | Vlabs Developer or Integration Engineer| Designation | Department|
 1 | **Prakriti Dhang** | Developer and Integration Engineer | Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |
 2 | **Namrata Ganguli** | | Research Scholar | School of Bioscience | IIT Kharagpur |
 
+ 
