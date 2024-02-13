@@ -338,6 +338,17 @@ function pseqbtn() {
     document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
     document.getElementById("pk1").innerHTML = "pK<sub>a2</sub>";
     document.getElementById("pk2").innerHTML = "pK<sub>a3</sub>";
+    document.getElementById("anspi").innerHTML = "";
+    document.getElementById("netcharge1").value = "";
+    document.getElementById("netcharge2").value = "";
+    document.getElementById("netcharge3").value = "";
+    document.getElementById("netcharge4").value = "";
+    document.getElementById("netcharge5").value = "";
+    document.getElementById("netcharge1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge2").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge3").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge4").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge5").style.border = "1px solid #D8D8D8 ";
 
   }
   else if (selectpeptide.options[selectpeptide.selectedIndex].value == 2) {
@@ -355,6 +366,17 @@ function pseqbtn() {
     document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
     document.getElementById("pk1").innerHTML = "pK<sub>a1</sub>";
     document.getElementById("pk2").innerHTML = "pK<sub>a3</sub>";
+    document.getElementById("anspi").innerHTML = "";
+    document.getElementById("netcharge1").value = "";
+    document.getElementById("netcharge2").value = "";
+    document.getElementById("netcharge3").value = "";
+    document.getElementById("netcharge4").value = "";
+    document.getElementById("netcharge5").value = "";
+    document.getElementById("netcharge1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge2").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge3").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge4").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge5").style.border = "1px solid #D8D8D8 ";
   }
   else if (selectpeptide.options[selectpeptide.selectedIndex].value == 3) {
     document.getElementById("peptide3").style.display = "block";
@@ -371,6 +393,17 @@ function pseqbtn() {
     document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
     document.getElementById("pk1").innerHTML = "pK<sub>a1</sub>";
     document.getElementById("pk2").innerHTML = "pK<sub>a2</sub>";
+    document.getElementById("anspi").innerHTML = "";
+    document.getElementById("netcharge1").value = "";
+    document.getElementById("netcharge2").value = "";
+    document.getElementById("netcharge3").value = "";
+    document.getElementById("netcharge4").value = "";
+    document.getElementById("netcharge5").value = "";
+    document.getElementById("netcharge1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge2").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge3").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge4").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge5").style.border = "1px solid #D8D8D8 ";
   }
   else if (selectpeptide.options[selectpeptide.selectedIndex].value == 4) {
     document.getElementById("peptide4").style.display = "block";
@@ -387,6 +420,17 @@ function pseqbtn() {
     document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
     document.getElementById("pk1").innerHTML = "pK<sub>a1</sub>";
     document.getElementById("pk2").innerHTML = "pK<sub>a2</sub>";
+    document.getElementById("anspi").innerHTML = "";
+    document.getElementById("netcharge1").value = "";
+    document.getElementById("netcharge2").value = "";
+    document.getElementById("netcharge3").value = "";
+    document.getElementById("netcharge4").value = "";
+    document.getElementById("netcharge5").value = "";
+    document.getElementById("netcharge1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge2").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge3").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge4").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge5").style.border = "1px solid #D8D8D8 ";
   }
   else if (selectpeptide.options[selectpeptide.selectedIndex].value == 5) {
     document.getElementById("netchargetable").style.display = "block";
@@ -403,6 +447,17 @@ function pseqbtn() {
     document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
     document.getElementById("pk1").innerHTML = "pK<sub>1</sub>";
     document.getElementById("pk2").innerHTML = "pK<sub>2</sub>";
+    document.getElementById("anspi").innerHTML = "";
+    document.getElementById("netcharge1").value = "";
+    document.getElementById("netcharge2").value = "";
+    document.getElementById("netcharge3").value = "";
+    document.getElementById("netcharge4").value = "";
+    document.getElementById("netcharge5").value = "";
+    document.getElementById("netcharge1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge2").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge3").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge4").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge5").style.border = "1px solid #D8D8D8 ";
   }
 
   else {
@@ -420,6 +475,19 @@ function pseqbtn() {
     document.getElementById("inputpib2").value = "";
     document.getElementById("inputpib1").style.border = "1px solid #D8D8D8 ";
     document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
+    document.getElementById("pk1").innerHTML = "";
+    document.getElementById("pk2").innerHTML = "";
+    document.getElementById("anspi").innerHTML = "";
+    document.getElementById("netcharge1").value = "";
+    document.getElementById("netcharge2").value = "";
+    document.getElementById("netcharge3").value = "";
+    document.getElementById("netcharge4").value = "";
+    document.getElementById("netcharge5").value = "";
+    document.getElementById("netcharge1").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge2").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge3").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge4").style.border = "1px solid #D8D8D8 ";
+    document.getElementById("netcharge5").style.border = "1px solid #D8D8D8 ";
   }
   /* var peptideSequence = document.getElementById("Textarea2").value;
  
@@ -574,7 +642,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib1").style.border = "2px solid blue";
     }
-    else if ( (usrinppi1 == "9.04")) {
+    else if ((usrinppi1 == "9.04")) {
       document.getElementById("inputpib1").value = usrinppi1;
       document.getElementById("inputpib1").style.border = "2px solid green";
     }
@@ -588,7 +656,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib2").style.border = "2px solid blue";
     }
-    else if ((usrinppi2 == "12.48") ) {
+    else if ((usrinppi2 == "12.48")) {
       document.getElementById("inputpib2").value = usrinppi2;
       document.getElementById("inputpib2").style.border = "2px solid green";
     }
@@ -598,10 +666,10 @@ function checpibtn() {
       document.getElementById("pibtnshow").disabled = false;
     }
 
-    if (((usrinppi1 == "9.04") && (usrinppi2 == "12.48")) ) {
+    if (((usrinppi1 == "9.04") && (usrinppi2 == "12.48"))) {
       document.getElementById("anspi").innerHTML = "10.76";
     }
-    
+
 
     else {
       document.getElementById("anspi").innerHTML = "";
@@ -617,7 +685,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib1").style.border = "2px solid blue";
     }
-    else if ( (usrinppi1 == "1.88")) {
+    else if ((usrinppi1 == "1.88")) {
       document.getElementById("inputpib1").value = usrinppi1;
       document.getElementById("inputpib1").style.border = "2px solid green";
     }
@@ -631,7 +699,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib2").style.border = "2px solid blue";
     }
-    else if ( (usrinppi2 == "3.65")) {
+    else if ((usrinppi2 == "3.65")) {
       document.getElementById("inputpib2").value = usrinppi2;
       document.getElementById("inputpib2").style.border = "2px solid green";
     }
@@ -641,7 +709,7 @@ function checpibtn() {
       document.getElementById("pibtnshow").disabled = false;
     }
 
-    if (((usrinppi1 == "1.88") && (usrinppi2 == "3.65")) ) {
+    if (((usrinppi1 == "1.88") && (usrinppi2 == "3.65"))) {
       document.getElementById("anspi").innerHTML = "2.77";
     }
     else {
@@ -658,7 +726,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib1").style.border = "2px solid blue";
     }
-    else if ((usrinppi1 == "2.34") ) {
+    else if ((usrinppi1 == "2.34")) {
       document.getElementById("inputpib1").value = usrinppi1;
       document.getElementById("inputpib1").style.border = "2px solid green";
     }
@@ -672,7 +740,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib2").style.border = "2px solid blue";
     }
-    else if ((usrinppi2 == "9.60") ) {
+    else if ((usrinppi2 == "9.60")) {
       document.getElementById("inputpib2").value = usrinppi2;
       document.getElementById("inputpib2").style.border = "2px solid green";
     }
@@ -682,7 +750,7 @@ function checpibtn() {
       document.getElementById("pibtnshow").disabled = false;
     }
 
-    if (((usrinppi1 == "2.34") && (usrinppi2 == "9.60")) ) {
+    if (((usrinppi1 == "2.34") && (usrinppi2 == "9.60"))) {
       document.getElementById("anspi").innerHTML = "5.97";
     }
     else {
@@ -697,7 +765,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib1").style.border = "2px solid blue";
     }
-    else if ((usrinppi1 == "1.83") ) {
+    else if ((usrinppi1 == "1.83")) {
       document.getElementById("inputpib1").value = usrinppi1;
       document.getElementById("inputpib1").style.border = "2px solid green";
     }
@@ -711,7 +779,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib2").style.border = "2px solid blue";
     }
-    else if ((usrinppi2 == "9.13") ) {
+    else if ((usrinppi2 == "9.13")) {
       document.getElementById("inputpib2").value = usrinppi2;
       document.getElementById("inputpib2").style.border = "2px solid green";
     }
@@ -721,7 +789,7 @@ function checpibtn() {
       document.getElementById("pibtnshow").disabled = false;
     }
 
-    if (((usrinppi1 == "1.83") && (usrinppi2 == "9.13")) ) {
+    if (((usrinppi1 == "1.83") && (usrinppi2 == "9.13"))) {
       document.getElementById("anspi").innerHTML = "5.48";
     }
     else {
@@ -736,7 +804,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib1").style.border = "2px solid blue";
     }
-    else if ((usrinppi1 == "2.19") ) {
+    else if ((usrinppi1 == "2.19")) {
       document.getElementById("inputpib1").value = usrinppi1;
       document.getElementById("inputpib1").style.border = "2px solid green";
     }
@@ -750,7 +818,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib2").style.border = "2px solid blue";
     }
-    else if ((usrinppi2 == "3.86") ) {
+    else if ((usrinppi2 == "3.86")) {
       document.getElementById("inputpib2").value = usrinppi2;
       document.getElementById("inputpib2").style.border = "2px solid green";
     }
@@ -760,7 +828,7 @@ function checpibtn() {
       document.getElementById("pibtnshow").disabled = false;
     }
 
-    if (((usrinppi1 == "2.19") && (usrinppi2 == "3.86")) ) {
+    if (((usrinppi1 == "2.19") && (usrinppi2 == "3.86"))) {
       document.getElementById("anspi").innerHTML = "3.03";
     }
     else {
@@ -1254,44 +1322,66 @@ function plottm() {
   document.getElementById("carddnapartc").style.display = "block";
   window.scrollBy(0, 700);
   const chart = new CanvasJS.Chart("chartContainer", {
-    animationEnabled: true,
+    //animationEnabled: true,
     title: {
-      text: "Tm Vs Percentage of single stranded DNA "
+      text: "Tm Vs Percentage of single stranded DNA ",
+      fontSize: 32
     },
     axisY: {
       title: "Percentage of single stranded DNA",
+      gridThickness: 0,
+      minimum: 0,
+      maximum: 50,
+      interval: 5,
+     /*  stripLines: [{
+        value: (molarConcentrationG + molarConcentrationC) * 100,
+        lineDashType: "dash", // set to "dash" for dashed line
+        color: "blue",
+        thickness: 2,
 
-
-      gridThickness: 0
-
+      }] */
     },
     axisX: {
       title: "Tm",
       minimum: 0,
       maximum: 95,
       interval: 10,
+      stripLines: [{
+        value: Tm,
+        lineDashType: "dash", // set to "dash" for dashed line
+        color: "blue",
+        thickness: 2,
+        
 
+      }
+    
+    ]
 
     },
 
     data: [{
       type: "line",
+      indexLabel: "Tm", 
+      indexLabelFontColor: "red",
+     
       dataPoints: dataPointg,
+      
     },
 
 
-    {
+      {
       type: "line",
       color: "purple",
-      dataPoints: [{ x: 0, y: 0 },
-      { x: parseFloat(Tm), y: parseFloat((molarConcentrationG + molarConcentrationC) * 100), indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside" }], //,indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside", indexLabelWrap: true, indexLabelBackgroundColor: "black" 
+      dataPoints: [
+      { x: parseFloat(Tm), y: parseFloat((molarConcentrationG + molarConcentrationC) * 100), indexLabel: "Tm", indexLabelFontColor: "red", indexLabelPlacement: "inside",  indexLabelTextAlign: "right"}], //, indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside"  
 
-    },
+    },  
     ],
-    axisY2: {
+    /* axisY2: {
       title: "Y2 Axis",
       stripLines: [{
-        value: 40,
+        startValue:40,
+        endValue:41, 
         lineDashType: "dash", // set to "dash" for dashed line
         color: "red"
       }]
@@ -1299,11 +1389,12 @@ function plottm() {
     axisX2: {
       title: "X2 Axis",
       stripLines: [{
-        value: 56,
+        startValue:55,
+        endValue:56, 
         lineDashType: "dash", // set to "dash" for dashed line
         color: "blue"
       }]
-    }
+    } */
 
 
     /* annotations:  [
@@ -1324,32 +1415,36 @@ function plottm() {
     }); */
 }
 
-/* window.onload = function () {
+window.onload = function () {
   var chart = new CanvasJS.Chart("chartContainer", {
     title: {
-      text: "Tm Vs Percentage of single stranded DNA"
+      text: "Tm Vs Percentage of single stranded DNA",
+      fontSize: 32
     },
     axisX: {
       title: "Tm",
       minimum: 0,
       maximum: 95,
-     
+
 
     },
     axisY: {
       title: "Percentage of single stranded DNA",
       minimum: 0,
       maximum: 100,
-   
       gridThickness: 0
+
     },
     data: [{
       type: "line",
-      
+      dataPoints: [
+
+      ]
+
     }]
 
   });
 
   chart.render();
-} 
- */
+}
+
