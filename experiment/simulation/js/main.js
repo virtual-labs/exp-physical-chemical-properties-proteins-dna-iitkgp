@@ -462,7 +462,7 @@ function pseqbtn() {
 
   else {
     $('#alertModal').modal('show');
-    $('.modal-body').html('Please select an peptide sequence from the select menu ');
+    $('.modal-body').html('Please select a peptide or amino acid sequence from the select menu.');
     document.getElementById("steppb1").disabled = true;
     document.getElementById("pibtn").disabled = true;
     document.getElementById("netchargetable").style.display = "none";
