@@ -1,6 +1,6 @@
 ## Procedure
 
-### **Protein**
+**Protein**
 1.	Approximate molecular weight of protein = Number of amino acids x 110 Da 
 
 | Amino Acid | 1-letter code | Molecular weight (g/mol) |
@@ -59,7 +59,7 @@ For calculation of pI of a protein, following steps must be followed
 **Step 6:** Calculate the pI by averaging the two pKa values that are just before and just after the zero net charge.   
 
 
-### DNA
+**DNA**
 
 1.	The average weight of a single DNA bp is 660 daltons. This can also be written as 660 g/mol (= molar mass).The molecular weight or molar mass of any double-stranded DNA fragment can therefore be calculated by multiplying number of nucleotides by 650 and the answer will be expressed as daltons or g/mol.
 
