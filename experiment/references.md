@@ -1,7 +1,18 @@
 ## References
 
--
--
+
+- [Khan Academy: Introduction to protein and amino acids](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/introduction-to-proteins-and-amino-acids) 
+- [LabXchange: The amino acid a guided introduction](https://www.labxchange.org/library/pathway/lx-pathway:12ef05df-7058-4e4d-a8cf-116d66ad860f/items/lb:LabXchange:c266ffec:lx_simulation:1/51591)
+- [NPTEL: Experimental Biochemistry](https://archive.nptel.ac.in/courses/104/105/104105102/)
+- Lehninger Principles of Biochemistry 7th edition
+- [Amino Acids](https://courses.lumenlearning.com/wm-biology1/chapter/reading-amino-acids/)
+- Thermo fisher Scientific (Technical note) : A theoretical and practical guide for spectrophotometric determination of protein concentrations at 280 nm
+- Tokmakov, A. A., Kurotani, A., & Sato, K. (2021). Protein pI and Intracellular Localization. Frontiers in Molecular Biosciences, 8, 775736. 
+[https://doi.org/10.3389/fmolb.2021.775736](https://doi.org/10.3389/fmolb.2021.775736) 
+- [Nucleotide](https://www.labxchange.org/library/items/lb:LabXchange:8ecc7210:lx_image:1)
+- [Base Pair](https://www.genome.gov/genetics-glossary/Base-Pair)
+- [Determination of Isoelectic point (pI) of protein](https://foodsciencetoolbox.com/how-to-determine-isoelectric-point-pi-of-proteins)
+
 
 
 
