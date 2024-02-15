@@ -41,11 +41,11 @@ The amino acids of a polypeptide are attached to their neighbours by covalent bo
 1.	Molar mass of protein
 2.	Molar extinction coefficient : The property of protein  to absorb UV light in proportion to their concentrations is utilized for the spectrophotometric determination of protein concentrations, and it is defined by the Beer–Lambert law (or Beer’s law). Beer’s law describes the dependence of a protein’s absorbance on its absorptivity coefficient, its concentration, and the pathlength of the incident light: The protein concentration based on the measured absorbance at 280 nm can be derived from the equation 
 
-    A = εcL 
-    A: absorbance of the protein (unitless)  
-    ε: molar extinction coefficient of the protein (M <sup>-1</sup> cm <sup>-1</sup>)   
-    c: concentration of the protein (molar units, M)   
-    L: light pathlength (cm)   
+A = εcL 
+A: absorbance of the protein (unitless)  
+ε: molar extinction coefficient of the protein (M <sup>-1</sup> cm <sup>-1</sup>)   
+c: concentration of the protein (molar units, M)   
+L: light pathlength (cm)   
 
 
 At wavelength of 280 nm the aromatic amino acids tryptophan (Trp) , tyrosine (Tyr) and phenylalanine(Phe) exhibit strong light absorption and cysteine groups forming disulfide bonds (Cys–Cys) also absorb but to a lesser extent. Consequently, absorption of proteins and peptides at 280 nm is proportional to the content of these amino acids.  
@@ -58,8 +58,8 @@ At wavelength of 280 nm the aromatic amino acids tryptophan (Trp) , tyrosine (Ty
 
 A nucleotide has three characteristics component
 1.	Nitrogenous base(Pyrimidines-Cytosine and thymine, Purine- Adenine and guanine) 
-2.	 Pentose sugar ( 2ˈ-deoxy-D-ribose)
-3. Phosphate group
+2.	Pentose sugar ( 2ˈ-deoxy-D-ribose)
+3.  Phosphate group
 
 5 ˈ-phosphate group of one nucleotide is linked to the 3 ˈ hydroxyl group of the next nucleotide, creating a phosphodiester linkage. Each strand of DNA has a backbone made of alternating sugar (deoxyribose) and phosphate groups. Attached to each sugar is one of four bases: adenine (A), cytosine (C), guanine (G) or thymine (T). The two strands are held together by hydrogen bonds between pairs of bases: adenine pairs with thymine, and cytosine pairs with guanine.
 
