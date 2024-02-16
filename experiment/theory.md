@@ -16,12 +16,12 @@ Proteins are one of the most significant and abundant organic molecules in livin
 Proteins are polymers of amino acids and each amino acid is joined to its neighbour through a covalent amide linkage known as  peptide bond. All amino acids share a basic structure, which consists of a central carbon atom, also known as the alpha (α) carbon, bonded to an amino group (‍NH2 ), a carboxyl group (‍COOH), and a hydrogen atom. They differ from each other in their side chains or R group, which vary in structure, size, and electric charge and also determine the solubility of the amino acids in water. 
 
 <div align="center">
-<img src="images/.png" class=img-fluid>
+<img src="images/Fig 1.png" class=img-fluid>
 <p>Figure 1: General structure of an amino acid </p>
 </div>
 
 <div align="center">
-<img src="images/.png" class=img-fluid>
+<img src="images/Figure 2.png" class=img-fluid>
 <p>Figure 2: Twenty different amino acids commonly found in proteins, each with a different R group  that determines its chemical nature. </p>
 </div>
 
@@ -32,7 +32,7 @@ The properties of the side chain determine an amino acid’s chemical behavior (
 The amino acids of a polypeptide are attached to their neighbours by covalent bonds known as peptide bond. Such a linkage is formed by the removal of elements of water(dehydration) from the α-carboxyl group of one amino acid and the α-amino group of another resulting in a condensation reaction. In a peptide amino acid residue at the end with a free α-amino group is the amino-terminal(or N terminal), the residue at the other end which has a free carboxyl group, is the carboxyl-terminal(or C terminal)
 
 <div align="center">
-<img src="images/.png" class=img-fluid>
+<img src="images/Figure 3.png" class=img-fluid>
 <p>Figure 3 : Peptide bond formed between two amino acids </p>
 </div>
 
@@ -64,7 +64,7 @@ A nucleotide has three characteristics component
 5 ˈ-phosphate group of one nucleotide is linked to the 3 ˈ hydroxyl group of the next nucleotide, creating a phosphodiester linkage. Each strand of DNA has a backbone made of alternating sugar (deoxyribose) and phosphate groups. Attached to each sugar is one of four bases: adenine (A), cytosine (C), guanine (G) or thymine (T). The two strands are held together by hydrogen bonds between pairs of bases: adenine pairs with thymine, and cytosine pairs with guanine.
 
 <div align="center">
-<img src="images/.png" class=img-fluid>
+<img src="images/Figure 4.png" class=img-fluid>
 <p>Figure 4 : Schematic representation of structure of a nucleotide and DNA </p>
 </div>
 

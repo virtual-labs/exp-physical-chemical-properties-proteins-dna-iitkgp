@@ -13,7 +13,7 @@
 - [Base Pair](https://www.genome.gov/genetics-glossary/Base-Pair)
 - [Determination of Isoelectic point (pI) of protein](https://foodsciencetoolbox.com/how-to-determine-isoelectric-point-pi-of-proteins)
 
-
+- [Master organic chemistry-Isoelectric Points of Amino Acids]( https://www.masterorganicchemistry.com/2023/02/09/isoelectric-point-calculation/)
 
 
 **To explore additional amino acid parameters for computation, visit the tool links provided below.**

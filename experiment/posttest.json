@@ -2,123 +2,123 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. This is a Sample Question 1?",
+      "question": "1. Which of the following amino acids is most likely to be found in the core of the protein structure?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Arginine",
+        "b": "Glutamic acid",
+        "c": "Histidine",
+        "d": "Phenylalanine"
       },
      
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
-      "question": "2. This is a Sample Question 2?",
+      "question": "2. Which of the following techniques can be used to identify a post-translational modification such as phosphorylation or methylation of a protein, and the residue where it is modified? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "2-D gel electrophoresis",
+        "b": "Size exclusion chromatography ",
+        "c": "Mass spectrometry ",
+        "d": "UV-Visible spectroscopy"
       },
       
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "3. This is a Sample Question 3?",
+      "question": "3. Which amino acids do you expect to find in higher proportion within histones compared to a cytoskeletal protein? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "K and R ",
+        "b": "L and A ",
+        "c": "D and E ",
+        "d": "F and W"
       },
     
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "4. This is a Sample Question 4?",
+      "question": "4. Which of the following  has the highest isoelectric point?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "<img src=\"images/4a.png\">",
+        "b": "<img src=\"images/4a.png\">",
+        "c": "<img src=\"images/4a.png\">",
+        "d": "<img src=\"images/4a.png\">"
       },
     
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "5. This is a Sample Question 5?",
+      "question": "5. Two solutions of the same protein, with concentrations of 10-3 and 5X10-4 M, are kept in two different cuvettes with path lengths 1 cm and 2 cm, respectively. If the absorbance for 1st sample is 1.2,what will be the absorbance for the 2nd sample?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "1.0",
+        "b": "1.2",
+        "c": "2.4",
+        "d": "6.0"
+      },
+    
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. Which one of the following changes will not alter the amino acid sequence of the encoded protein?",
+      "answers": {
+        "a": "Codon optimization",
+        "b": "Gene methylation ",
+        "c": "Synonymous mutation",
+        "d": "All of the above"
+      },
+    
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Two samples of DNA, A and B have melting temperatures of 380K and 320K respectively. This is because",
+      "answers": {
+        "a": "B has more GC content than A",
+        "b": "A has more GC content than B",
+        "c": "B has more AT content than A",
+        "d": "Both have same AT content"
+      },
+    
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. What is the starting point for the selection of a suitable Ion exchange matrix for the purification of a recombinant protein?",
+      "answers": {
+        "a": "Prediction of isoelectric point (pI) from the amino acid sequence",
+        "b": "Test protein binding to an IEX matrix at a range of pHs and salt concentrations ",
+        "c": "Test protein binding to a selection of anion and cation exchange matrices",
+        "d": "Pass your sample through a preparative column and elute with a salt gradient"
+      },
+    
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. Protein ‘A’ contains 192 amino acids and is mono-ubiquinated at two residues. What could be the approximate molecular weight of the protein? [Molecular weight of ubiquitin is 8 kDa]",
+      "answers": {
+        "a": "19 kDa ",
+        "b": "25 kDa ",
+        "c": "37 kDa ",
+        "d": "32 kDa "
       },
     
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "6. This is a Sample Question 6?",
+      "question": "10. If we have a polypeptide  A of size 11kDa, what would be the mass of the open reading frame that codes for the polypeptide? The average mass of an amino acid and a nucleotide is considered to be 110Da and 330 Da, respectively. ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "99990",
+        "b": "99000",
+        "c": "90900",
+        "d": "99900"
       },
     
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "7. This is a Sample Question 7?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-    
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "8. This is a Sample Question 8?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-    
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "9. This is a Sample Question 9?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-    
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "10. This is a Sample Question 10?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-    
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
