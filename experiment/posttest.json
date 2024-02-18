@@ -34,16 +34,16 @@
         "d": "F and W"
       },
     
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "4. Which of the following  has the highest isoelectric point?",
+      "question": "4. Which of the following  has the highest isoelectric point? ",
       "answers": {
         "a": "<img src=\"images/4a.png\">",
-        "b": "<img src=\"images/4a.png\">",
-        "c": "<img src=\"images/4a.png\">",
-        "d": "<img src=\"images/4a.png\">"
+        "b": "<img src=\"images/4b.png\">",
+        "c": "<img src=\"images/4c.png\">",
+        "d": "<img src=\"images/4d.png\">"
       },
     
       "correctAnswer": "c",
