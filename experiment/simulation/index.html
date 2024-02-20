@@ -63,12 +63,9 @@ Developer: Prakriti Dhang
 					</div>
 					<div class="card-body">
 						<ol>
-							<li>Click on "Part A - Calculation of molecular weight and molar extinction coefficient of amino acid sequence. Click on the
-								button to hide part A section.</li>
-							<li>Click on "Part B - Calculation of pI of peptide and amino acid" button. Click on the
-								button to hide part B section.</li>
-							<li>Click on "Part C - Calculation of melting temperature (t<sub>m</sub>) of DNA sequence" button. Click on the
-								button to hide  part C section.</li>
+							<li>Click on "Part A - Calculation of molecular weight and molar extinction coefficient of amino acid sequence"  button. </li>
+							<li>Click on "Part B - Calculation of pI of peptide and amino acid" button" button. </li>
+							<li>Click on "Part C - Calculation of melting temperature (t<sub>m</sub>) of DNA sequence" button.</li>
 						</ol>
 						<!--ol style="list-style: none;">
 							<li class="fs-6 fw-bold">
@@ -183,12 +180,12 @@ Developer: Prakriti Dhang
 
 			<div class="col-md-12 text-center">
 
-				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3 " type="button" data-bs-toggle="collapse"
-					data-bs-target="#collapseamino" aria-expanded="false" aria-controls="collapseExample">
+				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3 " type="button" onclick="toggleDiv(1)"> <!--data-bs-toggle="collapse"
+					data-bs-target="#collapseamino" aria-expanded="false" aria-controls="collapseamino"-->
 					Part A - Calculation of molecular weight and molar extinction coefficient of amino acid sequence
 				</button>
 			</div>
-			<div class="collapse" id="collapseamino">
+			<div class="toggle-content" id="content1" style="display: none;"><!--class="collapse" id="collapseamino"-->
 				<div class="card border-secondary border border-2">
 					<div class="card-body ">
 				<div class="row">
@@ -940,12 +937,12 @@ Developer: Prakriti Dhang
 
 			<div class="col-md-12 text-center">
 
-				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3" type="button" data-bs-toggle="collapse"
-					data-bs-target="#collapsepeptide" aria-expanded="false" aria-controls="collapseExample">
+				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3" type="button" onclick="toggleDiv(2)"> <!--data-bs-toggle="collapse"
+					data-bs-target="#collapsepeptide"  aria-expanded="false" aria-controls="collapsepeptide"-->
 					Part B - Calculation of pI of peptide and amino acid
 				</button>
 			</div>
-			<div class="collapse" id="collapsepeptide">
+			<div class="toggle-content" id="content2" style="display: none;"><!--class="collapse" id="collapsepeptide"-->
 
 				<div class="card border-secondary border border-2" id="card11">
 					<div class="card-body">
@@ -1364,12 +1361,12 @@ Developer: Prakriti Dhang
 
 			<div class="col-md-12 text-center">
 
-				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3" type="button" data-bs-toggle="collapse"
-					data-bs-target="#collapsedna" aria-expanded="false" aria-controls="collapseExample">
+				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3" type="button"  onclick="toggleDiv(3)" > <!--data-bs-toggle="collapse"
+					data-bs-target="#collapsedna" aria-expanded="false" aria-controls="collapsedna"-->
 					Part C - Calculation of melting temperture (t<sub>m</sub>) of DNA sequence
 				</button>
 			</div>
-			<div class="collapse" id="collapsedna">
+			<div class="toggle-content" id="content3" style="display: none;" > <!--class="collapse" id="collapsedna"-->
 				<div class="card  border-secondary border border-2">
 					<div class="card-body">
 				<div class="row">
@@ -1990,7 +1987,24 @@ Developer: Prakriti Dhang
 			$('[data-toggle="tooltip"]').tooltip()
 		})
 
+
+
+		
 	</script>
+
+<script>
+	function toggleDiv(divNumber) {
+	  // Hide all divs
+	  var divs = document.getElementsByClassName('toggle-content');
+	  for (var i = 0; i < divs.length; i++) {
+		divs[i].style.display = 'none';
+	  }
+  
+	  // Show the selected div
+	  var selectedDiv = document.getElementById('content' + divNumber);
+	  selectedDiv.style.display = 'block';
+	}
+  </script>
 	<script>
 		let display = document.getElementById('display');
 
