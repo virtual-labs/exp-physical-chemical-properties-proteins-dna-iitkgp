@@ -3,7 +3,7 @@
 ## **Protein**
 1.	***Approximate molecular weight of protein*** 
 
-Approximate molecular weight of protein = Number of amino acids x 110 Da 
+Approximate molecular weight of protein = Number of amino acids x 110 Da (molar mass: 1g/mol = 1 Da)
 
 | Amino Acid | 1-letter code | Molecular weight (g/mol) |
 | :-- | :-- | :-- |
