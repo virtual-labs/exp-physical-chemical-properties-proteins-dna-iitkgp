@@ -21,34 +21,35 @@ Developer: Prakriti Dhang
 
 	<style>
 		.table-container {
-            max-height: 400px; /* Set the maximum height for tbody to enable scrolling */
-            overflow-y: auto; /* Enable vertical scrolling */
-        }
+			max-height: 400px;
+			/* Set the maximum height for tbody to enable scrolling */
+			overflow-y: auto;
+			/* Enable vertical scrolling */
+		}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            table-layout: fixed;
-        }
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			table-layout: fixed;
+		}
 
-        th, td {
-            padding: 8px;
-            text-align: left;
-        
-        }
+		th,
+		td {
+			padding: 8px;
+			text-align: left;
 
-      
+		}
 
-        thead {
-            position: sticky;
-            top: 0;
-            background-color: #dbdbdb;
-        }
 
-		
+
+		thead {
+			position: sticky;
+			top: 0;
+			background-color: #dbdbdb;
+		}
 	</style>
 
-	 
+
 </head>
 
 <body>
@@ -63,9 +64,11 @@ Developer: Prakriti Dhang
 					</div>
 					<div class="card-body">
 						<ol>
-							<li>Click on "Part A - Calculation of molecular weight and molar extinction coefficient of amino acid sequence"  button. </li>
+							<li>Click on "Part A - Calculation of molecular weight and molar extinction coefficient of
+								amino acid sequence" button. </li>
 							<li>Click on "Part B - Calculation of pI of peptide and amino acid" button" button. </li>
-							<li>Click on "Part C - Calculation of melting temperature (t<sub>m</sub>) of DNA sequence" button.</li>
+							<li>Click on "Part C - Calculation of melting temperature (t<sub>m</sub>) of DNA sequence"
+								button.</li>
 						</ol>
 						<!--ol style="list-style: none;">
 							<li class="fs-6 fw-bold">
@@ -188,225 +191,232 @@ Developer: Prakriti Dhang
 			<div class="toggle-content" id="content1" style="display: none;"><!--class="collapse" id="collapseamino"-->
 				<div class="card border-secondary border border-2">
 					<div class="card-body ">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="card">
-							<div class="card-header fs-5 fw-bold">Instructions
-							</div>
-							<div class="card-body">
-								<ol style="list-style: none;">
-									<li class="fs-6 fw-bold">
-										
-									</li>
-									<ol>
-										<li>Click on the button "Table of molecular weights of amino acid and
-											corresponding
-											3-letter
-											code and 1-letter code" to see the 1-letter code
-											and corresponding molecular weight.
-											Click on the
-											button to close the table.</li>
-										<li>Enter any Amino acid sequence in the input box and click on the button
-											"Submit".
-										</li>
-										<ul type="disc">
-											<li>Approximate molecular weight of
-												the sequence </li>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card">
+									<div class="card-header fs-5 fw-bold">Instructions
+									</div>
+									<div class="card-body">
+										<ol style="list-style: none;">
+											<li class="fs-6 fw-bold">
+
+											</li>
 											<ol>
-												<li>Enter number of amino acid in the input box. </li>
-												<li>Click on "Check" button to display a message indicating correctness.
-													To reveal the correct answer, click on the "Show Answer" button.
+												<li>Click on the button "Table of molecular weights of amino acid and
+													corresponding
+													3-letter
+													code and 1-letter code" to see the 1-letter code
+													and corresponding molecular weight.
+													Click on the
+													button to close the table.</li>
+												<li>Enter any Amino acid sequence in the input box and click on the
+													button
+													"Submit".
 												</li>
+												<ul type="disc">
+													<li>Approximate molecular weight of
+														the sequence </li>
+													<ol>
+														<li>Enter number of amino acid in the input box. </li>
+														<li>Click on "Check" button to display a message indicating
+															correctness.
+															To reveal the correct answer, click on the "Show Answer"
+															button.
+														</li>
+													</ol>
+
+
+													<li>
+														Actual
+														molecular weight of the sequence
+														<ol>
+															<li>Enter the calculated molecular weight of amino acid in
+																the input
+																box.
+															</li>
+															<li>Click on "Check" button to display a message indicating
+																correctness.
+																To reveal the correct answer, click on the "Show Answer"
+																button.
+															</li>
+														</ol>
+
+
+													<li>Molar extinction coefficient of peptide sequence</li>
+													<ol>
+														<li>Enter number W, Y and C in the respective input boxes. </li>
+														<li>Click on "Check" button to display a message indicating
+															correctness.
+															To reveal the correct answer, click on the "Show Answer"
+															button.
+														</li>
+													</ol>
+												</ul>
 											</ol>
 
 
-											<li>
-												Actual
-												molecular weight of the sequence
-												<ol>
-													<li>Enter the calculated molecular weight of amino acid in the input
-														box.
-													</li>
-													<li>Click on "Check" button to display a message indicating
-														correctness.
-														To reveal the correct answer, click on the "Show Answer" button.
-													</li>
-												</ol>
-
-
-											<li>Molar extinction coefficient of peptide sequence</li>
-											<ol>
-												<li>Enter number W, Y and C in the respective input boxes. </li>
-												<li>Click on "Check" button to display a message indicating correctness.
-													To reveal the correct answer, click on the "Show Answer" button.
-												</li>
-											</ol>
-										</ul>
-									</ol>
-
-
-								</ol>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-
-					<div class="col-md-12 ">
-						<div class="card card-body">
-							<button class="btn btn-info col-md-12 fs-5" type="button" data-bs-toggle="collapse"
-								data-bs-target="#collapseExample1" aria-expanded="false"
-								aria-controls="collapseExample">
-								Table of molecular weights of amino acid and corresponding 3-letter code and
-								1-letter code
-
-							</button>
-
-							<div class="collapse" id="collapseExample1">
-								<div class="card card-body border-0">
-									<div class="table-responsive table-container">
-										<table class="table table-bordered border-primary table-hover ">
-											<thead>
-												<tr>
-													<th scope="col">Amino Acid</th>
-													<th scope="col">3-letters code</th>
-													<th scope="col">1-letter code</th>
-													<th scope="col">Molecular weight</th>
-												</tr>
-
-											</thead>
-											<tbody>
-												<tr>
-													<th scope="row" >Alanine</th>
-													<td>Ala</td>
-													<td>A</td>
-													<td>89.1</td>
-												</tr>
-												<tr>
-													<th scope="row" >Arginine</th>
-													<td> Arg</td>
-													<td> R</td>
-													<td> 174.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Asparagine</th>
-													<td> Asn</td>
-													<td> N</td>
-													<td> 132.1</td>
-												</tr>
-												<tr>
-													<th scope="row" >Aspartate</th>
-													<td> Asp</td>
-													<td> D</td>
-													<td> 133.1</td>
-												</tr>
-												<tr>
-													<th scope="row" >Cysteine</th>
-													<td> Cys</td>
-													<td> C</td>
-													<td> 121.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Glutamate</th>
-													<td> Glu</td>
-													<td> E</td>
-													<td> 147.1</td>
-												</tr>
-												<tr>
-													<th scope="row" >Glutamine</th>
-													<td> Gln</td>
-													<td> Q</td>
-													<td> 146.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Glycine</th>
-													<td> Gly</td>
-													<td> G</td>
-													<td> 75.1</td>
-												</tr>
-												<tr>
-													<th scope="row" >Histidine</th>
-													<td> His</td>
-													<td> H</td>
-													<td> 155.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Isoleucine</td>
-													<td> Ile</td>
-													<td> I</td>
-													<td> 131.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Leucine</th>
-													<td> Leu</td>
-													<td> L</td>
-													<td> 131.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Lysine</th>
-													<td> Lys</td>
-													<td> K</td>
-													<td> 146.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Methionine</th>
-													<td> Met</td>
-													<td> M</td>
-													<td> 149.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Phenylalanine</th>
-													<td> Phe</td>
-													<td> F</td>
-													<td> 165.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Proline</th>
-													<td> Pro</td>
-													<td> P</td>
-													<td> 115.1</td>
-												</tr>
-												<tr>
-													<th scope="row" >Serine</th>
-													<td> Ser</td>
-													<td> S</td>
-													<td> 105.1</td>
-												</tr>
-												<tr>
-													<th scope="row" >Threonine</th>
-													<td> Thr</td>
-													<td> T</td>
-													<td> 119.1</td>
-												</tr>
-												<tr>
-													<th scope="row" >Tryptophan</th>
-													<td> Trp</td>
-													<td> W</td>
-													<td> 204.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Tyrosine</th>
-													<td> Tyr</td>
-													<td> Y</td>
-													<td> 181.2</td>
-												</tr>
-												<tr>
-													<th scope="row" >Valine</th>
-													<td> Val</td>
-													<td> V</td>
-													<td> 117.1</td>
-												</tr>
-
-											</tbody>
-										</table>
+										</ol>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+						<div class="row">
 
-				</div>
-				
+							<div class="col-md-12 ">
+								<div class="card card-body">
+									<button class="btn btn-info col-md-12 fs-5" type="button" data-bs-toggle="collapse"
+										data-bs-target="#collapseExample1" aria-expanded="false"
+										aria-controls="collapseExample">
+										Table of molecular weights of amino acid and corresponding 3-letter code and
+										1-letter code
+
+									</button>
+
+									<div class="collapse" id="collapseExample1">
+										<div class="card card-body border-0">
+											<div class="table-responsive table-container">
+												<table class="table table-bordered border-primary table-hover ">
+													<thead>
+														<tr>
+															<th scope="col">Amino Acid</th>
+															<th scope="col">3-letters code</th>
+															<th scope="col">1-letter code</th>
+															<th scope="col">Molecular weight</th>
+														</tr>
+
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">Alanine</th>
+															<td>Ala</td>
+															<td>A</td>
+															<td>89.1</td>
+														</tr>
+														<tr>
+															<th scope="row">Arginine</th>
+															<td> Arg</td>
+															<td> R</td>
+															<td> 174.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Asparagine</th>
+															<td> Asn</td>
+															<td> N</td>
+															<td> 132.1</td>
+														</tr>
+														<tr>
+															<th scope="row">Aspartate</th>
+															<td> Asp</td>
+															<td> D</td>
+															<td> 133.1</td>
+														</tr>
+														<tr>
+															<th scope="row">Cysteine</th>
+															<td> Cys</td>
+															<td> C</td>
+															<td> 121.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Glutamate</th>
+															<td> Glu</td>
+															<td> E</td>
+															<td> 147.1</td>
+														</tr>
+														<tr>
+															<th scope="row">Glutamine</th>
+															<td> Gln</td>
+															<td> Q</td>
+															<td> 146.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Glycine</th>
+															<td> Gly</td>
+															<td> G</td>
+															<td> 75.1</td>
+														</tr>
+														<tr>
+															<th scope="row">Histidine</th>
+															<td> His</td>
+															<td> H</td>
+															<td> 155.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Isoleucine</td>
+															<td> Ile</td>
+															<td> I</td>
+															<td> 131.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Leucine</th>
+															<td> Leu</td>
+															<td> L</td>
+															<td> 131.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Lysine</th>
+															<td> Lys</td>
+															<td> K</td>
+															<td> 146.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Methionine</th>
+															<td> Met</td>
+															<td> M</td>
+															<td> 149.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Phenylalanine</th>
+															<td> Phe</td>
+															<td> F</td>
+															<td> 165.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Proline</th>
+															<td> Pro</td>
+															<td> P</td>
+															<td> 115.1</td>
+														</tr>
+														<tr>
+															<th scope="row">Serine</th>
+															<td> Ser</td>
+															<td> S</td>
+															<td> 105.1</td>
+														</tr>
+														<tr>
+															<th scope="row">Threonine</th>
+															<td> Thr</td>
+															<td> T</td>
+															<td> 119.1</td>
+														</tr>
+														<tr>
+															<th scope="row">Tryptophan</th>
+															<td> Trp</td>
+															<td> W</td>
+															<td> 204.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Tyrosine</th>
+															<td> Tyr</td>
+															<td> Y</td>
+															<td> 181.2</td>
+														</tr>
+														<tr>
+															<th scope="row">Valine</th>
+															<td> Val</td>
+															<td> V</td>
+															<td> 117.1</td>
+														</tr>
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
 						<div class="row">
 							<div class="col-md-12">
 
@@ -942,48 +952,55 @@ Developer: Prakriti Dhang
 					Part B - Calculation of pI of peptide and amino acid
 				</button>
 			</div>
-			<div class="toggle-content" id="content2" style="display: none;"><!--class="collapse" id="collapsepeptide"-->
+			<div class="toggle-content" id="content2" style="display: none;">
+				<!--class="collapse" id="collapsepeptide"-->
 
 				<div class="card border-secondary border border-2" id="card11">
 					<div class="card-body">
 
-				<div class="row">
-					<div class="col-md-12">
-						<div class="card">
-							<div class="card-header fs-5 fw-bold">Instructions
-							</div>
-							<div class="card-body">
-								<ol style="list-style: none;">
-									<li class="fs-6 fw-bold"></li>
-									<ol>
-										<li>Click on "Table of pK<sub>a</sub>
-											and pI values" to see the specific values for each amino acid. Click on
-											the button to close the table. </li>
-									
-										<li>To calculate pI of the selected peptide or amino acid, enter the pK<sub>a</sub> value in the given input box; 
-											where pK<sub>a1</sub> is &alpha; - carboxyl group, pK<sub>a2</sub> is &alpha;-ammonium ion, and pK<sub>a3</sub> is side chain group.
-											Click the "ckeck" button to
-											indicate
-											the correctness. To reveal the correct answer, click on the "Show Answer"
-											button.
-										</li>
-										
-										<li>Enter net charge value in the given input box of selected the tripeptide. Click the
-											"check"
-											button to indicate the correctness. To reveal the correct answer, click on
-											the "Show
-											Answer" button.</li>
-										
-									</ol>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card">
+									<div class="card-header fs-5 fw-bold">Instructions
+									</div>
+									<div class="card-body">
+										<ol style="list-style: none;">
+											<li class="fs-6 fw-bold"></li>
+											<ol>
+												<li>Click on "Table of pK<sub>a</sub>
+													and pI values" to see the specific values for each amino acid. Click
+													on
+													the button to close the table. </li>
 
-								</ol>
+												<li>To calculate pI of the selected peptide or amino acid, enter the
+													pK<sub>a</sub> value in the given input box;
+													where pK<sub>a1</sub> is &alpha; - carboxyl group, pK<sub>a2</sub>
+													is &alpha;-ammonium ion, and pK<sub>a3</sub> is side chain group.
+													Click the "ckeck" button to
+													indicate
+													the correctness. To reveal the correct answer, click on the "Show
+													Answer"
+													button.
+												</li>
+
+												<li>Enter net charge value in the given input box of selected the
+													tripeptide. Click the
+													"check"
+													button to indicate the correctness. To reveal the correct answer,
+													click on
+													the "Show
+													Answer" button.</li>
+
+											</ol>
+
+										</ol>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
 
-				
+
 
 						<div class="row">
 							<div class="col-md-12">
@@ -1017,7 +1034,7 @@ Developer: Prakriti Dhang
 														</div-->
 
 											<div class="table-responsive table-container">
-												<table class="table table-bordered border-primary table-hover" >
+												<table class="table table-bordered border-primary table-hover">
 													<thead>
 														<tr>
 															<th scope="col">Amino Acid</th>
@@ -1027,9 +1044,9 @@ Developer: Prakriti Dhang
 															<th scope="col">pI</th>
 														</tr>
 													</thead>
-													
+
 													<tbody>
-													
+
 														<tr>
 															<th scope="row">Glycine (Gly)</th>
 															<td>2.34</td>
@@ -1188,7 +1205,8 @@ Developer: Prakriti Dhang
 								<label class="fs-5 fw-bold" for="Textarea2">Select a
 									peptide or amino acid
 								</label>
-								<select class="form-select" id="peptidesel" aria-label="Default select example" onchange="pseqbtn()">
+								<select class="form-select" id="peptidesel" aria-label="Default select example"
+									onchange="pseqbtn()">
 									<option value="0" selected>Choose a peptide or amino acid</option>
 									<option value="1">Arginine</option>
 									<option value="2">Aspartic acid</option>
@@ -1207,19 +1225,24 @@ Developer: Prakriti Dhang
 						</div>
 
 						<div class="row">
-							
+
 							<div class="col-md-6">
 								<div class="card card-body  border-0">
 									<div class="img-container">
-										<img src="./images/Arginine.png" id="peptide1" alt="peptide 1" style="display: none;" class="img-fluid">
-										<img src="./images/Aspartic_acid.png" id="peptide2" alt="peptide 2" style="display: none;" class="img-fluid">
-										<img src="./images/Glycine.png" id="peptide3" alt="peptide 3" style="display: none;" class="img-fluid">
-										<img src="./images/Phenylalanine.png" id="peptide4" alt="peptide 4" style="display: none;" class="img-fluid">
-										<img src="./images/Tripeptide.png" id="peptide5" alt="peptide 5" style="display: none;" class="img-fluid">
+										<img src="./images/Arginine.png" id="peptide1" alt="peptide 1"
+											style="display: none;" class="img-fluid">
+										<img src="./images/Aspartic_acid.png" id="peptide2" alt="peptide 2"
+											style="display: none;" class="img-fluid">
+										<img src="./images/Glycine.png" id="peptide3" alt="peptide 3"
+											style="display: none;" class="img-fluid">
+										<img src="./images/Phenylalanine.png" id="peptide4" alt="peptide 4"
+											style="display: none;" class="img-fluid">
+										<img src="./images/Tripeptide.png" id="peptide5" alt="peptide 5"
+											style="display: none;" class="img-fluid">
 									</div>
 								</div>
 							</div>
-							
+
 						</div>
 
 						<div class="row">
@@ -1228,47 +1251,61 @@ Developer: Prakriti Dhang
 
 									<div class="card-body">
 										<div class="table-responsive">
-										<table class="table table-bordered">
+											<table class="table table-bordered" id="netchargetable">
 
-											<tr>
-												<td style="text-align: center;" class="fs-5 fw-bold">pH</td>
-												<td style="text-align: center;" class="fs-5 fw-bold">1</td>
-												<td style="text-align: center;" class="fs-5 fw-bold">3</td>
-												<td style="text-align: center;" class="fs-5 fw-bold">4</td>
-												<td style="text-align: center;" class="fs-5 fw-bold">5</td>
-												<td style="text-align: center;" class="fs-5 fw-bold">10</td>
+												<tr>
+													<td style="text-align: center;" class="fs-5 fw-bold">pH</td>
+													<td style="text-align: center;" class="fs-5 fw-bold">1</td>
+													<td style="text-align: center;" class="fs-5 fw-bold">3</td>
+													<td style="text-align: center;" class="fs-5 fw-bold">4</td>
+													<td style="text-align: center;" class="fs-5 fw-bold">5</td>
+													<td style="text-align: center;" class="fs-5 fw-bold">10</td>
 
-											</tr>
-											<tr>
-												<td style="text-align: center;" class="fs-5 fw-bold">Net Charge</td>
-												<td><input type="input" class="form-control fs-5" value=""
-														style="text-align: center; font-weight: bold;"
-														id="netcharge1" /></td>
-												<td><input type="input" class="form-control fs-5" value=""
-														style="text-align: center; font-weight: bold;"
-														id="netcharge2" /></td>
-												<td><input type="input" class="form-control fs-5" value=""
-														style="text-align: center; font-weight: bold;"
-														id="netcharge3" /></td>
-												<td><input type="input" class="form-control fs-5" value=""
-														style="text-align: center; font-weight: bold;"
-														id="netcharge4" /></td>
-												<td><input type="input" class="form-control fs-5" value=""
-														style="text-align: center; font-weight: bold;"
-														id="netcharge5" /></td>
+												</tr>
+												<tr>
+													<td style="text-align: center;" class="fs-5 fw-bold">Net Charge</td>
+													<td><input type="input" class="form-control fs-5" value=""
+															style="text-align: center; font-weight: bold;"
+															id="netcharge1" /></td>
+													<td><input type="input" class="form-control fs-5" value=""
+															style="text-align: center; font-weight: bold;"
+															id="netcharge2" /></td>
+													<td><input type="input" class="form-control fs-5" value=""
+															style="text-align: center; font-weight: bold;"
+															id="netcharge3" /></td>
+													<td><input type="input" class="form-control fs-5" value=""
+															style="text-align: center; font-weight: bold;"
+															id="netcharge4" /></td>
+													<td><input type="input" class="form-control fs-5" value=""
+															style="text-align: center; font-weight: bold;"
+															id="netcharge5" /></td>
 
-											</tr>
-										</table>
-									</div>
+												</tr>
+											</table>
+										</div>
 
 										<button id="steppb1" type="button"
 											class="btn btn-success border border-1  rounded-3 fs-6 m-1"
 											style="cursor: pointer; " onclick="checkb1()" disabled>Check</button>
+										<!-- <button id="stepplot" type="button"
+											class="btn btn-info border border-1  rounded-3 fs-6 m-1"
+											style="cursor: pointer; " onclick="plotnetcharge()" >Plot</button> -->
+
 										<button id="showsteppb1" type="button"
 											class="btn btn-warning border border-1  rounded-3 fs-6 m-1"
 											style="cursor: pointer; float: right;" onclick="showansb1()" disabled>Show
 											Answer</button>
 									</div>
+
+
+									<!-- <div class="row" style="display:none;" id="plotnetchargedata">
+
+										<div class="col-md-6">
+											<div id="chartContainerpi" style="height: 450px; width: 100%;" ></div>
+
+										</div>
+									</div> -->
+
 								</div>
 							</div>
 						</div>
@@ -1277,7 +1314,8 @@ Developer: Prakriti Dhang
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card border-0">
-									<div class="card-header border-secondary fs-5 fw-bold">Calculate Isoelectic point (pI)
+									<div class="card-header border-secondary fs-5 fw-bold">Calculate Isoelectic point
+										(pI)
 									</div>
 									<div class="card-body">
 
@@ -1291,11 +1329,10 @@ Developer: Prakriti Dhang
 												</span>
 											</div>
 											<div class="col-auto">
-												<input type="input" id="inputpib1" 
-													class="form-control">
-													<span class="form-text fs-5" id="pk1">
-														
-													</span>
+												<input type="input" id="inputpib1" class="form-control">
+												<span class="form-text fs-5" id="pk1">
+
+												</span>
 											</div>
 											<div class="col-auto">
 												<span class="form-text fs-5">
@@ -1303,11 +1340,10 @@ Developer: Prakriti Dhang
 												</span>
 											</div>
 											<div class="col-auto">
-												<input type="input" id="inputpib2" 
-													class="form-control">
-													<span class="form-text fs-5" id="pk2">
+												<input type="input" id="inputpib2" class="form-control">
+												<span class="form-text fs-5" id="pk2">
 
-													</span>
+												</span>
 											</div>
 											<div class="col-auto">
 												<span class="form-text fs-5">
@@ -1322,20 +1358,20 @@ Developer: Prakriti Dhang
 
 											<div class="col-auto">
 												<span class="form-text fs-5">
-													2 = 
+													2 =
 												</span>
 											</div>
 
 											<div class="col-auto">
 												<span class="form-text fs-5" id="anspi">
-													
+
 												</span>
 											</div>
 										</div>
 
 										<button id="pibtn" type="button"
 											class="btn btn-success border border-1  rounded-3 fs-6 m-2"
-											style="cursor: pointer; " onclick="checpibtn()" disabled >Check</button>
+											style="cursor: pointer; " onclick="checpibtn()" disabled>Check</button>
 										<button id="pibtnshow" type="button"
 											class="btn btn-warning border border-1  rounded-3 fs-6 m-2"
 											style="cursor: pointer;float: right; " onclick="showpibtn()" disabled>Show
@@ -1347,7 +1383,7 @@ Developer: Prakriti Dhang
 						</div>
 
 
-						
+
 
 					</div>
 
@@ -1361,78 +1397,88 @@ Developer: Prakriti Dhang
 
 			<div class="col-md-12 text-center">
 
-				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3" type="button"  onclick="toggleDiv(3)" > <!--data-bs-toggle="collapse"
+				<button class="btn btn-secondary col-md-5 fs-5 fw-bold mb-3" type="button" onclick="toggleDiv(3)"> <!--data-bs-toggle="collapse"
 					data-bs-target="#collapsedna" aria-expanded="false" aria-controls="collapsedna"-->
 					Part C - Calculation of melting temperture (t<sub>m</sub>) of DNA sequence
 				</button>
 			</div>
-			<div class="toggle-content" id="content3" style="display: none;" > <!--class="collapse" id="collapsedna"-->
+			<div class="toggle-content" id="content3" style="display: none;"> <!--class="collapse" id="collapsedna"-->
 				<div class="card  border-secondary border border-2">
 					<div class="card-body">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="card">
-							<div class="card-header fs-5 fw-bold">Instructions
-							</div>
-							<div class="card-body">
-								<ol style="list-style: none;">
-									<li class="fs-6 fw-bold"></li>
-									<ol>
-										<li>Enter DNA sequence in the input box 1 and enter complementary DNA
-											sequence in input box 2.
-											Click on the "Submit" button.</li>
-										<ul type="disc">
-											<li>Approximate molecular weight of double-standed DNA sequence</li>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card">
+									<div class="card-header fs-5 fw-bold">Instructions
+									</div>
+									<div class="card-body">
+										<ol style="list-style: none;">
+											<li class="fs-6 fw-bold"></li>
 											<ol>
-												<li>Enter number of bases from single strand DNA sequence in the input
-													box.
-												</li>
-												<li>Click on "Check" button to display a message indicating correctness.
-													To reveal the correct answer, click on the "Show Answer" button.
-												</li>
+												<li>Enter DNA sequence in the input box 5'-3' and enter complementary DNA
+													sequence in the input box 3'-5'.
+													Click on the "Submit" button.</li>
+												<ul type="disc">
+													<li>Approximate molecular weight of double-standed DNA sequence</li>
+													<ol>
+														<li>Enter number of bases from single strand DNA sequence in the
+															input
+															box.
+														</li>
+														<li>Click on "Check" button to display a message indicating
+															correctness.
+															To reveal the correct answer, click on the "Show Answer"
+															button.
+														</li>
+													</ol>
+
+													<li>Actual
+														molecular
+														weight of double-stranded DNA sequence</li>
+													<ol>
+														<li>Enter total number of A, T, C, G from the double strand DNA
+															in the
+															respective
+															input
+															boxes </li>
+														<li>Next Click on "Check" button to display a message indicating
+															correctness.
+															To reveal the correct answer, click on the "Show Answer"
+															button.
+														</li>
+													</ol>
+													<li>
+														Melting temperature (t<sub>m</sub>) of double-stranded DNA
+														sequence
+													</li>
+													<ol>
+
+														<li>Enter the melting
+															temperature of the DNA sequence in the input box "Enter
+															calculated
+															t<sub>m</sub>".
+														</li>
+														<li>Click on "Check" button to display a message indicating
+															correctness.
+															To reveal the correct answer, click on the "Show Answer"
+															button.
+														</li>
+
+													</ol>
+													<li>Click on "Plot Tm Vs Percentage of single stranded DNA" button.
+													</li>
+												</ul>
+
 											</ol>
-
-											<li>Actual
-												molecular
-												weight of double-stranded DNA sequence</li>
-											<ol>
-												<li>Enter total number of A, T, C, G from the double strand DNA in the
-													respective
-													input
-													boxes </li>
-												<li>Next Click on "Check" button to display a message indicating
-													correctness.
-													To reveal the correct answer, click on the "Show Answer" button.
-												</li>
-											</ol>
-											<li>
-												Melting temperature (t<sub>m</sub>) of double-stranded DNA sequence
-											</li>
-											<ol>
-
-												<li>Enter the melting
-													temperature of the DNA sequence in the input box "Enter calculated
-													t<sub>m</sub>".
-												</li>
-												<li>Click on "Check" button to display a message indicating correctness.
-													To reveal the correct answer, click on the "Show Answer" button.
-												</li>
-
-											</ol>
-											<li>Click on "Plot Tm Vs Percentage of single stranded DNA" button. </li>
-										</ul>
-
-									</ol>
-								</ol>
+										</ol>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
 
 
 
 
-				
+
 						<div class="row">
 							<div class="col-md-12">
 
@@ -1639,12 +1685,12 @@ Developer: Prakriti Dhang
 											disabled>Show
 											Answer</button>
 
-										
+
 									</div>
 								</div>
 							</div>
 						</div>
-						
+
 
 
 						<!----------------------------------------------------------------------- Tm ---------------------------------------------------------------->
@@ -1728,7 +1774,7 @@ Developer: Prakriti Dhang
 											style="cursor: pointer;float: right; " onclick="showtmdnabtn()"
 											disabled>Show
 											Answer</button>
-											<button id="calci" class="btn  border border-0" data-toggle="tooltip"
+										<button id="calci" class="btn  border border-0" data-toggle="tooltip"
 											data-placement="top" title="Calculator" style="float:right"
 											onclick="calcul2()">
 											<img src="./images/Calculator.png" alt="Save icon"
@@ -1736,7 +1782,7 @@ Developer: Prakriti Dhang
 
 									</div>
 
-									
+
 								</div>
 
 
@@ -1745,175 +1791,175 @@ Developer: Prakriti Dhang
 
 
 						</div>
-					<!--------------------------------------------  Calculator -------------------------------------------------------->
-					<div class="row ">
-						<div class="col-md-8"></div>
-						<div class="col-md-4">
+						<!--------------------------------------------  Calculator -------------------------------------------------------->
+						<div class="row ">
+							<div class="col-md-8"></div>
+							<div class="col-md-4">
 
-							<div class="calculator border border-4 border-secondary rounded-4 p-3 " id="calc2"
-								style="background-color: #383636; ">
-								<button class="btn btn-indian-red btn-block mb-2 " onclick="closecalculate2()"
-									style="float: right;">Close</button>
-								<!--div class="calculator" style="width: 300px;"-->
-								<input type="text" id="display2" class="form-control mb-3 " readonly>
-								<div class="row p-1">
+								<div class="calculator border border-4 border-secondary rounded-4 p-3 " id="calc2"
+									style="background-color: #383636; ">
+									<button class="btn btn-indian-red btn-block mb-2 " onclick="closecalculate2()"
+										style="float: right;">Close</button>
+									<!--div class="calculator" style="width: 300px;"-->
+									<input type="text" id="display2" class="form-control mb-3 " readonly>
+									<div class="row p-1">
 
-									<div class="col">
-										<button class="btn btn-pink btn-block "
-											onclick="clearDisplay2()">Clear</button>
-									</div>
-									<div class="col">
-										<!--button class="btn btn-danger btn-block " onclick="" disabled>AC</button-->
-									</div>
-									<div class="col">
-										<!--button class="btn btn-danger btn-block " onclick="" disabled>AC</button-->
+										<div class="col">
+											<button class="btn btn-pink btn-block "
+												onclick="clearDisplay2()">Clear</button>
+										</div>
+										<div class="col">
+											<!--button class="btn btn-danger btn-block " onclick="" disabled>AC</button-->
+										</div>
+										<div class="col">
+											<!--button class="btn btn-danger btn-block " onclick="" disabled>AC</button-->
+										</div>
+
+										<div class="col">
+											<button class="btn btn-warning btn-block" onclick="delback2()"> DEL
+											</button>
+											<!--&#9003;-->
+
+										</div>
 									</div>
 
-									<div class="col">
-										<button class="btn btn-warning btn-block" onclick="delback2()"> DEL
-										</button>
-										<!--&#9003;-->
+									<div class="row p-1">
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendNumber2('7')">7</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendNumber2('8')">8</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendNumber2('9')">9</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-slate-blue-grey btn-block fw-bold"
+												onclick="appendOperator2('/')">/</button>
+										</div>
+
+									</div>
+
+									<div class="row p-1">
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendNumber2('4')">4</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendNumber2('5')">5</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendNumber2('6')">6</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-slate-blue-grey btn-block fw-bold"
+												onclick="appendOperator2('*')">*</button>
+										</div>
+									</div>
+
+									<div class="row p-1">
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendNumber2('1')">1</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendNumber2('2')">2</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendNumber2('3')">3</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-slate-blue-grey btn-block fw-bold"
+												onclick="appendOperator2('+')">+</button>
+										</div>
+									</div>
+
+									<div class="row p-1">
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendNumber2('0')">0</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-secondary btn-block"
+												onclick="appendDecimal2('.')">.</button>
+										</div>
+
+										<div class="col">
+
+											<button class="btn btn-success btn-block  "
+												onclick="calculate2()">=</button>
+
+										</div>
+										<div class="col">
+											<button class="btn btn-slate-blue-grey btn-block fw-bold"
+												onclick="appendOperator2('-')">-</button>
+										</div>
+
+									</div>
+
+									<div class="row p-1">
+										<div class="col">
+											<button class="btn btn-olive btn-block" onclick="appendNumber2('(')"> (
+											</button>
+										</div>
+										<div class="col">
+											<button class="btn btn-olive 	 btn-block" onclick="appendNumber2(')')"> )
+											</button>
+										</div>
+
+										<div class="col"></div>
+										<div class="col">
+
+
+										</div>
 
 									</div>
 								</div>
 
-								<div class="row p-1">
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendNumber2('7')">7</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendNumber2('8')">8</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendNumber2('9')">9</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-slate-blue-grey btn-block fw-bold"
-											onclick="appendOperator2('/')">/</button>
-									</div>
+							</div>
+						</div>
+						<!---------Calculator --------->
+						<div class="row">
+							<div class="col-md-8">
+								<div class="card card-body border-0">
+									<button id="tmdnaplotbtn" type="button"
+										class="btn btn-slate-blue-grey border border-1 col-md-5  rounded-3 fs-6 m-2"
+										style="cursor: pointer; " onclick="plottm()" disabled>Plot t<sub>m</sub> Vs
+										Percentage of
+										single
+										stranded DNA </button>
 
-								</div>
-
-								<div class="row p-1">
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendNumber2('4')">4</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendNumber2('5')">5</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendNumber2('6')">6</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-slate-blue-grey btn-block fw-bold"
-											onclick="appendOperator2('*')">*</button>
-									</div>
-								</div>
-
-								<div class="row p-1">
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendNumber2('1')">1</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendNumber2('2')">2</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendNumber2('3')">3</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-slate-blue-grey btn-block fw-bold"
-											onclick="appendOperator2('+')">+</button>
-									</div>
-								</div>
-
-								<div class="row p-1">
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendNumber2('0')">0</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-secondary btn-block"
-											onclick="appendDecimal2('.')">.</button>
-									</div>
-
-									<div class="col">
-
-										<button class="btn btn-success btn-block  "
-											onclick="calculate2()">=</button>
-
-									</div>
-									<div class="col">
-										<button class="btn btn-slate-blue-grey btn-block fw-bold"
-											onclick="appendOperator2('-')">-</button>
-									</div>
-
-								</div>
-
-								<div class="row p-1">
-									<div class="col">
-										<button class="btn btn-olive btn-block" onclick="appendNumber2('(')"> (
-										</button>
-									</div>
-									<div class="col">
-										<button class="btn btn-olive 	 btn-block" onclick="appendNumber2(')')"> )
-										</button>
-									</div>
-
-									<div class="col"></div>
-									<div class="col">
-
-
-									</div>
 
 								</div>
 							</div>
+						</div>
 
+						<div class="row">
+
+							<div class="col-md-6">
+								<div class="card card-body border-0" id="carddnapartc" style="display:none;">
+									<img src="./images/DNA_melting_curve.png" id="meltingp" alt="Tm">
+									<br>
+									<br>
+									<p>Ref: Lehninger Principles of Biochemistry 7th edition (Fig 8-27)
+									</p>
+
+								</div>
+							</div>
+							<div class="col-md-6">
+								<!--div id="chartContainer" style="height: 450px; width: 100%;"></div-->
+
+							</div>
 						</div>
 					</div>
-					<!---------Calculator --------->
-<div class="row">
-	<div class="col-md-8">
-		<div class="card card-body border-0">
-			<button id="tmdnaplotbtn" type="button"
-				class="btn btn-slate-blue-grey border border-1 col-md-5  rounded-3 fs-6 m-2"
-				style="cursor: pointer; " onclick="plottm()" disabled>Plot t<sub>m</sub> Vs
-				Percentage of
-				single
-				stranded DNA </button>
-
-				
-		</div>
-	</div>
-</div>
-
-				<div class="row">
-
-					<div class="col-md-6">
-						<div class="card card-body border-0" id="carddnapartc" style="display:none;">
-							<img src="./images/DNA_melting_curve.png" id="meltingp" alt="Tm" >
-							<br>
-							<br>
-							<p>Ref: Lehninger Principles of Biochemistry 7th edition (Fig 8-27) 
-							</p>
-							
-					</div>
 				</div>
-				<div class="col-md-6">
-					<!--div id="chartContainer" style="height: 450px; width: 100%;"></div-->
-							
-						</div>
-				</div>
-			</div>
-		</div>
 			</div>
 
 		</div>
@@ -1982,7 +2028,7 @@ Developer: Prakriti Dhang
 	<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
 	<script src="./js/main.js"></script>
 	<script src="./js/virtualc.js"></script>
-	
+
 	<script>
 		$(function () {
 			$('[data-toggle="tooltip"]').tooltip()
@@ -1990,22 +2036,22 @@ Developer: Prakriti Dhang
 
 
 
-		
+
 	</script>
 
-<script>
-	function toggleDiv(divNumber) {
-	  // Hide all divs
-	  var divs = document.getElementsByClassName('toggle-content');
-	  for (var i = 0; i < divs.length; i++) {
-		divs[i].style.display = 'none';
-	  }
-  
-	  // Show the selected div
-	  var selectedDiv = document.getElementById('content' + divNumber);
-	  selectedDiv.style.display = 'block';
-	}
-  </script>
+	<script>
+		function toggleDiv(divNumber) {
+			// Hide all divs
+			var divs = document.getElementsByClassName('toggle-content');
+			for (var i = 0; i < divs.length; i++) {
+				divs[i].style.display = 'none';
+			}
+
+			// Show the selected div
+			var selectedDiv = document.getElementById('content' + divNumber);
+			selectedDiv.style.display = 'block';
+		}
+	</script>
 	<script>
 		let display = document.getElementById('display');
 
