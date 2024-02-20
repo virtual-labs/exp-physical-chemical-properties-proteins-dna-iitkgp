@@ -538,6 +538,7 @@ function checkb1() {
     else if (usrinpnc1 == "+1") {
       document.getElementById("netcharge1").value = "+1";
       document.getElementById("netcharge1").style.border = "2px solid green";
+
     }
 
     else {
@@ -1316,7 +1317,7 @@ function cancelmsg() {
 
 }
 
-
+/*
 function plottm() {
 
   document.getElementById("carddnapartc").style.display = "block";
@@ -1332,15 +1333,15 @@ function plottm() {
       gridThickness: 0,
       minimum: 0,
       maximum: 50,
-      interval: 5,
-     /*  stripLines: [{
-        value: (molarConcentrationG + molarConcentrationC) * 100,
-        lineDashType: "dash", // set to "dash" for dashed line
-        color: "blue",
-        thickness: 2,
-
-      }] */
-    },
+      interval: 5,*/
+      /*  stripLines: [{
+         value: (molarConcentrationG + molarConcentrationC) * 100,
+         lineDashType: "dash", // set to "dash" for dashed line
+         color: "blue",
+         thickness: 2,
+ 
+       }] */
+   /* },
     axisX: {
       title: "Tm",
       minimum: 0,
@@ -1351,47 +1352,49 @@ function plottm() {
         lineDashType: "dash", // set to "dash" for dashed line
         color: "blue",
         thickness: 2,
-        
+
 
       }
-    
-    ]
+
+      ]
 
     },
 
     data: [{
       type: "line",
-      indexLabel: "Tm", 
+      indexLabel: "Tm",
       indexLabelFontColor: "red",
-     
+
       dataPoints: dataPointg,
-      
+
     },
 
 
-      {
+    {
       type: "line",
       color: "purple",
       dataPoints: [
-      { x: parseFloat(Tm), 
-        y: parseFloat((molarConcentrationG + molarConcentrationC) * 100), 
-        indexLabel: "Tm", 
-        indexLabelFontColor: "red", 
-        indexLabelPlacement: "outside",  
-        indexLabelTextAlign: "right"}], //, indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside"  
+        {
+          x: parseFloat(Tm),
+          y: parseFloat((molarConcentrationG + molarConcentrationC) * 100),
+          indexLabel: "Tm",
+          indexLabelFontColor: "red",
+          indexLabelPlacement: "outside",
+          indexLabelTextAlign: "right"
+        }], //, indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside"  
 
-    },  
+    },
     ],
-    
+
   });
-  
-  chart.render();
+
+  chart.render();*/
   /* document.getElementById("exportChart").addEventListener("click",function(){
       chart.exportChart({format: "jpg"});
     }); */
-}
+//}
 
-window.onload = function () {
+/*window.onload = function () {
   var chart = new CanvasJS.Chart("chartContainer", {
     title: {
       text: "Tm Vs Percentage of single stranded DNA",
@@ -1422,5 +1425,54 @@ window.onload = function () {
   });
 
   chart.render();
-}
+}*/
 
+
+/*function plotnetcharge() {
+
+  document.getElementById("plotnetchargedata").style.display = "block";
+  var dataPoints = [];
+
+  // Read values from input fields
+  var pHValues = ["1", "3", "4", "5", "10"];
+  var netChargeValues = [];
+  for (var i = 1; i <= pHValues.length; i++) {
+    var netCharge = parseFloat(document.getElementById("netcharge" + i).value);
+    netChargeValues.push(netCharge);
+  }
+
+  // Create data points
+  for (var i = 0; i < pHValues.length; i++) {
+    dataPoints.push({ x: parseFloat(pHValues[i]), y: netChargeValues[i] });
+  }
+
+  // Create CanvasJS chart
+  var chart = new CanvasJS.Chart("chartContainerpi", {
+    title: {
+      text: "Net Charge vs pH"
+    },
+    axisX: {
+      title: "pH",
+      minimum: 0,
+      maximum: 14,
+      interval: 1,
+      
+    },
+    axisY: {
+      title: "Net Charge",
+      minimum: -7,
+      maximum: 7,
+      interval: 1,
+      gridThickness: 0.3,
+    },
+    data: [{
+      type: "spline",
+      dataPoints: dataPoints
+    }]
+  });
+
+  // Render chart
+  chart.render();
+
+
+}*/
