@@ -34,7 +34,7 @@ Suppose there is a protein with the amino acid sequence **MRANLDFW**
 
 This protein has 7 peptide bonds, and during formation of each peptide bond 1 molecule of water having molecular mass of 18 g/mol is removed. So molecular mass of this protein would be  
 
-Molecular weight of (methionine(M)+Arginine(R)+Alanine(A)+Asparagine(N)+Leucine(L)+Aspartate(D)+Phenyalanine(F)+Trytophan(W) – (7*18))
+Molecular weight of (methionine(M)+Arginine(R)+Alanine(A)+Asparagine(N)+Leucine(L)+Aspartate(D)+Phenyalanine(F)+Trytophan(W) – (7x18))
 [ Molecular weight of water-18 gm]
 
 
