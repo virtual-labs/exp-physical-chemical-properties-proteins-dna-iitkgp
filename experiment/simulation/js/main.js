@@ -1373,42 +1373,18 @@ function plottm() {
       type: "line",
       color: "purple",
       dataPoints: [
-      { x: parseFloat(Tm), y: parseFloat((molarConcentrationG + molarConcentrationC) * 100), indexLabel: "Tm", indexLabelFontColor: "red", indexLabelPlacement: "inside",  indexLabelTextAlign: "right"}], //, indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside"  
+      { x: parseFloat(Tm), 
+        y: parseFloat((molarConcentrationG + molarConcentrationC) * 100), 
+        indexLabel: "Tm", 
+        indexLabelFontColor: "red", 
+        indexLabelPlacement: "outside",  
+        indexLabelTextAlign: "right"}], //, indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside"  
 
     },  
     ],
-    /* axisY2: {
-      title: "Y2 Axis",
-      stripLines: [{
-        startValue:40,
-        endValue:41, 
-        lineDashType: "dash", // set to "dash" for dashed line
-        color: "red"
-      }]
-    },
-    axisX2: {
-      title: "X2 Axis",
-      stripLines: [{
-        startValue:55,
-        endValue:56, 
-        lineDashType: "dash", // set to "dash" for dashed line
-        color: "blue"
-      }]
-    } */
-
-
-    /* annotations:  [
-      {
-        type: "rectangle",
-        x: parseFloat(Tm)-50, // Adjust the position as needed  
-        y: parseFloat(molarConcentrationG + molarConcentrationC)-50 ,
-        width: 40, // Adjust the width as needed
-        height: 20, // Adjust the height as needed
-        
-      }
-    ] */
+    
   });
-
+  
   chart.render();
   /* document.getElementById("exportChart").addEventListener("click",function(){
       chart.exportChart({format: "jpg"});
