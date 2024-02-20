@@ -65,10 +65,9 @@ Molar absorptivities have units of M<sup>-1</sup> cm<sup>-1</sup>.
 
 ## **DNA**
 
-1.	***The average weight of a single DNA*** bp is 660 daltons. This can also be written as 660 g/mol (= molar mass).The molecular weight or molar mass of any double-stranded DNA fragment can therefore be calculated by multiplying number of nucleotides by 660 and the answer will be expressed as daltons or g/mol.  
+1.	***The average weight of a single DNA*** bp is 660 daltons. This can also be written as 660 g/mol (molar mass: 1g/mol = 1 Da). The molecular weight or molar mass of any double-stranded DNA fragment can therefore be calculated by multiplying number of nucleotides by 660 and the answer will be expressed as daltons or g/mol.  
 
-    1g/mol = 1 Da
-
+   
 
 2. ***Actual molecular mass of double stranded DNA***
 
