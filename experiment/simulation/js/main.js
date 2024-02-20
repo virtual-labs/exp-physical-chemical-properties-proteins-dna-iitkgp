@@ -445,8 +445,8 @@ function pseqbtn() {
     document.getElementById("inputpib2").value = "";
     document.getElementById("inputpib1").style.border = "1px solid #D8D8D8 ";
     document.getElementById("inputpib2").style.border = "1px solid #D8D8D8";
-    document.getElementById("pk1").innerHTML = "pK<sub>1</sub>";
-    document.getElementById("pk2").innerHTML = "pK<sub>2</sub>";
+    document.getElementById("pk1").innerHTML = "pK<sub>a1</sub>";
+    document.getElementById("pk2").innerHTML = "pK<sub>a3</sub>";
     document.getElementById("anspi").innerHTML = "";
     document.getElementById("netcharge1").value = "";
     document.getElementById("netcharge2").value = "";
@@ -818,7 +818,7 @@ function checpibtn() {
       $('.modal-body').html('Input box cannot be empty');
       document.getElementById("inputpib2").style.border = "2px solid blue";
     }
-    else if ((usrinppi2 == "3.86")) {
+    else if ((usrinppi2 == "3.65")) {
       document.getElementById("inputpib2").value = usrinppi2;
       document.getElementById("inputpib2").style.border = "2px solid green";
     }
@@ -828,8 +828,8 @@ function checpibtn() {
       document.getElementById("pibtnshow").disabled = false;
     }
 
-    if (((usrinppi1 == "2.19") && (usrinppi2 == "3.86"))) {
-      document.getElementById("anspi").innerHTML = "3.03";
+    if (((usrinppi1 == "2.19") && (usrinppi2 == "3.65"))) {
+      document.getElementById("anspi").innerHTML = "2.92";
     }
     else {
       document.getElementById("anspi").innerHTML = "";
@@ -869,8 +869,8 @@ function showpibtn() {
   }
   if (selectpeptide.options[selectpeptide.selectedIndex].value == 5) {
     document.getElementById("inputpib1").value = " 2.19";
-    document.getElementById("inputpib2").value = "3.86";
-    document.getElementById("anspi").innerHTML = "3.03";
+    document.getElementById("inputpib2").value = "3.65";
+    document.getElementById("anspi").innerHTML = "2.92";
     document.getElementById("inputpib1").style.border = "2px solid green";
     document.getElementById("inputpib2").style.border = "2px solid green";
   }
