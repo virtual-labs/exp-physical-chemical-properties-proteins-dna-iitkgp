@@ -1317,46 +1317,47 @@ function cancelmsg() {
 
 }
 
-/*
+
 function plottm() {
 
   document.getElementById("carddnapartc").style.display = "block";
+  document.getElementById("carddnapartc3").style.display = "block";
   window.scrollBy(0, 700);
-  const chart = new CanvasJS.Chart("chartContainer", {
+  const chart = new CanvasJS.Chart("chartContainertm", {
     //animationEnabled: true,
     title: {
-      text: "Tm Vs Percentage of single stranded DNA ",
+      text: "Melting Temperature Vs Molar Concentraction of G and C ",
       fontSize: 32
     },
     axisY: {
-      title: "Percentage of single stranded DNA",
+      title: "Molar Concentraction of G and C",
       gridThickness: 0,
       minimum: 0,
       maximum: 50,
-      interval: 5,*/
-      /*  stripLines: [{
+      interval: 5,
+        /* stripLines: [{
          value: (molarConcentrationG + molarConcentrationC) * 100,
          lineDashType: "dash", // set to "dash" for dashed line
          color: "blue",
          thickness: 2,
  
-       }] */
-   /* },
+       }]  */
+   },
     axisX: {
-      title: "Tm",
+      title: "Melting Temperature",
       minimum: 0,
       maximum: 95,
       interval: 10,
-      stripLines: [{
+      /* stripLines: [{
         value: Tm,
         lineDashType: "dash", // set to "dash" for dashed line
         color: "blue",
         thickness: 2,
 
 
-      }
+      } 
 
-      ]
+      ]*/
 
     },
 
@@ -1372,27 +1373,38 @@ function plottm() {
 
     {
       type: "line",
-      color: "purple",
+      lineDashType: "dash", 
+      color:"purple",
       dataPoints: [
+        {
+          x:0,
+          y:parseFloat((molarConcentrationG + molarConcentrationC) * 100) , markerType: "none"
+        },
         {
           x: parseFloat(Tm),
           y: parseFloat((molarConcentrationG + molarConcentrationC) * 100),
           indexLabel: "Tm",
-          indexLabelFontColor: "red",
-          indexLabelPlacement: "outside",
+          indexLabelFontColor: "green",
+          indexLabelPlacement: "inside",
           indexLabelTextAlign: "right"
-        }], //, indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside"  
+        },
+        {
+          x:parseFloat(Tm),
+          y:0, markerType: "none"
+        }
+        
+    ], //, indexLabel: "Tm", indexLabelFontColor: "green", indexLabelPlacement: "outside"  
 
     },
     ],
 
   });
 
-  chart.render();*/
+  chart.render();
   /* document.getElementById("exportChart").addEventListener("click",function(){
       chart.exportChart({format: "jpg"});
     }); */
-//}
+}
 
 /*window.onload = function () {
   var chart = new CanvasJS.Chart("chartContainer", {
