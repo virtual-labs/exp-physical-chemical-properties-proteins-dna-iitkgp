@@ -1320,14 +1320,14 @@ function cancelmsg() {
 
 function plottm() {
 
-  document.getElementById("carddnapartc").style.display = "block";
+  //document.getElementById("carddnapartc").style.display = "block";
   document.getElementById("carddnapartc3").style.display = "block";
   window.scrollBy(0, 700);
   const chart = new CanvasJS.Chart("chartContainertm", {
     //animationEnabled: true,
     title: {
       text: "Melting Temperature Vs Molar Concentraction of G and C ",
-      fontSize: 32
+      fontSize: 30
     },
     axisY: {
       title: "Molar Concentraction of G and C",
