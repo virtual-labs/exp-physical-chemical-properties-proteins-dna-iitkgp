@@ -58,7 +58,7 @@ At wavelength of 280 nm the aromatic amino acids tryptophan (Trp) , tyrosine (Ty
 
 A nucleotide has three characteristics component
 1.	Nitrogenous base(Pyrimidines-Cytosine and thymine, Purine- Adenine and guanine) 
-2.	Pentose sugar ( 2ˈ-deoxy-D-ribose)
+2.	Pentose sugar (2ˈ-deoxy-D-ribose)
 3.  Phosphate group
 
 5 ˈ-phosphate group of one nucleotide is linked to the 3 ˈ hydroxyl group of the next nucleotide, creating a phosphodiester linkage. Each strand of DNA has a backbone made of alternating sugar (deoxyribose) and phosphate groups. Attached to each sugar is one of four bases: adenine (A), cytosine (C), guanine (G) or thymine (T). The two strands are held together by hydrogen bonds between pairs of bases: adenine pairs with thymine, and cytosine pairs with guanine.
@@ -72,3 +72,5 @@ A nucleotide has three characteristics component
 
 1.	Molar mass
 2.	Melting temperature(t<sub>m</sub> ) : Temperature at which half the DNA is present as separated single strands. The higher the content of G≡C base pairs, the higher is the melting point of DNA.DNA region that are rich in A=T pairs will denature easily. Melting temperature of DNA determined under fixed conditions of pH and iconic strength can give an approximate estimation of base content of DNA.
+
+<img src="images/tm_curve.png" class="img-fluid" alt="Tm">

@@ -83,4 +83,4 @@ Molar absorptivities have units of M<sup>-1</sup> cm<sup>-1</sup>.
    Tm= (nA+nT) * 2 + (nG+nC) * 4 °C
 
 
-<img src="images/tm_curve.png" class="img-fluid" alt="Tm">
+
