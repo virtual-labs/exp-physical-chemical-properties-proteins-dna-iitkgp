@@ -1932,10 +1932,8 @@ Developer: Prakriti Dhang
 								<div class="card card-body border-0">
 									<button id="tmdnaplotbtn" type="button"
 										class="btn btn-slate-blue-grey border border-1 col-md-5  rounded-3 fs-6 m-2"
-										style="cursor: pointer; " onclick="plottm()" >Plot t<sub>m</sub> Vs
-										Percentage of
-										single
-										stranded DNA </button>
+										style="cursor: pointer; " onclick="plottm()" disabled> Show Temperature Vs
+										Denaturation curve</button>
 
 
 								</div>
@@ -1943,17 +1941,20 @@ Developer: Prakriti Dhang
 						</div>
 
 						<div class="row">
-
-							<!--div class="col-md-4">
+							<div class="col-md-3"></div>
+							<div class="col-md-6">
 								<div class="card card-body border-1" id="carddnapartc" style="display:none;">
-									<img src="./images/tm_curve.png" id="meltingp" alt="Tm">
+									<h5 class="fs-5 fw-bold">Representative curve of melting temperature of DNA versus Denaturation</h5>
+									<img src="./images/Melting_curve_modified.png" id="meltingp" alt="Tm" class="img-fluid">
+									
+									<h5> GC contain of DNA strand <span style="color:red">B</span> is higher than that of DNA strand <span style="color:blue">A</span></h5>
 									<br>
 									<br>
 									
 								</div>
-							</div-->
-							
-								<div class="col-md-6 ">
+							</div>
+							<div class="col-md-3"></div>
+								<!--div class="col-md-6 ">
 									<div class="card card-body border-1" id="carddnapartc2" style="display:none;">
 									<div id="chartContainer" style="height: 450px; width: 100%;"></div>
 								</div>
@@ -1962,7 +1963,7 @@ Developer: Prakriti Dhang
 								<div class="col-md-6">
 									<div class="card card-body border-1" id="carddnapartc3" style="display:none;">
 									<div id="chartContainertm" style="height: 450px; width: 100%;"></div>
-								</div>
+								</div-->
 								
 							</div>
 						</div>

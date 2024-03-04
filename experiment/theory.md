@@ -71,6 +71,8 @@ A nucleotide has three characteristics component
 **Properties of DNA that can be derived from their nucleotide sequence**
 
 1.	Molar mass
-2.	Melting temperature(t<sub>m</sub> ) : Temperature at which half the DNA is present as separated single strands. The higher the content of G≡C base pairs, the higher is the melting point of DNA.DNA region that are rich in A=T pairs will denature easily. Melting temperature of DNA determined under fixed conditions of pH and iconic strength can give an approximate estimation of base content of DNA.
+2.	Melting temperature(t<sub>m</sub> ) : Temperature at which half the DNA is present as separated single strands. The higher the content of G≡C base pairs, the higher is the melting point of DNA. DNA region that are rich in A=T pairs will denature easily. Melting temperature of DNA determined under fixed conditions of pH and iconic strength can give an approximate estimation of base content of DNA.
 
-<img src="images/tm_curve.png" class="img-fluid" alt="Tm">
+<img src="images/Melting_curve_modified.png" class="img-fluid" alt="Tm">
+<p>Representative curve of melting temperature of DNA versus Denaturation.</p>
+<p> GC contain of DNA strand <span style="color:red">B</span> is higher than that of DNA strand <span style="color:blue">A</span>
