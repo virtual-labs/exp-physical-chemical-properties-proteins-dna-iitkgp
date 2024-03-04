@@ -1320,11 +1320,12 @@ function cancelmsg() {
 
 function plottm() {
 
-  //document.getElementById("carddnapartc").style.display = "block";
-  document.getElementById("carddnapartc3").style.display = "block";
+  document.getElementById("carddnapartc").style.display = "block";
   window.scrollBy(0, 700);
+ /* document.getElementById("carddnapartc3").style.display = "block";
+ 
   const chart = new CanvasJS.Chart("chartContainertm", {
-    //animationEnabled: true,
+    
     title: {
       text: "Melting Temperature Vs Molar Concentraction of G and C ",
       fontSize: 30
@@ -1335,20 +1336,20 @@ function plottm() {
       minimum: 0,
       maximum: 50,
       interval: 5,
-        /* stripLines: [{
+        stripLines: [{
          value: (molarConcentrationG + molarConcentrationC) * 100,
          lineDashType: "dash", // set to "dash" for dashed line
          color: "blue",
          thickness: 2,
  
-       }]  */
+       }]  
    },
     axisX: {
       title: "Melting Temperature",
       minimum: 0,
       maximum: 95,
       interval: 10,
-      /* stripLines: [{
+       stripLines: [{
         value: Tm,
         lineDashType: "dash", // set to "dash" for dashed line
         color: "blue",
@@ -1357,7 +1358,7 @@ function plottm() {
 
       } 
 
-      ]*/
+      ]
 
     },
 
@@ -1400,7 +1401,7 @@ function plottm() {
 
   });
 
-  chart.render();
+  chart.render();*/
   /* document.getElementById("exportChart").addEventListener("click",function(){
       chart.exportChart({format: "jpg"});
     }); */
