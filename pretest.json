@@ -1,0 +1,124 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. The isoelectric point of an amino acid is defined as",
+      "answers": {
+        "a": "pH where amino acids carboxyl group is uncharged",
+        "b": "pH of maximum electrophoretic mobility",
+        "c": "pH where amino acids amino group is uncharged",
+        "d": "pH where amino acid has a net charge of zero"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which of the following amino acids has a net negative charge at physiologic pH (~7.4)?",
+      "answers": {
+        "a": "Alanine",
+        "b": "Histidine",
+        "c": "Glutamic acid",
+        "d": "Glutamine"
+      },
+    
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which of the following properties of a protein is least likely to be affected by changes in pH?",
+      "answers": {
+        "a": "Primary structure",
+        "b": "Secondary structure",
+        "c": "Net charge",
+        "d": "Tertiary structure"
+      },
+    
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. If a DNA sample contains 18% C on a molar basis. What will be the molar percentage of A, G, and T respectively? ",
+      "answers": {
+        "a": "32,18,32",
+        "b": "18,32,32",
+        "c": "32,18,18",
+        "d": "32,32,18"
+      },
+    
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Electrophoretic separation at pH 6 of a sample of protein A (M.W 25 kDa) , protein B (M.W  10 kDa) and protein C 3 (M.W 65 kDa) would result in which of the following? (Note: the isoelectric point of each protein occurs at pH 6) ",
+      "answers": {
+        "a": "Protein A would move the farthest",
+        "b": "Protein B would move the farthest",
+        "c": "Protein C would move the farthest",
+        "d": "None of the protein would move"
+      },
+    
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. What type of bonds are formed between two amino acids?",
+      "answers": {
+        "a": "Glycosidic bond",
+        "b": "Ester linkage",
+        "c": "Phosphodiester bond",
+        "d": "Peptide bond"
+      },
+    
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. Which of the following methods can we use to check molecular weight of our protein?",
+      "answers": {
+        "a": "SDS PAGE",
+        "b": "Mass spectrometry",
+        "c": "Analytical SEC",
+        "d": "All of the above"
+      },
+    
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "8. In terms of DNA and RNA structure, what is a nucleotide?",
+      "answers": {
+        "a": "A nucleotide is a heterocyclic base ",
+        "b": "A nucleotide is a sugar molecule covalently bonded to a heterocyclic base ",
+        "c": "A nucleotide is a sugar molecule bonded to phosphate group/s and a heterocyclic base ",
+        "d": "A nucleotide is a heterocyclic base bonded to phosphate group/s"
+      },
+    
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "9. The melting temperature of a nucleic acid:",
+      "answers": {
+        "a": "Is directly proportional to the sum of the percentages of adenine and thymine ",
+        "b": "Is directly proportional to the sum of the percentages of adenine and guanine",
+        "c": "Is directly proportional to the sum of the percentages of thymine and cytosine ",
+        "d": "Is directly proportional to the sum of the percentages of cytosine and guanine "
+      },
+    
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "10. Which of the following techniques cannot be used to quantify affinity between an enzyme and its peptide substrate? ",
+      "answers": {
+        "a": "X-ray crystallography ",
+        "b": "Isothermal calorimetry",
+        "c": "Surface plasmon resonance",
+        "d": "Fluorescence anisotropy"
+      },
+    
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}
