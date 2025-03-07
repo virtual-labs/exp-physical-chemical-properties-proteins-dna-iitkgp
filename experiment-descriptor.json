@@ -8,13 +8,6 @@
       "unit-type": "aim"
     },
     {
-      "target": "introduction.html",
-      "source": "introduction.md",
-      "label": "Introduction",
-      "unit-type": "task",
-      "content-type": "text"
-    },
-    {
       "target": "objective.html",
       "source": "objective.md",
       "label": "Objective",
