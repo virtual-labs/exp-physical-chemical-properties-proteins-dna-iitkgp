@@ -1,6 +1,6 @@
 ## Theory
 
-**Introduction to protein and amino acids:**  
+#### **Introduction to protein and amino acids:**  
 
 Proteins are one of the most significant and abundant organic molecules in living systems that exhibit more diversity in structure and function than any other classes of macromolecules. They mediate virtually every cellular process exhibiting numerous functions. The diverse functions of proteins are determined by its structure and chemical composition. Although their structures, like their functions, vary greatly, all proteins are made up of one or more chains of amino acids.  
 
@@ -18,7 +18,7 @@ Proteins are polymers of amino acids and each amino acid is joined to its neighb
 
 The properties of the side chain determine an amino acid’s chemical behavior (that is, whether it is considered acidic, basic, polar, or nonpolar). For example, amino acids such as valine, isoleucine, and leucine are nonpolar and hydrophobic, while amino acids like serine and glutamine have hydrophilic side chains and are polar. Some amino acids, such as lysine and arginine, have side chains that exhibit  positively charge at physiological pH and are considered basic amino acids whereas some amino acids like aspartate and glutamate are negatively charged at physiological pH and are considered acidic.
 
-**Peptide bonds :**
+#### **Peptide bonds :**
 
 The amino acids of a polypeptide are attached to their neighbours by covalent bonds known as peptide bond. Such a linkage is formed by the removal of elements of water(dehydration) from the α-carboxyl group of one amino acid and the α-amino group of another resulting in a condensation reaction. In a peptide amino acid residue at the end with a free α-amino group is the amino-terminal(or N terminal), the residue at the other end which has a free carboxyl group, is the carboxyl-terminal(or C terminal)
 
@@ -28,7 +28,7 @@ The amino acids of a polypeptide are attached to their neighbours by covalent bo
 </div>
 
 
-**Physical and chemical properties of protein that can be derived from their primary sequence**
+#### **Physical and chemical properties of protein that can be derived from their primary sequence**
 1.	Molar mass of protein
 2.	Molar extinction coefficient : The property of protein  to absorb UV light in proportion to their concentrations is utilized for the spectrophotometric determination of protein concentrations, and it is defined by the Beer–Lambert law (or Beer’s law). Beer’s law describes the dependence of a protein’s absorbance on its absorptivity coefficient, its concentration, and the pathlength of the incident light: The protein concentration based on the measured absorbance at 280 nm can be derived from the equation 
 
@@ -43,7 +43,7 @@ At wavelength of 280 nm the aromatic amino acids tryptophan (Trp) , tyrosine (Ty
 
 3. Isoelectric point (pI) of protein:- It is defined as the pH at which the net charge of a protein molecule is zero. Proteins are positively charged at a pH below their pI and negatively charged at a pH above their pI. The protein pI varies greatly from extremely acidic to highly alkaline values ranging from about 4.0 to 12.0. Hence, pI values of proteins are used to determine methods and buffer composition for isolation, separation, purification and crystallization of protein. pI of a protein is primarily dependent on  amino acid composition based on the combination of dissociation constant (pKa) values of the constituent amino acids. Out of  the twenty common amino acids, two amino acids, aspartic acid, and glutamic acid, are negatively charged and three amino acids, lysine, arginine, and histidine, are positively charged at the neutral pH, as defined by their pKa values.
 
-**Introduction to DNA**
+#### **Introduction to DNA**
 
  **DNA**(deoxyribonucleic acid) is the molecular repositors of genetic information. Structure and function of every protein, biomolecule and cellular component is dependent on information programmed in the nucleotide sequence of DNA.  
 
@@ -59,9 +59,27 @@ A nucleotide has three characteristics component
 <p>Figure 4 : Schematic representation of structure of a nucleotide and DNA </p>
 </div>
 
-**Properties of DNA that can be derived from their nucleotide sequence**
+#### **Properties of DNA that can be derived from their nucleotide sequence**
 
 1.	Molar mass
 2.	Melting temperature(t<sub>m</sub> ) : Temperature at which half the DNA is present as separated single strands. The higher the content of G≡C base pairs, the higher is the melting point of DNA. DNA region that are rich in A=T pairs will denature easily. Melting temperature of DNA determined under fixed conditions of pH and iconic strength can give an approximate estimation of base content of DNA.
+
+#### Real World Applications
+
+Computational analysis of DNA and protein sequences allows us to predict significant parameters such as molecular weight, isoelectric point, hydrophobicity, melting temperature, and secondary structure tendencies. It has wide application in the field of genetic testing, vaccine design, personalized medicines and also in industrial biotechnology. In this experiment, we aim to compute and analyze various physical and chemical properties of proteins and DNA based on their primary sequences, providing insights into how sequence composition governs molecular behavior.  Some real world applications highlighting the importance of interpreting physical and chemical properties of DNA and protein from their primary sequence is given below:
+
+1. **Drug Design and Therapeutics:**
+ When developing monoclonal antibodies or peptide-based drugs, researchers compute parameters like isoelectric point (pI), hydrophobicity, and stability from the protein's primary sequence to predict solubility and aggregation behavior, critical for successful formulation and delivery.
+
+2. **Amino acid mutation in diseases:**
+Single amino acid mutation or substitution causes deadly diseases like sickle cell anaemia, thalassemia, cystic fibrosis, etc. Changes in the primary sequence of protein can disrupt correct folding thereby leading to aggregation, loss of function, or toxic gain of function. 
+
+3. **Vaccine Development(e.g., COVID-19 mRNA vaccines):**
+ The spike protein sequence was analyzed computationally for hydrophobicity, epitope prediction, and secondary structure determination to develop effective and stable vaccine components.
+
+4. **Protein Expression Systems (Biotechnology):**
+ When expressing a recombinant protein in E. coli or yeast, computational analysis of the primary sequence helps predict solubility issues. Highly hydrophobic or aggregation-prone sequences are often modified based on these predictions.
+
+
 
 
