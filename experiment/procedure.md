@@ -34,8 +34,9 @@ Suppose there is a protein with the amino acid sequence **MRANLDFW**
 
 This protein has 7 peptide bonds, and during formation of each peptide bond 1 molecule of water having molecular mass of 18 g/mol is removed. So molecular mass of this protein would be  
 
-Molecular weight of (methionine(M)+Arginine(R)+Alanine(A)+Asparagine(N)+Leucine(L)+Aspartate(D)+Phenyalanine(F)+Trytophan(W) – (7x18))
-[ Molecular weight of water-18 gm]
+Molecular weight of Methionine(M)+ Arginine(R)+Alanine(A)+Asparagine(N)+Leucine(L)+Aspartate(D)+Phenyalanine(F)+Trytophan(W) – (7 x 18)
+
+Molecular weight of water= 18 gm/mol
 
 
 3. ***The molar absorption coefficient of a peptide or protein*** is related to its tryptophan (W), tyrosine (Y) and cysteine (C) amino acid composition. At 280nm, this value is approximated by the weighted sum of the 280nm molar absorption coefficients (ε) of these three constituent amino acids, as described in the following equation:   
@@ -82,5 +83,7 @@ Molar absorptivities have units of M<sup>-1</sup> cm<sup>-1</sup>.
 
    Tm= (nA+nT) * 2 + (nG+nC) * 4 °C
 
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 

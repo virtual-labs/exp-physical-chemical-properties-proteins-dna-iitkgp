@@ -4,7 +4,7 @@
 
 Proteins are one of the most significant and abundant organic molecules in living systems that exhibit more diversity in structure and function than any other classes of macromolecules. They mediate virtually every cellular process exhibiting numerous functions. The diverse functions of proteins are determined by its structure and chemical composition. Although their structures, like their functions, vary greatly, all proteins are made up of one or more chains of amino acids.  
 
-Proteins are polymers of amino acids and each amino acid is joined to its neighbour through a covalent amide linkage known as  peptide bond. All amino acids share a basic structure, which consists of a central carbon atom, also known as the alpha (α) carbon, bonded to an amino group (‍NH2 ), a carboxyl group (‍COOH), and a hydrogen atom. They differ from each other in their side chains or R group, which vary in structure, size, and electric charge and also determine the solubility of the amino acids in water. 
+Proteins are polymers of amino acids and each amino acid is joined to its neighbour through a covalent amide linkage known as  peptide bond. All amino acids share a basic structure, which consists of a central carbon atom, also known as the alpha (α) carbon, bonded to an amino group (‍NH<sub>2</sub> ), a carboxyl group (‍COOH), and a hydrogen atom. They differ from each other in their side chains or R group, which vary in structure, size, and electric charge and also determine the solubility of the amino acids in water. 
 
 <div align="center">
 <img src="images/Fig 1.png" class=img-fluid>
@@ -41,7 +41,7 @@ L: light pathlength (cm)
 
 At wavelength of 280 nm the aromatic amino acids tryptophan (Trp) , tyrosine (Tyr) and phenylalanine(Phe) exhibit strong light absorption and cysteine groups forming disulfide bonds (Cys–Cys) also absorb but to a lesser extent. Consequently, absorption of proteins and peptides at 280 nm is proportional to the content of these amino acids.  
 
-3. Isoelectric point (pI) of protein:- It is defined as the pH at which the net charge of a protein molecule is zero. Proteins are positively charged at a pH below their pI and negatively charged at a pH above their pI. The protein pI varies greatly from extremely acidic to highly alkaline values ranging from about 4.0 to 12.0. Hence, pI values of proteins are used to determine methods and buffer composition for isolation, separation, purification and crystallization of protein. pI of a protein is primarily dependent on  amino acid composition based on the combination of dissociation constant (pKa) values of the constituent amino acids. Out of  the twenty common amino acids, two amino acids, aspartic acid, and glutamic acid, are negatively charged and three amino acids, lysine, arginine, and histidine, are positively charged at the neutral pH, as defined by their pKa values.
+3. Isoelectric point (pI) of protein:- It is defined as the pH at which the net charge of a protein molecule is zero. Proteins are positively charged at a pH below their pI and negatively charged at a pH above their pI. The protein pI varies greatly from extremely acidic to highly alkaline values ranging from about 4.0 to 12.0. Hence, pI values of proteins are used to determine methods and buffer composition for isolation, separation, purification and crystallization of protein. pI of a protein is primarily dependent on  amino acid composition based on the combination of dissociation constant (pK<sub>a</sub>) values of the constituent amino acids. Out of  the twenty common amino acids, two amino acids, aspartic acid, and glutamic acid, are negatively charged and three amino acids, lysine, arginine, and histidine, are positively charged at the neutral pH, as defined by their pK<sub>a</sub> values.
 
 #### **Introduction to DNA**
 
@@ -52,7 +52,7 @@ A nucleotide has three characteristics component
 2.	Pentose sugar (2ˈ-deoxy-D-ribose)
 3.  Phosphate group
 
-5 ˈ-phosphate group of one nucleotide is linked to the 3 ˈ hydroxyl group of the next nucleotide, creating a phosphodiester linkage. Each strand of DNA has a backbone made of alternating sugar (deoxyribose) and phosphate groups. Attached to each sugar is one of four bases: adenine (A), cytosine (C), guanine (G) or thymine (T). The two strands are held together by hydrogen bonds between pairs of bases: adenine pairs with thymine, and cytosine pairs with guanine.
+5ˈ-phosphate group of one nucleotide is linked to the 3ˈ hydroxyl group of the next nucleotide, creating a phosphodiester linkage. Each strand of DNA has a backbone made of alternating sugar (deoxyribose) and phosphate groups. Attached to each sugar is one of four bases: adenine (A), cytosine (C), guanine (G) or thymine (T). The two strands are held together by hydrogen bonds between pairs of bases: adenine pairs with thymine, and cytosine pairs with guanine.
 
 <div align="center">
 <img src="images/Figure 4.png" class=img-fluid>
