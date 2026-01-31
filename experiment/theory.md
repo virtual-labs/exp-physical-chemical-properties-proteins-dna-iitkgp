@@ -13,14 +13,14 @@ Proteins are polymers of amino acids and each amino acid is joined to its neighb
 
 <div align="center">
 <img src="images/Figure 2.png" class=img-fluid>
-<p>Figure 2: Twenty different amino acids commonly found in proteins, each with a different R group  that determines its chemical nature. </p>
+<p>Figure 2: Twenty different amino acids commonly found in proteins, each with a different R group that determines its chemical nature. </p>
 </div>
 
 The properties of the side chain determine an amino acid’s chemical behavior (that is, whether it is considered acidic, basic, polar, or nonpolar). For example, amino acids such as valine, isoleucine, and leucine are nonpolar and hydrophobic, while amino acids like serine and glutamine have hydrophilic side chains and are polar. Some amino acids, such as lysine and arginine, have side chains that exhibit  positively charge at physiological pH and are considered basic amino acids whereas some amino acids like aspartate and glutamate are negatively charged at physiological pH and are considered acidic.
 
 #### **Peptide bonds :**
 
-The amino acids of a polypeptide are attached to their neighbours by covalent bonds known as peptide bond. Such a linkage is formed by the removal of elements of water(dehydration) from the α-carboxyl group of one amino acid and the α-amino group of another resulting in a condensation reaction. In a peptide amino acid residue at the end with a free α-amino group is the amino-terminal(or N terminal), the residue at the other end which has a free carboxyl group, is the carboxyl-terminal(or C terminal)
+The amino acids of a polypeptide are attached to their neighbours by covalent bonds known as peptide bond. Such a linkage is formed by the removal of elements of water(dehydration) from the α-carboxyl group of one amino acid and the α-amino group of another resulting in a condensation reaction. In a peptide, amino acid residue at the end with a free α-amino group is the amino-terminal(or N terminal), and the residue at the other end which has a free carboxyl group, is the carboxyl-terminal(or C terminal)
 
 <div align="center">
 <img src="images/Figure 3.png" class=img-fluid>
@@ -32,23 +32,23 @@ The amino acids of a polypeptide are attached to their neighbours by covalent bo
 1.	Molar mass of protein
 2.	Molar extinction coefficient : The property of protein  to absorb UV light in proportion to their concentrations is utilized for the spectrophotometric determination of protein concentrations, and it is defined by the Beer–Lambert law (or Beer’s law). Beer’s law describes the dependence of a protein’s absorbance on its absorptivity coefficient, its concentration, and the pathlength of the incident light: The protein concentration based on the measured absorbance at 280 nm can be derived from the equation 
 
-A = εcL 
+A = εcL  
 A: absorbance of the protein (unitless)  
 ε: molar extinction coefficient of the protein (M <sup>-1</sup> cm <sup>-1</sup>)   
 c: concentration of the protein (molar units, M)   
 L: light pathlength (cm)   
 
 
-At wavelength of 280 nm the aromatic amino acids tryptophan (Trp) , tyrosine (Tyr) and phenylalanine(Phe) exhibit strong light absorption and cysteine groups forming disulfide bonds (Cys–Cys) also absorb but to a lesser extent. Consequently, absorption of proteins and peptides at 280 nm is proportional to the content of these amino acids.  
+At wavelength of 280 nm the aromatic amino acids tryptophan (Trp), tyrosine (Tyr) and phenylalanine(Phe) exhibit strong light absorption and cysteine groups forming disulfide bonds (Cys–Cys) also absorb but to a lesser extent. Consequently, absorption of proteins and peptides at 280 nm is proportional to the content of these amino acids.  
 
-3. Isoelectric point (pI) of protein:- It is defined as the pH at which the net charge of a protein molecule is zero. Proteins are positively charged at a pH below their pI and negatively charged at a pH above their pI. The protein pI varies greatly from extremely acidic to highly alkaline values ranging from about 4.0 to 12.0. Hence, pI values of proteins are used to determine methods and buffer composition for isolation, separation, purification and crystallization of protein. pI of a protein is primarily dependent on  amino acid composition based on the combination of dissociation constant (pK<sub>a</sub>) values of the constituent amino acids. Out of  the twenty common amino acids, two amino acids, aspartic acid, and glutamic acid, are negatively charged and three amino acids, lysine, arginine, and histidine, are positively charged at the neutral pH, as defined by their pK<sub>a</sub> values.
+3. Isoelectric point (pI) of protein:- It is defined as the pH at which the net charge of a protein molecule is zero. Proteins are positively charged at a pH below their pI and negatively charged at a pH above their pI. The protein pI varies greatly from extremely acidic to highly alkaline values ranging from about 4.0 to 12.0. Hence, pI values of proteins are used to determine methods and buffer composition for isolation, separation, purification and crystallization of protein. pI of a protein is primarily dependent on  amino acid composition based on the combination of dissociation constant (pKa) values of the constituent amino acids. Out of the twenty common amino acids, two amino acids, aspartic acid, and glutamic acid, are negatively charged and three amino acids, lysine, arginine, and histidine, are positively charged at the neutral pH, as defined by their pKa values.
 
 #### **Introduction to DNA**
 
  **DNA**(deoxyribonucleic acid) is the molecular repositors of genetic information. Structure and function of every protein, biomolecule and cellular component is dependent on information programmed in the nucleotide sequence of DNA.  
 
 A nucleotide has three characteristics component
-1.	Nitrogenous base(Pyrimidines-Cytosine and thymine, Purine- Adenine and guanine) 
+1.	Nitrogenous base(Pyrimidines-Cytosine and thymine, Purine-Adenine and guanine) 
 2.	Pentose sugar (2ˈ-deoxy-D-ribose)
 3.  Phosphate group
 
