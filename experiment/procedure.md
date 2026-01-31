@@ -76,7 +76,7 @@ Molar absorptivities have units of M<sup>-1</sup> cm<sup>-1</sup>.
 
     M.W. = (nA x 313.2) + (nT x 304.2) + (nC x 289.2) + (nG x 329.2)
 
-      where nA(adenine) , nT(Thymine), nC(Cytosine), and nG(Guanine) are the number of each respective nucleotide within the polynucleotide on both the DNA strands.
+      where nA(Adenine) , nT(Thymine), nC(Cytosine), and nG(Guanine) are the number of each respective nucleotide within the polynucleotide on both the DNA strands.
 
 
 3. ***Melting temperature of DNA*** is calculated by the formula
